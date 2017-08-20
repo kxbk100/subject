@@ -8,7 +8,8 @@
 
     <title>ZUST软件工程一流学科网站管理中心</title>
 
-
+    <meta name="description"
+          content="AppUI is a Web App Bootstrap Admin Template created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
 
@@ -54,7 +55,8 @@
                 <a href="<?php echo (C("GOTO")); ?>Admin/index/showAdmin" class="sidebar-title">
                     <span class="sidebar-nav-mini-hide"><strong>ZUST软件工程管理中心</strong></span>
                 </a>
-            </div>                    <!-- END Sidebar Brand -->
+            </div>
+            <!-- END Sidebar Brand -->
 
             <!-- Wrapper for scrolling functionality -->
             <div id="sidebar-scroll">
@@ -62,7 +64,7 @@
                 <div class="sidebar-content">
                     <!-- Sidebar Navigation -->
                     <ul class="sidebar-nav">
-                        <li>
+                        <li class="active">
                             <a href="#" class="sidebar-nav-menu"><i
                                     class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i
                                     class="fa fa-list-alt sidebar-nav-icon"></i><span
@@ -72,7 +74,7 @@
                                     <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showAdd">公告发布</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showManage">公告删改</a>
+                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showManage" class="active">公告删改</a>
                                 </li>
                             </ul>
                         </li>
@@ -101,7 +103,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="#" class="sidebar-nav-menu"><i
                                     class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i
                                     class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学子风采管理</span></a>
@@ -110,7 +112,7 @@
                                     <a href="<?php echo (C("GOTO")); ?>Admin/Student/showAdd">学子风采发布</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage" class="active">学子风采删改</a>
+                                    <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage">学子风采删改</a>
                                 </li>
                             </ul>
                         </li>
@@ -132,9 +134,7 @@
                 </div>
                 <!-- END Sidebar Content -->
             </div>
-            <!-- END Wrapper for scrolling functionality -->
 
-            <!-- Sidebar Extra Info -->
             <div id="sidebar-extra-info" class="sidebar-content sidebar-nav-mini-hide">
                 <div class="text-center">
                     <small> Copyright &copy; 2012-2017 ZUST ITEE All Rights Reserved <br/>
@@ -160,6 +160,12 @@
                         </a>
                     </li>
                     <!-- END Main Sidebar Toggle Button -->
+
+                    <!-- Header Link -->
+                    <li class="hidden-xs animation-fadeInQuick">
+                        <a href="admin_index.html"><strong></strong></a>
+                    </li>
+                    <!-- END Header Link -->
                 </ul>
                 <!-- END Left Header Navigation -->
 
@@ -168,7 +174,7 @@
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
                            style="margin-right:20px; ">
-                            <strong>欢迎您，<?php echo ($name); ?></strong>
+                            <strong>欢迎您，<?php echo ($name); ?> </strong>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li>
@@ -198,7 +204,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="header-section">
-                                <h1>学子风采管理</h1>
+                                <h1>公告管理</h1>
                             </div>
                         </div>
                         <div class="col-sm-6 hidden-xs">
@@ -216,8 +222,9 @@
                 <div class="block full">
                     <!-- Get Started Title -->
                     <div class="block-title">
-                        <h2>学子风采删改</h2>
+                        <h2>公告删改</h2>
                     </div>
+                    <!-- END Get Started Title -->
                     <div class="table-responsive">
                         <table id="example-datatable" class="table table-striped table-bordered table-vcenter">
                             <thead>
@@ -232,27 +239,24 @@
                             <tbody>
 
                             <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                    <td class="text-center"><?php echo ($vo["id"]); ?></td>
-                                    <td class="text-center"><strong>管理员</strong></td>
-                                    <td class="text-center"><?php echo ($vo["title"]); ?></td>
-                                    <td class="text-center"><?php echo ($vo["time"]); ?></td>
-                                    <td class="text-center">
-                                        <a href="<?php echo (C("GOTO")); ?>Admin/Student/showModify?id=<?php echo ($vo["id"]); ?>"
-                                           data-toggle="tooltip" title="修改"
-                                           class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
-                                        <a onclick="return del()"
-                                           href="<?php echo (C("GOTO")); ?>Admin/Student/delete?id=<?php echo ($vo["id"]); ?>"
-                                           data-toggle="tooltip" title="删除"
-                                           class="btn btn-effect-ripple btn-xs btn-danger"><i
-                                                class="fa fa-times"></i></a>
-                                    </td>
-                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <td class="text-center"><?php echo ($vo["id"]); ?></td>
+                                <td class="text-center"><strong><?php echo ($vo["author"]); ?></strong></td>
+                                <td class="text-center"><?php echo ($vo["title"]); ?></td>
+                                <td class="text-center"><?php echo ($vo["time"]); ?></td>
+                                <td class="text-center">
+                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showModify?id=<?php echo ($vo["id"]); ?>"
+                                       data-toggle="tooltip" title="修改"
+                                       class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
+                                    <a onclick="return del()" href="<?php echo (C("GOTO")); ?>Admin/Notice/delete?id=<?php echo ($vo["id"]); ?>"
+                                       data-toggle="tooltip" title="删除" class="btn btn-effect-ripple btn-xs btn-danger"><i
+                                            class="fa fa-times"></i></a>
+                                </td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                             </tbody>
                         </table>
                     </div>
                 </div>
-
                 <!-- END Get Started Block -->
             </div>
             <!-- END Page Content -->

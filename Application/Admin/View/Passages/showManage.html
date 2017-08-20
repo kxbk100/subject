@@ -250,8 +250,12 @@
 
         <!-- Load and execute javascript code used only in this page -->
         <script src="{$Think.config.JS_PATH}pages/uiTables.js"></script>
-        <script>$(function () {
-                                                UiTables.init();
-                                            });</script>
+        <script>
+            $(function(){
+                UiTables.init();
+            });
+            $(document).ready(function () {
+                $('.form-control').attr('placeholder','搜索');
+        </script>
     </body>
 </html>

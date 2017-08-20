@@ -1,13 +1,12 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <!--[if IE 9]>
-<html class="no-js lt-ie10" lang="ch-zn"> <![endif]-->
+<html class="no-js lt-ie10" lang="zh-cn"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js" lang="ch-zn"> <!--<![endif]-->
+<html class="no-js" lang="zh-zn"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
 
     <title>ZUST软件工程一流学科网站管理中心</title>
-
 
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
@@ -54,7 +53,8 @@
                 <a href="<?php echo (C("GOTO")); ?>Admin/index/showAdmin" class="sidebar-title">
                     <span class="sidebar-nav-mini-hide"><strong>ZUST软件工程管理中心</strong></span>
                 </a>
-            </div>                    <!-- END Sidebar Brand -->
+            </div>
+            <!-- END Sidebar Brand -->
 
             <!-- Wrapper for scrolling functionality -->
             <div id="sidebar-scroll">
@@ -76,7 +76,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="#" class="sidebar-nav-menu"><i
                                     class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i
                                     class="fa fa-book sidebar-nav-icon"></i><span
@@ -86,7 +86,7 @@
                                     <a href="<?php echo (C("GOTO")); ?>Admin/News/showAdd">学科动态发布</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo (C("GOTO")); ?>Admin/News/showManage">学科动态删改</a>
+                                    <a href="<?php echo (C("GOTO")); ?>Admin/News/showManage" class="active">学科动态删改</a>
                                 </li>
                             </ul>
                         </li>
@@ -101,7 +101,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="#" class="sidebar-nav-menu"><i
                                     class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i
                                     class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学子风采管理</span></a>
@@ -110,7 +110,7 @@
                                     <a href="<?php echo (C("GOTO")); ?>Admin/Student/showAdd">学子风采发布</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage" class="active">学子风采删改</a>
+                                    <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage">学子风采删改</a>
                                 </li>
                             </ul>
                         </li>
@@ -160,6 +160,7 @@
                         </a>
                     </li>
                     <!-- END Main Sidebar Toggle Button -->
+
                 </ul>
                 <!-- END Left Header Navigation -->
 
@@ -198,7 +199,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="header-section">
-                                <h1>学子风采管理</h1>
+                                <h1>学科动态管理</h1>
                             </div>
                         </div>
                         <div class="col-sm-6 hidden-xs">
@@ -216,7 +217,7 @@
                 <div class="block full">
                     <!-- Get Started Title -->
                     <div class="block-title">
-                        <h2>学子风采删改</h2>
+                        <h2>学科动态删改</h2>
                     </div>
                     <div class="table-responsive">
                         <table id="example-datatable" class="table table-striped table-bordered table-vcenter">
@@ -232,27 +233,25 @@
                             <tbody>
 
                             <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                    <td class="text-center"><?php echo ($vo["id"]); ?></td>
-                                    <td class="text-center"><strong>管理员</strong></td>
-                                    <td class="text-center"><?php echo ($vo["title"]); ?></td>
-                                    <td class="text-center"><?php echo ($vo["time"]); ?></td>
-                                    <td class="text-center">
-                                        <a href="<?php echo (C("GOTO")); ?>Admin/Student/showModify?id=<?php echo ($vo["id"]); ?>"
-                                           data-toggle="tooltip" title="修改"
-                                           class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
-                                        <a onclick="return del()"
-                                           href="<?php echo (C("GOTO")); ?>Admin/Student/delete?id=<?php echo ($vo["id"]); ?>"
-                                           data-toggle="tooltip" title="删除"
-                                           class="btn btn-effect-ripple btn-xs btn-danger"><i
-                                                class="fa fa-times"></i></a>
-                                    </td>
-                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <td class="text-center"><?php echo ($vo["id"]); ?></td>
+                                <td class="text-center"><strong><?php echo ($vo["author"]); ?></strong></td>
+                                <td class="text-center"><?php echo ($vo["title"]); ?></td>
+                                <td class="text-center"><?php echo ($vo["time"]); ?></td>
+                                <td class="text-center">
+                                    <a href="<?php echo (C("GOTO")); ?>Admin/News/showModify?id=<?php echo ($vo["id"]); ?>"
+                                       data-toggle="tooltip" title="修改"
+                                       class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
+                                    <a onclick="return del()"
+                                       href="<?php echo (C("GOTO")); ?>Admin/News/delete?id=<?php echo ($vo["id"]); ?>"
+                                       data-toggle="tooltip" title="删除" class="btn btn-effect-ripple btn-xs btn-danger"><i
+                                            class="fa fa-times"></i></a>
+                                </td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                             </tbody>
                         </table>
                     </div>
                 </div>
-
                 <!-- END Get Started Block -->
             </div>
             <!-- END Page Content -->
@@ -285,8 +284,7 @@
     }
     $(document).ready(function () {
         $('.form-control').attr('placeholder','搜索');
-        $('.dataTables_info').html('共'+$('#example-datatable tbody tr').length+'条记录');
     })
 </script>
 </body>
-</html>
+< / html >

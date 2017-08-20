@@ -222,7 +222,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-file-input">上传标题图片：</label>
+                                            <label class="col-md-3 control-label" for="example-file-input">上传标题图片</label>
                                             <div class="col-md-9">
                                                 <input type="file" id="example-file-input" name="titlePhoto">
                                             </div>

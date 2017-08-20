@@ -1,0 +1,56 @@
+[ 2017-08-21T00:58:55+08:00 ] ::1 /subject/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 3   [ RunTime:0.2919s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000442s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000825s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002359s ]
+
+[ 2017-08-21T00:59:05+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0923s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0188s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学科介绍' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000450s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001331s ]
+

@@ -248,8 +248,13 @@
 
         <!-- Load and execute javascript code used only in this page -->
         <script src="<?php echo (C("JS_PATH")); ?>pages/uiTables.js"></script>
-        <script>$(function () {
-                                                UiTables.init();
-                                            });</script>
+        <script>
+            $(function(){
+                UiTables.init();
+            });
+            $(document).ready(function () {
+                $('.form-control').attr('placeholder','搜索');
+                $('.dataTables_info').html('共'+$('#example-datatable tbody tr').length+'条记录')})
+        </script>
     </body>
 </html>
