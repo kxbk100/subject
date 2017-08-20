@@ -1,7 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <html>
-
 <head>
     <!-- meta -->
     <meta charset="utf-8">
@@ -43,8 +42,8 @@
 </head>
 
 <body class="sticky-header-on tablet-sticky-header">
-<div id="fb-root"></div>
 
+<div id="fb-root"></div>
 <!-- Container -->
 <div class="container">
     <!-- Header -->
@@ -148,15 +147,13 @@
         </div>
     </header>
     <!-- /Header -->
-
-
     <section id="content">
 
         <!-- Page Heading -->
         <section class="section page-heading animate-onscroll">
 
-            <h1>学子风采</h1>
-            <p class="breadcrumb"><a href="<?php echo (C("GOTO")); ?>">首页</a> -> 学子风采</p>
+            <h1><?php echo ($result['title']); ?></h1>
+            <p class="breadcrumb"><a href="<?php echo (C("GOTO")); ?>">首页</a> -> 通知公告</p>
 
         </section>
         <!-- Page Heading -->
@@ -164,48 +161,82 @@
 
         <!-- Section -->
         <section class="section full-width-bg gray-bg">
+
             <div class="row">
+
                 <div class="col-lg-9 col-md-9 col-sm-8">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="blog-post big">
-                            <div class="post-image" style="width: 30%">
-                                <img src="<?php echo ($vo["small_path"]); ?>" alt="">
+                    <!-- Single Blog Post -->
+                    <div class="blog-post-single">
+
+                        <div class="post-meta animate-onscroll">
+                            <span>作者：<?php echo ($result['author']); ?></span>
+                            <span><?php echo ($result['time']); ?></span>
+                        </div>
+
+                        <div class="post-content">
+
+                            <p class="animate-onscroll"><?php echo ($result['content']); ?></p>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="row animate-onscroll">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">
+                                <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($result['pre']); ?>"
+                                   class="button big previous">上一篇</a>
                             </div>
 
-                            <h4 class="post-title"><a href="<?php echo (C("GOTO")); ?>Home/Student/showStudent/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a></h4>
-
-                            <div class="post-meta">
-                                <span><?php echo ($vo["time"]); ?></span>
+                            <div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">
+                                <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($result['next']); ?>"
+                                   class="button big next">下一篇</a>
                             </div>
 
-                            <p><?php echo (msubstr($vo["content"],0,100,'utf-8',true)); ?><!--限定字数--></p>
+                        </div>
+                        <!-- /Pagination -->
 
-                            <a href="<?php echo (C("GOTO")); ?>Home/Student/showStudent/<?php echo ($vo["id"]); ?>" class="button read-more-button big button-arrow">More</a>
-                            </div><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </div>
                     </div>
-                    <div class="text-center animate-onscroll">
-                        <div class="yahoo2">
-                            <?php echo ($page); ?>
+                    <!-- /Single Blog Post -->
+                    <!-- related-articles -->
+                    <div class="related-articles">
+
+                        <h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 更多动态<a href="<?php echo (C("GOTO")); ?>Home/News/showList/p/1"
+                                                                                                      class="pull-right">More</a>
+                        </h3>
+                        <div class="row">
+                            <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 col-md-4 col-sm-4">
+
+                                    <!-- Blog Post -->
+                                    <div class="blog-post animate-onscroll">
+
+                                        <div class="post-image">
+                                            <img src="<?php echo ($vo["small_path"]); ?>" alt="">
+                                        </div>
+
+                                        <h4 class="post-title"><a
+                                                href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                                        </h4>
+
+                                        <div class="post-meta">
+                                            <span>作者：<?php echo ($vo["author"]); ?></span>
+                                            <span><?php echo ($vo["time"]); ?></span>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Blog Post -->
+
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+
                         </div>
+
                     </div>
+                    <!-- /related-articles -->
                 </div>
 
-                <!-- Sidebar -->
                 <div class="col-lg-3 col-md-3 col-sm-4 sidebar">
-                    <div class="sidebar-box white">
-                        <h3><i class="icon-comment"></i> 学子风采</h3>
-
-                        <div class="banner-wrapper">
-                            <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Student/showList/p/1">
-                                <i class="icons icon-calendar"></i>
-                                <h4>学子风采</h4>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="sidebar-box white">
+                    <!-- /Featured Video -->                        <!-- Upcoming Events -->
+                    <div class="sidebar-box white animate-onscroll">
                         <h3><i class="icon-camera"></i> 公告通知</h3>
                         <ul class="upcoming-events">
 
@@ -227,70 +258,69 @@
                                 </li>
                                 <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
 
-
-
                         </ul>
-                        <a href=<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1" class="button transparent button-arrow">更多公告</a>
+                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1" class="button transparent button-arrow">更多公告</a>
                     </div>
+
                 </div>
-                <!-- /Sidebar -->
+
             </div>
         </section>
-<!-- /Section -->
+        <!-- /Section -->
 
-</section>
+    </section>
 
 
-<!-- Footer -->
-<footer id="footer">
+    <!-- Footer -->
+    <footer id="footer">
 
-    <!-- Main Footer -->
-    <div id="main-footer">
+        <!-- Main Footer -->
+        <div id="main-footer">
 
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 animate-onscroll">
-                <img src="<?php echo (C("HOMETOOLS")); ?>img/logo.png" class="img-responsive center-block"
-                     style=" vertical-align:middle">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12  col-lg-offset-2 col-md-offset-2 animate-onscroll">
-                <ul class="list-unstyled">
-                    <li>地址：杭州市留和路318号浙江科技学院习得园C2楼</li>
-                    <li>邮件：itee@zust.edu.cn</li>
-                    <li>电话：0571-85070300</li>
-                    <li>邮编：310023</li>
-                </ul>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 animate-onscroll">
+                    <img src="<?php echo (C("HOMETOOLS")); ?>img/logo.png" class="img-responsive center-block"
+                         style=" vertical-align:middle">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12  col-lg-offset-2 col-md-offset-2 animate-onscroll">
+                    <ul class="list-unstyled">
+                        <li>地址：杭州市留和路318号浙江科技学院习得园C2楼</li>
+                        <li>邮件：itee@zust.edu.cn</li>
+                        <li>电话：0571-85070300</li>
+                        <li>邮编：310023</li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>
-
-    </div>
-    <!-- /Main Footer -->
+        <!-- /Main Footer -->
 
 
-    <!-- Lower Footer -->
-    <div id="lower-footer">
+        <!-- Lower Footer -->
+        <div id="lower-footer">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-lg-12 col-md-12 col-sm-12 animate-onscroll">
-                <p class="copyright text-center">Copyright © 2012-2017 ZUST ITEE All Rights Reserved 浙江科技学院
-                    信息与电子工程学院 版权所有
-                </p>
+                <div class="col-lg-12 col-md-12 col-sm-12 animate-onscroll">
+                    <p class="copyright text-center">Copyright © 2012-2017 ZUST ITEE All Rights Reserved 浙江科技学院
+                        信息与电子工程学院 版权所有
+                    </p>
+                </div>
+
+
             </div>
 
-
         </div>
-
-    </div>
-    <!-- /Lower Footer -->
+        <!-- /Lower Footer -->
 
 
-</footer>
-<!-- /Footer -->
+    </footer>
+    <!-- /Footer -->
 
 
-<!-- Back To Top -->
-<a href="#" id="button-to-top"><i class="icons icon-up-dir"></i></a>
+    <!-- Back To Top -->
+    <a href="#" id="button-to-top"><i class="icons icon-up-dir"></i></a>
 
 </div>
 <!-- /Container -->

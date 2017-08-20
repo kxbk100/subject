@@ -289,7 +289,6 @@
     }
     $(document).ready(function () {
         $('.form-control').attr('placeholder','搜索');
-        $('.dataTables_info').html('共'+$('#example-datatable tbody tr').length+'条记录');
     })
 </script>
 </body>
