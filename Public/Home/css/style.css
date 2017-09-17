@@ -30,6 +30,11 @@ body.boxed-layout{
 .yahoo2 a.prev{border:#ccdbe4 2px solid;margin:0px 10px 0px 0px;}
 .yahoo2 a.prev:hover{border:#2b55af 2px solid;}
 
+/*.col-sm-12{*/
+	/*padding-left: 50px;*/
+	/*padding-right: 50px;*/
+/*}*/
+
 img{
 	max-width:100%;
 }
@@ -1314,6 +1319,7 @@ h6.shortcodes-caption{
 .post-meta{
 	margin-bottom:15px;
 	line-height:16px;
+	margin-top: 15px;
 }
 
 .post-meta>span{
@@ -3997,6 +4003,10 @@ a.button.details-button:hover:after{
 	opacity:0;
 	-moz-opacity:0;
 	-khtml-opacity:0;
+}
+
+.bannerhover a{
+	color: #0b0b0b;
 }
 
 .banner.donate-banner{

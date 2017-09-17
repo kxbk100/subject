@@ -27,4 +27,8 @@ class PassagesController extends Controller {
 		$this->display();
 	}
 
+	public function time(){
+	    $this->display();
+	}
+
 }
