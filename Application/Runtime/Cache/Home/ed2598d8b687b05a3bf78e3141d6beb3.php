@@ -25,7 +25,14 @@
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
+            display: none;          
+        }
+         .right {
             display: none;
+        }
+
+        .right:first-child {
+            display: block
         }
     </style>
     <!-- JQuery -->
@@ -177,10 +184,13 @@
                 <!-- Sidebar -->
                 <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
                     <div class="sidebar-box white">
-                        <h3><span style="padding-right: 15px;color: #4174c5;" id="content1"
-                              onmouseover="changeContent(this)">公告通知</span>|</h3>
+                        <h3><span style="padding-right: 8px;color: #4174c5;" id="content1"
+                              onmouseover="changeContent(this)">公告通知</span>|
+                              <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
+                        </h3>
+                    <div id="right">
+                        <div id="aboutcontent1" class="right">
                         <ul class="upcoming-events">
-
                             <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
                                 <li>
                                     <div class="date">
@@ -198,11 +208,35 @@
                                     </div>
                                 </li>
                                 <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
-
-
                         </ul>
                         <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
                            class="button transparent button-arrow">更多公告</a>
+                        </div>
+
+                        <div id="aboutcontent2" class="right">
+                        <ul class="upcoming-events">
+                            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
+                                <li>
+                                    <div class="date">
+                                    <span>
+                                        <span class="day"><?php echo ($vo["day"]); ?></span>
+                                        <span class="month"><?php echo ($vo["month"]); ?>月</span>
+                                    </span>
+                                    </div>
+
+                                    <div class="event-content">
+                                        <h6>
+                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                                        </h6>
+
+                                    </div>
+                                </li>
+                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </ul>
+                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
+                           class="button transparent button-arrow">更多活动</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 <!-- /Sidebar -->

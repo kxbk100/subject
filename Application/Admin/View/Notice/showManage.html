@@ -126,6 +126,17 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">大事记管理</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/Time/showAdd">大事记发布</a>
+                                        </li>
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/Time/showManage">大事记删改</a>
+                                        </li>
+                                    </ul>
+                        </li>
                     </ul>
 
                     <div class="sidebar-separator push">
@@ -249,8 +260,7 @@
                                        data-toggle="tooltip" title="修改"
                                        class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
                                     <a onclick="return del()" href="{$Think.config.GOTO}Admin/Notice/delete?id={$vo.id}"
-                                       data-toggle="tooltip" title="删除" class="btn btn-effect-ripple btn-xs btn-danger"><i
-                                            class="fa fa-times"></i></a>
+                                       data-toggle="tooltip" title="删除" class="btn btn-effect-ripple btn-xs btn-danger"><i class="fa fa-times"></i></a>
                                 </td>
                             </tr>
                             </volist>
