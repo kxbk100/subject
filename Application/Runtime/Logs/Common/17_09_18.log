@@ -1,0 +1,12 @@
+[ 2017-09-18T17:48:55+08:00 ] 192.168.1.135 /subject/index.php/jackbox/css/jackbox.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+ERR: 无法加载模块:Jackbox
+
+[ 2017-09-18T17:51:19+08:00 ] 192.168.1.135 /subject/index.php/News/showList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+ERR: 无法加载模块:News
+
