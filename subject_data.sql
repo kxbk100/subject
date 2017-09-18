@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-08-13 01:12:06
+Date: 2017-09-18 18:57:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -78,29 +78,30 @@ CREATE TABLE `passages` (
   `time` datetime NOT NULL,
   `first` char(255) NOT NULL,
   `second` char(255) NOT NULL,
+  `third` char(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=121213 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of passages
 -- ----------------------------
-INSERT INTO `passages` VALUES ('1', '学科介绍', '0', '<p>0</p>', '2017-08-05 08:45:23', '学科介绍', '学科简介');
-INSERT INTO `passages` VALUES ('2', '本科教育', '0', '0', '2017-08-05 08:45:23', '人才培养', '本科教育');
-INSERT INTO `passages` VALUES ('3', '研究生教育', '0', '0', '2017-08-05 08:45:23', '人才培养', '研究生教育');
-INSERT INTO `passages` VALUES ('4', '项目介绍', '0', '0', '2017-08-05 08:45:23', '项目竞赛', '项目介绍');
-INSERT INTO `passages` VALUES ('5', '竞赛介绍', '0', '0', '2017-08-05 08:45:23', '项目竞赛', '竞赛介绍');
-INSERT INTO `passages` VALUES ('6', '竞赛获奖', '0', '0', '2017-08-05 08:45:23', '项目竞赛', '竞赛获奖');
-INSERT INTO `passages` VALUES ('7', '项目立项', '0', '0', '2017-08-05 08:45:23', '研究成果', '项目立项');
-INSERT INTO `passages` VALUES ('8', '论文发表', '0', '0', '2017-08-05 08:45:23', '研究成果', '论文发表');
-INSERT INTO `passages` VALUES ('9', '已有著作', '0', '0', '2017-08-05 08:45:23', '研究成果', '已有著作');
-INSERT INTO `passages` VALUES ('10', '师资力量', '0', '0', '2017-08-05 08:45:23', '资源环境', '师资力量');
-INSERT INTO `passages` VALUES ('11', '硬件条件', '0', '0', '2017-08-05 08:45:23', '资源环境', '硬件条件');
-INSERT INTO `passages` VALUES ('12', '校企合作', '0', '0', '2017-08-05 08:45:23', '资源环境', '校企合作');
-INSERT INTO `passages` VALUES ('13', '招生简章', '0', '0', '2017-08-05 08:45:23', '招生信息', '招生简章');
-INSERT INTO `passages` VALUES ('14', '招生通知', '0', '0', '2017-08-05 08:45:23', '招生信息', '招生通知');
-INSERT INTO `passages` VALUES ('15', '招生流程', '0', '0', '2017-08-05 08:45:23', '招生信息', '招生流程');
-INSERT INTO `passages` VALUES ('16', '招生问答', '0', '0', '2017-08-05 08:45:23', '招生信息', '招生问答');
-INSERT INTO `passages` VALUES ('17', '联系我们', '0', '0', '2017-08-05 08:45:23', '招生信息', '联系我们');
+INSERT INTO `passages` VALUES ('1', '一流学科', '0', '0', '2017-08-05 08:45:23', '学科介绍', '一流学科', '');
+INSERT INTO `passages` VALUES ('9', '本科教育', '0', '0', '2017-08-05 08:45:23', '人才培养', '本科教育', '');
+INSERT INTO `passages` VALUES ('10', '研究生教育', '0', '0', '2017-08-05 08:45:23', '人才培养', '研究生教育', '');
+INSERT INTO `passages` VALUES ('11', '项目介绍', '0', '0', '2017-08-05 08:45:23', '学生成果', '项目介绍', '');
+INSERT INTO `passages` VALUES ('12', '竞赛介绍', '0', '0', '2017-08-05 08:45:23', '学生成果', '竞赛介绍', '');
+INSERT INTO `passages` VALUES ('13', '竞赛获奖', '0', '0', '2017-08-05 08:45:23', '学生成果', '竞赛获奖', '');
+INSERT INTO `passages` VALUES ('5', '项目立项', '0', '0', '2017-08-05 08:45:23', '学术研究', '学科成果', '项目立项');
+INSERT INTO `passages` VALUES ('6', '论文发表', '0', '0', '2017-08-05 08:45:23', '学术研究', '学科成果', '论文发表');
+INSERT INTO `passages` VALUES ('7', '专著教材', '0', '0', '2017-08-05 08:45:23', '学术研究', '学科成果', '专著教材');
+INSERT INTO `passages` VALUES ('14', '硬件条件', '0', '0', '2017-08-05 08:45:23', '资源环境', '硬件条件', '');
+INSERT INTO `passages` VALUES ('15', '校企合作', '0', '0', '2017-08-05 08:45:23', '资源环境', '校企合作', '');
+INSERT INTO `passages` VALUES ('16', '实习信息', '0', '0', '2017-08-05 08:45:23', '招生就业', '实习信息', '');
+INSERT INTO `passages` VALUES ('17', '就业信息', '0', '0', '2017-08-05 08:45:23', '招生就业', '就业信息', '');
+INSERT INTO `passages` VALUES ('8', '知识产权', '0', '0', '2017-08-05 08:45:23', '学术研究', '学科成果', '知识产权');
+INSERT INTO `passages` VALUES ('3', '学科团队', '0', '0', '2017-09-17 10:41:06', '学术研究', '学科团队', '');
+INSERT INTO `passages` VALUES ('2', '学科方向', '0', '0', '2017-09-17 10:39:50', '学术研究', '学科方向', '');
+INSERT INTO `passages` VALUES ('4', '学科成果', '0', '0', '2017-09-17 10:41:32', '学术研究', '学科成果', '');
 
 -- ----------------------------
 -- Table structure for picture
