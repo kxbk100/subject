@@ -9,8 +9,8 @@ class IndexController extends Controller {
 		$picture = M('picture');
 
 		$picture_data = $picture->order('id')->select();
-		$news_data = $news->order('time desc')->limit(3)->select();
-		$notice_data = $notice->order('time desc')->limit(5)->select();
+		$news_data = $news->order('istop desc,gtime desc')->limit(3)->select();
+		$notice_data = $notice->order('istop desc,time desc')->limit(5)->select();
 
 	    //去除news内容的html标记
 	    for($i=0;$i<count($news_data);$i++){
