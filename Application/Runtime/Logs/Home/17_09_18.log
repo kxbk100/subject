@@ -1,0 +1,1159 @@
+[ 2017-09-18T19:02:39+08:00 ] ::1 /GitHubDesktop/subject/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002063s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-09-18T19:06:17+08:00 ] ::1 /GitHubDesktop/subject/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001868s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0011s ]
+ERR: 1054:Unknown column 'istop' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5  
+ERR: 1054:Unknown column 'istop' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5  
+
+[ 2017-09-18T19:16:07+08:00 ] ::1 /GitHubDesktop/subject/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002170s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000239s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003604s ]
+
+[ 2017-09-18T19:18:05+08:00 ] ::1 /GitHubDesktop/subject/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002139s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002138s ]
+
+[ 2017-09-18T19:20:12+08:00 ] ::1 /GitHubDesktop/subject/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003944s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001878s ]
+
+[ 2017-09-18T19:20:16+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/time
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001823s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000313s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000411s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004086s ]
+
+[ 2017-09-18T19:33:44+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002458s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003183s ]
+
+[ 2017-09-18T19:34:30+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002337s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学科介绍' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001932s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002923s ]
+
+[ 2017-09-18T19:34:43+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002128s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001704s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004579s ]
+
+[ 2017-09-18T19:34:47+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002345s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001565s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002091s ]
+
+[ 2017-09-18T19:34:50+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001667s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001945s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001831s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002055s ]
+
+[ 2017-09-18T19:35:00+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001753s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='研究成果' )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003156s ]
+
+[ 2017-09-18T19:35:04+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003004s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='资源环境' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026854s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002009s ]
+
+[ 2017-09-18T19:35:19+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Student/showList/p/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0138s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `student` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 0,10   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001459s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001873s ]
+
+[ 2017-09-18T19:35:31+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002681s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='资源环境' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026274s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002214s ]
+
+[ 2017-09-18T19:35:35+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001720s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE ( first='资源环境' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002638s ]
+
+[ 2017-09-18T19:35:39+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001772s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0173s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生信息' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003245s ]
+
+[ 2017-09-18T19:36:14+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003139s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001908s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001989s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002176s ]
+
+[ 2017-09-18T19:55:18+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001864s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001944s ]
+
+[ 2017-09-18T19:55:22+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002655s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001985s ]
+
+[ 2017-09-18T19:55:25+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002726s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学生成果' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002283s ]
+
+[ 2017-09-18T19:55:28+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001805s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0135s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0191s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0184s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学生成果' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030146s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005733s ]
+
+[ 2017-09-18T19:55:32+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001784s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0159s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学生成果' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002030s ]
+
+[ 2017-09-18T19:55:37+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002357s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002252s ]
+
+[ 2017-09-18T19:55:41+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001762s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0162s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0149s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001923s ]
+
+[ 2017-09-18T19:55:45+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001845s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001868s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003305s ]
+
+[ 2017-09-18T19:55:47+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001823s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001797s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006604s ]
+
+[ 2017-09-18T19:57:23+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002318s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002429s ]
+
+[ 2017-09-18T19:57:36+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001846s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0011s ]
+ERR: 1054:Unknown column 'istop' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3  
+ERR: 1054:Unknown column 'istop' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3  
+
+[ 2017-09-18T19:59:26+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002952s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001782s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003944s ]
+
+[ 2017-09-18T20:00:18+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001991s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002696s ]
+
+[ 2017-09-18T20:00:38+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002491s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001796s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002461s ]
+
+[ 2017-09-18T20:01:15+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033611s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002703s ]
+
+[ 2017-09-18T20:01:46+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003369s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002093s ]
+
+[ 2017-09-18T20:02:35+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002836s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003346s ]
+
+[ 2017-09-18T20:03:01+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002220s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001517s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002982s ]
+
+[ 2017-09-18T20:03:07+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002774s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001800s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003056s ]
+
+[ 2017-09-18T20:03:21+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001734s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002390s ]
+
+[ 2017-09-18T20:03:29+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002052s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001398s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001812s ]
+
+[ 2017-09-18T20:04:08+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/time
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001936s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000363s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000495s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001986s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002436s ]
+
+[ 2017-09-18T20:13:36+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001498s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 150 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 151 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 165 行.
+NOTIC: [8] Undefined variable: sons D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 167 行.
+NOTIC: [8] Undefined variable: notice D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 181 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 215 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 224 行.
+NOTIC: [8] Undefined variable: result D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 229 行.
+NOTIC: [8] Undefined variable: news D:\php\GitHubDesktop\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001768s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001827s ]
+
+[ 2017-09-18T20:13:44+08:00 ] ::1 /GitHubDesktop/subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002099s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002209s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002379s ]
+
+[ 2017-09-18T20:13:47+08:00 ] ::1 /GitHubDesktop/subject/index.php/Home/Passages/showPassages/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002338s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002227s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002348s ]
+
