@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IE 9]>         <html class="no-js lt-ie10" lang="ch-zn"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="zh-cn"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="zh-cn"> <!--<![endif]-->
      <head>
         <meta charset="utf-8">
@@ -42,9 +42,9 @@
 
     </head>
     <body>
-        
+       
         <div id="page-wrapper" class="page-loading">
-           
+            
             <div class="preloader">
                 <div class="inner">
                     <!-- Animation spinner for all modern browsers -->
@@ -54,9 +54,7 @@
                     <h3 class="text-primary visible-lt-ie10"><strong>Loading..</strong></h3>
                 </div>
             </div>
-            <!-- END Preloader -->
-
-           
+            
             <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
                 
                 <!-- Main Sidebar -->
@@ -170,7 +168,6 @@
                                 </a>
                             </li>
                             <!-- END Main Sidebar Toggle Button -->
-
                         </ul>
                         <!-- END Left Header Navigation -->
 
@@ -208,7 +205,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="header-section">
-                                        <h1>公告管理</h1>
+                                        <h1>大事记管理</h1>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 hidden-xs">
@@ -226,31 +223,70 @@
                         <div class="block full">
                             <!-- Get Started Title -->
                             <div class="block-title">
-                                <h2>文章修改</h2>
+                                <h2>大事记修改</h2>
                             </div>
-                            <!-- END Get Started Title -->
-
-                            <!-- Get Started Content -->
-                            <form action="{$Think.config.GOTO}Admin/Passages/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                            <form action="{$Think.config.GOTO}/Admin/Notice/add" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-text-input">标题</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="example-text-input" name="title" class="form-control" required="required" value="{$result['title']}">
+                                            <label class="col-md-3 control-label" for="example-select2">年份</label>
+                                            <div class="col-md-5">
+                                                <select id="example-select2" name="example-select2" class="select-select2" style="width: 100%;" >
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2014">2014</option>
+                                                    <option value="2013">2013</option>
+                                                    <option value="2012">2012</option>
+                                                    <option value="2011">2011</option>
+                                                    <option value="2010">2010</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2003">2003</option>
+                                                    <option value="2002">2002</option>
+                                                    <option value="2001">2001</option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="1999">1999</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1996">1996</option>
+                                                    <option value="1995">1995</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1990">1990</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-text-input">发布人</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="example-text-input" name="author" class="form-control" required="required" value="{$result['author']}">
+                                            <label class="col-md-3 control-label" for="example-text-input">月份</label>
+                                            <div class="col-md-5">
+                                                <select id="example-select2" name="example-select2" class="select-select2" style="width: 100%;" >
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-3 control-label" for="example-textarea-input">内容</label>
                                             <div class="col-md-8">
-                                                <script id="editor" type="text/plain" style="height: 300px;">{$result['content']}</script>
+                                                <script id="editor" type="text/plain" style="height: 300px;"></script>
                                             </div>
                                         </div>
-                                        <input type="hidden" value="{$result['id']}" name="id">
                                         
                                         <div class="form-group form-actions">
                                             <div class="col-md-9 col-md-offset-3">
@@ -259,7 +295,6 @@
                                             </div>
                                         </div>
                                     </form>
-                            <!-- END Get Started Content -->
                         </div>
                         <!-- END Get Started Block -->
                     </div>

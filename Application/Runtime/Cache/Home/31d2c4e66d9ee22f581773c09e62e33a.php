@@ -1,7 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <html>
-
 <head>
     <!-- meta -->
     <meta charset="utf-8">
@@ -25,14 +24,7 @@
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
-            display: none;          
-        }
-         .right {
             display: none;
-        }
-
-        .right:first-child {
-            display: block
         }
     </style>
     <!-- JQuery -->
@@ -46,19 +38,6 @@
                 navigationType: "none",
             });
         });
-    </script>
-    <script>
-        var currentNode = "content1";
-        var changeContent = function (obj) {
-            //之前的选项恢复原状
-            document.getElementById(currentNode).style.color = "black";
-            document.getElementById("about" + currentNode).style.display = "none";
-            //currentNode指向新的节点
-            currentNode = obj.getAttribute("id");
-            //设置新的选项
-            document.getElementById(currentNode).style.color = "#4174c5";
-            document.getElementById("about" + currentNode).style.display = "block";
-        }
     </script>
 </head>
 
@@ -163,15 +142,14 @@
         </div>
     </header>
     <!-- /Header -->
-
-
     <section id="content">
 
         <!-- Page Heading -->
         <section class="section page-heading animate-onscroll">
 
-            <h1>学科动态</h1>
-            <p class="breadcrumb"><a href="<?php echo (C("GOTO")); ?>">首页</a> -> 学科动态</p>
+            <h1><?php echo ($result['title']); ?>123123123</h1>
+            <p class="breadcrumb"><a href="<?php echo (C("GOTO")); ?>">首页</a> -> <?php echo ($result['first']); ?> -> <?php echo ($result['second']); ?>
+            </p>
 
         </section>
         <!-- Page Heading -->
@@ -182,108 +160,124 @@
 
             <div class="row">
                 <!-- Sidebar -->
-                <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 sidebar">
                     <div class="sidebar-box white">
-                        <h3><span style="padding-right: 8px;color: #4174c5;" id="content1"
-                              onmouseover="changeContent(this)">公告通知</span>|
-                              <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
-                        </h3>
-                    <div id="right">
-                        <div id="aboutcontent1" class="right">
-                        <ul class="upcoming-events">
-                            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
-                                <li>
-                                    <div class="date">
+                        <h3><i class="icon-comment"></i> <?php echo ($result['first']); ?></h3>
+
+                        <?php if(is_array($sons)): $i = 0; $__LIST__ = $sons;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="banner-wrapper">
+                                <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($vo["id"]); ?>">
+                                    <i class="icons icon-calendar"></i>
+                                    <h4><?php echo ($vo["second"]); ?></h4>
+                                </a>
+                            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </div>
+
+                    <div class="hidden-xs">
+                        <!-- /Featured Video -->                        <!-- Upcoming Events -->
+                        <div class="sidebar-box white animate-onscroll">
+                            <h3><i class="icon-camera"></i> 公告通知</h3>
+                            <ul class="upcoming-events">
+
+                                <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
+                                    <li>
+                                        <div class="date">
 									<span>
 										<span class="day"><?php echo ($vo["day"]); ?></span>
 										<span class="month"><?php echo ($vo["month"]); ?>月</span>
 									</span>
-                                    </div>
+                                        </div>
 
-                                    <div class="event-content">
-                                        <h6>
-                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
-                                        </h6>
+                                        <div class="event-content">
+                                            <h6>
+                                                <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                                            </h6>
 
-                                    </div>
-                                </li>
-                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
-                           class="button transparent button-arrow">更多公告</a>
+                                        </div>
+                                    </li>
+                                    <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+                            </ul>
+                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
+                               class="button transparent button-arrow">更多公告</a>
                         </div>
-
-                        <div id="aboutcontent2" class="right">
-                        <ul class="upcoming-events">
-                            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
-                                <li>
-                                    <div class="date">
-                                    <span>
-                                        <span class="day"><?php echo ($vo["day"]); ?></span>
-                                        <span class="month"><?php echo ($vo["month"]); ?>月</span>
-                                    </span>
-                                    </div>
-
-                                    <div class="event-content">
-                                        <h6>
-                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
-                                        </h6>
-
-                                    </div>
-                                </li>
-                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
-                           class="button transparent button-arrow">更多活动</a>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /Sidebar -->
-
                 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Blog Post -->
-                                <div class="list-passage">
+
+                    <!-- Single Blog Post -->
+                    <div class="blog-post-single">
+
+
+                        <div class="post-content">
+
+                            <p class="animate-onscroll"><?php echo ($result['content']); ?>1111111</p>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <!--<div class="row animate-onscroll">-->
+
+                        <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">-->
+                        <!--<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['pre']); ?>"-->
+                        <!--class="button big previous">上一篇</a>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">-->
+                        <!--<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['next']); ?>"-->
+                        <!--class="button big next">下一篇</a>-->
+                        <!--</div>-->
+
+                        <!--</div>-->
+                        <!-- /Pagination -->
+
+                    </div>
+                    <!-- /Single Blog Post -->
+
+
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+
+                        <h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 更多动态<a
+                                href="<?php echo (C("GOTO")); ?>Home/News/showList/p/1"
+                                class="pull-right">More</a>
+                        </h3>
+                        <div class="row">
+
+                            <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 col-md-4 col-sm-4">
+
+                                    <!-- Blog Post -->
                                     <div class="blog-post animate-onscroll">
-                                        <div class="post-content">
-                                            <div class="post-side-meta">
-                                                <div class="date">
-                                                    <span class="day"><?php echo ($vo["day"]); ?></span>
-                                                    <span class="month"><?php echo ($vo["month"]); ?>月</span>
-                                                </div>
-                                            </div>
-                                            <div class="post-header">
-                                                <h2><a href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
-                                                </h2>
-                                                <div class="post-meta">
-                                                    <span>作者：<?php echo ($vo["author"]); ?></span>
-                                                    <span><?php echo ($vo["time"]); ?></span>
-                                                </div>
-                                            </div>
-                                            <div class="post-exceprt">
-                                                <p><?php echo (msubstr($vo["content"],0,50,'utf-8',true)); ?></p>
-                                            </div>
+
+                                        <div class="post-image">
+                                            <img src="<?php echo ($vo["small_path"]); ?>" alt="">
                                         </div>
+
+                                        <h4 class="post-title"><a
+                                                href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+                                        </h4>
+
+                                        <div class="post-meta">
+                                            <span>作者：<?php echo ($vo["author"]); ?></span>
+                                            <span><?php echo ($vo["time"]); ?></span>
+                                        </div>
+
                                     </div>
-                                </div>
-                                <!-- /Blog Post --><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    <!-- /Blog Post -->
 
-                        </div>
-                    </div>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
 
-                    <div class="text-center animate-onscroll">
 
-                        <div class="yahoo2">
-                            <?php echo ($page); ?>
                         </div>
 
                     </div>
+                    <!-- /Related Articles -->
+
 
                 </div>
             </div>
-
 
         </section>
         <!-- /Section -->
