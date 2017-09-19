@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="ch-zn"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="ch-zn"> <!--<![endif]-->
      <head>
@@ -14,20 +14,20 @@
 
         <!-- Stylesheets -->
         <!-- Bootstrap is included in its original form, unaltered -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>bootstrap.min.css">
 
         <!-- Related styles of various icon packs and plugins -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}plugins.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>plugins.css">
 
         <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}main.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>main.css">
 
        
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}themes.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>themes.css">
         <!-- END Stylesheets -->
 
         <!-- Modernizr (browser feature detection library) -->
-         <script src="{$Think.config.JS_PATH}vendor/modernizr-3.3.1.min.js"></script>
+         <script src="<?php echo (C("JS_PATH")); ?>vendor/modernizr-3.3.1.min.js"></script>
     </head>
     <body>
         
@@ -49,7 +49,7 @@
                 <div id="sidebar">
                     <!-- Sidebar Brand -->
                     <div id="sidebar-brand" class="themed-background">
-                        <a href="{$Think.config.GOTO}Admin/index/showAdmin" class="sidebar-title">
+                        <a href="<?php echo (C("GOTO")); ?>Admin/index/showAdmin" class="sidebar-title">
                              <span class="sidebar-nav-mini-hide"><strong>ZUST软件工程管理中心</strong></span>
                         </a>
                     </div>
@@ -65,10 +65,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-list-alt sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">公告管理</span></a>
                                     <ul>
                                                 <li>
-                                                    <a href="{$Think.config.GOTO}Admin/Notice/showAdd">公告发布</a>
+                                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showAdd">公告发布</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{$Think.config.GOTO}Admin/Notice/showManage">公告删改</a>
+                                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showManage">公告删改</a>
                                                 </li>
                                     </ul>
                                 </li>
@@ -76,10 +76,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-book sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学科动态管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showAdd">学科动态发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/News/showAdd">学科动态发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showManage">学科动态删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/News/showManage">学科动态删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -87,7 +87,7 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-notes_2 sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">文章管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Passages/showManage">文章修改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Passages/showManage">文章修改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -95,10 +95,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学子风采管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd">学子风采发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Student/showAdd">学子风采发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">学子风采删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage">学子风采删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -106,7 +106,7 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">首页幻灯片管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Picture/showModify">首页幻灯片修改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Picture/showModify">首页幻灯片修改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -114,10 +114,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">大事记管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showAdd">大事记发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Time/showAdd">大事记发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showManage" class="active">大事记删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Time/showManage" class="active">大事记删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -135,7 +135,7 @@
                     <div id="sidebar-extra-info" class="sidebar-content sidebar-nav-mini-hide">
                         <div class="text-center">
                             <small>  Copyright &copy; 2012-2017 ZUST ITEE All Rights Reserved <br/>
-                                     <a herf="{$Think.config.GOTO}" >浙江科技学院 信息与电子工程学院</a> 版权所有</small>
+                                     <a herf="<?php echo (C("GOTO")); ?>" >浙江科技学院 信息与电子工程学院</a> 版权所有</small>
                         </div>
                     </div>
                     <!-- END Sidebar Extra Info -->
@@ -164,17 +164,17 @@
                         <ul class="nav navbar-nav-custom pull-right">
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:20px; ">
-                                    <strong>欢迎您，{$name}</strong>
+                                    <strong>欢迎您，<?php echo ($name); ?></strong>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
-                                        <a href="{$Think.config.GOTO}">
+                                        <a href="<?php echo (C("GOTO")); ?>">
                                             <i class="hi hi-home pull-right" style="line-height: 20px;"></i>
                                             网站首页
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Admin/User/logout">
+                                        <a href="<?php echo (C("GOTO")); ?>Admin/User/logout">
                                             <i class="hi hi-off pull-right" style="line-height: 20px;"></i>
                                             注销账号
                                         </a>
@@ -227,19 +227,17 @@
                                     </thead>
                                     <tbody>
 
-                                        <volist name="result" id="vo">
-                                        <tr>
-                                            <td class="text-center">{$vo.id}</td>
-                                            <td class="text-center">{$vo.year}</td>
-                                            <td class="text-center">{$vo.month}</td>
-                                            <td class="text-center">{$vo.content}</td>
+                                        <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                            <td class="text-center"><?php echo ($vo["id"]); ?></td>
+                                            <td class="text-center"><?php echo ($vo["year"]); ?></td>
+                                            <td class="text-center"><?php echo ($vo["month"]); ?></td>
+                                            <td class="text-center"><?php echo ($vo["content"]); ?></td>
                                             <td class="text-center">
-                                                <a href="{$Think.config.GOTO}Admin/Time/showModify?id={$vo.id}" data-toggle="tooltip" title="修改" class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
-                                                <a onclick="return del()" href="{$Think.config.GOTO}Admin/Time/delete?id={$vo.id}"
+                                                <a href="<?php echo (C("GOTO")); ?>Admin/Time/showModify?id=<?php echo ($vo["id"]); ?>" data-toggle="tooltip" title="修改" class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
+                                                <a onclick="return del()" href="<?php echo (C("GOTO")); ?>Admin/Time/delete?id=<?php echo ($vo["id"]); ?>"
                                                 data-toggle="tooltip" title="删除" class="btn btn-effect-ripple btn-xs btn-danger"><i class="fa fa-times"></i></a>
                                             </td>
-                                        </tr>
-                                        </volist>
+                                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                                     </tbody>
                              </table>
@@ -256,13 +254,13 @@
         <!-- END Page Wrapper -->
 
         <!-- jQuery, Bootstrap, jQuery plugins and Custom JS code -->
-        <script src="{$Think.config.JS_PATH}vendor/jquery-2.2.4.min.js"></script>
-        <script src="{$Think.config.JS_PATH}vendor/bootstrap.min.js"></script>
-        <script src="{$Think.config.JS_PATH}plugins.js"></script>
-        <script src="{$Think.config.JS_PATH}app.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>vendor/jquery-2.2.4.min.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>vendor/bootstrap.min.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>plugins.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>app.js"></script>
 
         <!-- Load and execute javascript code used only in this page -->
-        <script src="{$Think.config.JS_PATH}pages/uiTables.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>pages/uiTables.js"></script>
         <script>
             $(function(){
                 UiTables.init();
