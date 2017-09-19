@@ -25,7 +25,14 @@
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
+            display: none;          
+        }
+         .right {
             display: none;
+        }
+
+        .right:first-child {
+            display: block
         }
     </style>
     <!-- JQuery -->
@@ -39,6 +46,19 @@
                 navigationType: "none",
             });
         });
+    </script>
+    <script>
+        var currentNode = "content1";
+        var changeContent = function (obj) {
+            //之前的选项恢复原状
+            document.getElementById(currentNode).style.color = "black";
+            document.getElementById("about" + currentNode).style.display = "none";
+            //currentNode指向新的节点
+            currentNode = obj.getAttribute("id");
+            //设置新的选项
+            document.getElementById(currentNode).style.color = "#4174c5";
+            document.getElementById("about" + currentNode).style.display = "block";
+        }
     </script>
 </head>
 
@@ -163,17 +183,21 @@
                 <!-- Sidebar -->
                 <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
                     <div class="sidebar-box white">
-                        <h3><i class="icon-camera"></i> 公告通知</h3>
+                        <h3><span style="padding-right: 8px;color: #4174c5;" id="content1"
+                              onmouseover="changeContent(this)">公告通知</span>|
+                              <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
+                        </h3>
+                    <div id="right">
+                        <div id="aboutcontent1" class="right">
                         <ul class="upcoming-events">
-
                             <volist name="notice" id="vo">
                                 <!-- Event -->
                                 <li>
                                     <div class="date">
-									<span>
-										<span class="day">{$vo.day}</span>
-										<span class="month">{$vo.month}月</span>
-									</span>
+                                    <span>
+                                        <span class="day">{$vo.day}</span>
+                                        <span class="month">{$vo.month}月</span>
+                                    </span>
                                     </div>
 
                                     <div class="event-content">
@@ -185,11 +209,37 @@
                                 </li>
                                 <!-- /Event -->
                             </volist>
-
-
-
                         </ul>
-                        <a href={$Think.config.GOTO}Home/Notice/showList/p/1" class="button transparent button-arrow">更多公告</a>
+                        <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
+                           class="button transparent button-arrow">更多公告</a>
+                        </div>
+
+                        <div id="aboutcontent2" class="right">
+                        <ul class="upcoming-events">
+                            <volist name="notice" id="vo">
+                                <!-- Event -->
+                                <li>
+                                    <div class="date">
+                                    <span>
+                                        <span class="day">{$vo.day}</span>
+                                        <span class="month">{$vo.month}月</span>
+                                    </span>
+                                    </div>
+
+                                    <div class="event-content">
+                                        <h6>
+                                            <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                        </h6>
+
+                                    </div>
+                                </li>
+                                <!-- /Event -->
+                            </volist>
+                        </ul>
+                        <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
+                           class="button transparent button-arrow">更多活动</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 <!-- /Sidebar -->

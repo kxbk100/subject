@@ -15,8 +15,12 @@ class NoticeController extends Controller {
 		$notice = M('notice');
 		$result = $notice->create();
 		$content = I('post.editorValue','','');
-		$result['content'] = $content;
+		$istop = I('post.first','','');
+		$type = I('post.type','','');
 
+		$result['content'] = $content;
+		$result['istop'] = $istop;
+		$result['type'] = $type;
 		//得到id
 		$id = 0;
 		$con = $notice->query("select id from notice");
@@ -75,7 +79,12 @@ class NoticeController extends Controller {
 		$notice = M('notice');
 		$result = $notice->create();
 		$content = I('post.editorValue','','');
+		$istop = I('post.first','','');
+		$type = I('post.type','','');
+
 		$result['content'] = $content;
+		$result['istop'] = $istop;
+		$type['type'] = $type;
 
 		date_default_timezone_set('PRC');
 		$time = date("Y-m-d H:i:s");

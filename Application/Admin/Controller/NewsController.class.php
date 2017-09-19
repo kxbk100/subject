@@ -15,8 +15,11 @@ class NewsController extends Controller {
 		$news = M('news');
 		$result = $news->create();
 		$content = I('post.editorValue','','');
+		$istop = I('post.first','','');
+
 		$result['content'] = $content;
 		$result['photoName'] = $_FILES['titlePhoto']['name'];
+		$result['istop'] = $istop;
 
 		//得到id
 		$id = 0;
@@ -80,7 +83,6 @@ class NewsController extends Controller {
 			$this->erro('文件上传出错');
 		}
 
-
 	}
 
 	public function showManage(){
@@ -120,7 +122,10 @@ class NewsController extends Controller {
 
 		$result = $news->create();
 		$content = I('post.editorValue','','');
+		$istop = I('post.first','','');
+
 		$result['content'] = $content;
+		$result['istop'] = $istop;
 
 		date_default_timezone_set('PRC');
 		$time = date("Y-m-d H:i:s");

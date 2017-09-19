@@ -12,13 +12,23 @@ class TimeController extends Controller {
 
 	public function add(){
 		$time = M('time');
+
 		$content = I('post.editorValue','','');
-		$year = I('post.year','','');
-		$month = I('post.month','','');
+		$date = I('post.date','','');
+		$title = I('post.title','','');
+
+		$strs = explode('-',$date);
+		$year = $strs[0];
+		$month = $strs[1];
+		$day = $strs[2];
 
 		$result['content'] = $content;
 		$result['year'] = $year;
 		$result['month'] = $month;
+		$result['day'] = $day;
+		$result['title'] = $title;
+		$result['time'] = $date;
+
 		//得到id
 		$id = 0;
 		$con = $time->query("select id from time");
@@ -64,15 +74,22 @@ class TimeController extends Controller {
 	public function modify(){
 		$time = M('time');
 
-		$year = I('post.year','','');
-		$month = I('post.month','','');
 		$content = I('post.editorValue','','');
+		$date = I('post.date','','');
+		$title = I('post.title','','');
+
+		$strs = explode('-',$date);
+		$year = $strs[0];
+		$month = $strs[1];
+		$day = $strs[2];
 
 		$result['content'] = $content;
+		$result['id'] = I('post.id','','');
 		$result['year'] = $year;
 		$result['month'] = $month;
-		$result['id'] = I('post.id','','');
-		var_dump($result);
+		$result['day'] = $day;
+		$result['title'] = $title;
+		$result['time'] = $date;
 
 		$flag = $time->save($result);
 		if($flag){
