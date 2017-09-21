@@ -292,17 +292,45 @@
                                 <h3>
                                     <i class="icon-comment">
                                     </i>
-                                    <?php echo ($result['first']); ?>
+                                    招生介绍
                                 </h3>
-                                <?php if(is_array($sons)): $i = 0; $__LIST__ = $sons;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="banner-wrapper">
+                                
+                                    <div class="banner-wrapper">
                                         <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($vo["id"]); ?>">
                                             <i class="icons icon-calendar">
                                             </i>
                                             <h4>
-                                                <?php echo ($vo["second"]); ?>
+                                                招生简章
                                             </h4>
                                         </a>
-                                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </div>
+                                    <div class="banner-wrapper">
+                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($vo["id"]); ?>">
+                                            <i class="icons icon-calendar">
+                                            </i>
+                                            <h4>
+                                                招生通知
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="banner-wrapper">
+                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($vo["id"]); ?>">
+                                            <i class="icons icon-calendar">
+                                            </i>
+                                            <h4>
+                                                招生流程
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="banner-wrapper">
+                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($vo["id"]); ?>">
+                                            <i class="icons icon-calendar">
+                                            </i>
+                                            <h4>
+                                                招生问答
+                                            </h4>
+                                        </a>
+                                    </div>
                             </div>
                             <!-- /Featured Video -->                        <!--
                             Upcoming Events

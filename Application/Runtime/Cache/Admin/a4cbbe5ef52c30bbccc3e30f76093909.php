@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="ch-zn"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="ch-zn"> <!--<![endif]-->
      <head>
@@ -14,23 +15,24 @@
 
         <!-- Stylesheets -->
         <!-- Bootstrap is included in its original form, unaltered -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>bootstrap.min.css">
 
         <!-- Related styles of various icon packs and plugins -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}plugins.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>plugins.css">
 
         <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}main.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>main.css">
 
        
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}themes.css">
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>themes.css">
         <!-- END Stylesheets -->
 
         <!-- Modernizr (browser feature detection library) -->
-         <script src="{$Think.config.JS_PATH}vendor/modernizr-3.3.1.min.js"></script>
-    </head>
+         <script src="<?php echo (C("JS_PATH")); ?>vendor/modernizr-3.3.1.min.js"></script>
+
+     </head>
     <body>
-        
+
         <div id="page-wrapper" class="page-loading">
            
             <div class="preloader">
@@ -42,14 +44,14 @@
                     <h3 class="text-primary visible-lt-ie10"><strong>Loading..</strong></h3>
                 </div>
             </div>
-           
+            
             <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
                 
                 <!-- Main Sidebar -->
                 <div id="sidebar">
                     <!-- Sidebar Brand -->
                     <div id="sidebar-brand" class="themed-background">
-                        <a href="{$Think.config.GOTO}Admin/index/showAdmin" class="sidebar-title">
+                        <a href="<?php echo (C("GOTO")); ?>Admin/index/showAdmin" class="sidebar-title">
                              <span class="sidebar-nav-mini-hide"><strong>ZUST软件工程管理中心</strong></span>
                         </a>
                     </div>
@@ -65,10 +67,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-list-alt sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">公告管理</span></a>
                                     <ul>
                                                 <li>
-                                                    <a href="{$Think.config.GOTO}Admin/Notice/showAdd">公告发布</a>
+                                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showAdd">公告发布</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{$Think.config.GOTO}Admin/Notice/showManage">公告删改</a>
+                                                    <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showManage">公告删改</a>
                                                 </li>
                                     </ul>
                                 </li>
@@ -76,18 +78,18 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-book sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学科动态管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showAdd">学科动态发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/News/showAdd">学科动态发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showManage">学科动态删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/News/showManage">学科动态删改</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-notes_2 sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">文章管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Passages/showManage" class="active">文章修改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Passages/showManage">文章修改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -95,18 +97,18 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学子风采管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd">学子风采发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Student/showAdd">学子风采发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">学子风采删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage">学子风采删改</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">首页幻灯片管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Picture/showModify">首页幻灯片修改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Picture/showModify" class="active">主页幻灯片修改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -114,10 +116,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">大事记管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showAdd">大事记发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Time/showAdd">大事记发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showManage">大事记删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Time/showManage">大事记删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -125,10 +127,10 @@
                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">招生信息管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showAdd">招生信息发布</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Admissions/showAdd">招生信息发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showManage">招生信息删改</a>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Admissions/showManage">招生信息删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -140,13 +142,11 @@
                         </div>
                         <!-- END Sidebar Content -->
                     </div>
-                    <!-- END Wrapper for scrolling functionality -->
-
-                    <!-- Sidebar Extra Info -->
+                    
                     <div id="sidebar-extra-info" class="sidebar-content sidebar-nav-mini-hide">
                         <div class="text-center">
                             <small>  Copyright &copy; 2012-2017 ZUST ITEE All Rights Reserved <br/>
-                                     <a herf="{$Think.config.GOTO}" >浙江科技学院 信息与电子工程学院</a> 版权所有</small>
+                                     <a herf="" >浙江科技学院 信息与电子工程学院</a> 版权所有</small>
                         </div>
                     </div>
                     <!-- END Sidebar Extra Info -->
@@ -175,17 +175,17 @@
                         <ul class="nav navbar-nav-custom pull-right">
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:20px; ">
-                                    <strong>欢迎您，{$name}</strong>
+                                    <strong>欢迎您，<?php echo ($name); ?></strong>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
-                                        <a href="{$Think.config.GOTO}">
+                                        <a href="<?php echo (C("GOTO")); ?>">
                                             <i class="hi hi-home pull-right" style="line-height: 20px;"></i>
                                             网站首页
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Admin/User/logout">
+                                        <a href="<?php echo (C("GOTO")); ?>Admin/User/logout">
                                             <i class="hi hi-off pull-right" style="line-height: 20px;"></i>
                                             注销账号
                                         </a>
@@ -205,7 +205,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="header-section">
-                                        <h1>文章管理</h1>
+                                        <h1>首页幻灯片管理</h1>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 hidden-xs">
@@ -223,36 +223,78 @@
                         <div class="block full">
                             <!-- Get Started Title -->
                             <div class="block-title">
-                                <h2>文章修改</h2>
+                                <h2>首页幻灯片修改</h2>
                             </div>
-                            <div class="table-responsive">
-                             <table id="example-datatable" class="table table-striped table-bordered table-vcenter">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center" style="width: 50px;">序号</th>
-                                            <th class="text-center">标题</th>
-                                            <th class="text-center" style="width: 150px;">一级栏目</th>
-                                            <th class="text-center" style="width: 150px;">二级栏目</th>
-                                            <th class="text-center" style="width: 75px;">操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                            <form action="<?php echo (C("GOTO")); ?>/Admin/Picture/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" >
+                            
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-text-input">幻灯片一介绍</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="example-text-input" name="description1" class="form-control" value="<?php echo ($result[0]['description']); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">已上传幻灯片一</label>
+                                            <div class="col-md-9">
+                                                <img src="<?php echo ($result[0]['path']); ?>" style="width:60%;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">上传新幻灯片一</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="example-file-input" name="picture1">
+                                            </div>
+                                        </div>
 
-                                        <volist name="result" id="vo">
-                                        <tr>
-                                            <td class="text-center">{$vo.id}</td>
-                                            <td class="text-center">{$vo.title}</td>
-                                            <td class="text-center">{$vo.first}</td>
-                                            <td class="text-center">{$vo.second}</td>
-                                            <td class="text-center">
-                                                <a href="{$Think.config.GOTO}Admin/Passages/showModify?id={$vo.id}" data-toggle="tooltip" title="修改" class="btn btn-effect-ripple btn-xs btn-success"><i class="fa fa-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        </volist>
 
-                                    </tbody>
-                             </table>
-                            </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-text-input">幻灯片二介绍</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="example-text-input" name="description2" class="form-control" value="<?php echo ($result[1]['description']); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">已上传幻灯片二</label>
+                                            <div class="col-md-9">
+                                                <img src="<?php echo ($result[1]['path']); ?>" style="width:60%;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">上传新幻灯片二</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="example-file-input" name="picture2">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-text-input">幻灯片三介绍</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="example-text-input" name="description3" class="form-control" value="<?php echo ($result[2]['description']); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">已上传幻灯片三</label>
+                                            <div class="col-md-9">
+                                                <img src="<?php echo ($result[2]['path']); ?>" style="width:60%;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">上传新幻灯片三</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="example-file-input" name="picture3">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <button type="submit" class="btn btn-effect-ripple btn-primary">发布</button>
+                                                <button type="reset" class="btn btn-effect-ripple btn-danger">重置</button>
+                                            </div>
+                                        </div>
+                            </form>
+
                         </div>
                         <!-- END Get Started Block -->
                     </div>
@@ -265,20 +307,11 @@
         <!-- END Page Wrapper -->
 
         <!-- jQuery, Bootstrap, jQuery plugins and Custom JS code -->
-        <script src="{$Think.config.JS_PATH}vendor/jquery-2.2.4.min.js"></script>
-        <script src="{$Think.config.JS_PATH}vendor/bootstrap.min.js"></script>
-        <script src="{$Think.config.JS_PATH}plugins.js"></script>
-        <script src="{$Think.config.JS_PATH}app.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>vendor/jquery-2.2.4.min.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>vendor/bootstrap.min.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>plugins.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>app.js"></script>
 
-        <!-- Load and execute javascript code used only in this page -->
-        <script src="{$Think.config.JS_PATH}pages/uiTables.js"></script>
-        <script>
-            $(function(){
-                UiTables.init();
-            });
-            $(document).ready(function () {
-                $('.form-control').attr('placeholder','搜索');
-            });
-        </script>
+        <!--富文本编辑器的脚本-->
     </body>
 </html>
