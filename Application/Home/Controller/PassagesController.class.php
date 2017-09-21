@@ -9,7 +9,8 @@ class PassagesController extends Controller {
 		$notice = M('notice');
 
 		$news_data = $news->order('time desc')->limit('0,3')->select();
-		$notice_data = $notice->order('time desc')->limit('0,5')->select();
+		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
+		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 
 		$id = I('path.2','','');
 		$result = $passages->find($id);
@@ -22,6 +23,7 @@ class PassagesController extends Controller {
 
 		$this->assign('news',$news_data);
 		$this->assign('notice',$notice_data);
+		$this->assign('study',$notice_study);
 		$this->assign('sons',$sons);
 		$this->assign('result',$result);
 		$this->display();
@@ -33,7 +35,8 @@ class PassagesController extends Controller {
 		$notice = M('notice');
 
 		$news_data = $news->order('time desc')->limit('0,3')->select();
-		$notice_data = $notice->order('time desc')->limit('0,5')->select();
+		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
+		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 
 		$id = I('path.2','','');
 		$result = $passages->find($id);
@@ -43,6 +46,7 @@ class PassagesController extends Controller {
 
 		$this->assign('news',$news_data);
 		$this->assign('notice',$notice_data);
+		$this->assign('study',$notice_study);
 		$this->assign('third',$third);
 		$this->assign('result',$result);
 		$this->display();
@@ -54,17 +58,18 @@ class PassagesController extends Controller {
 		$notice = M('notice');
 
 		$news_data = $news->order('time desc')->limit('0,3')->select();
-		$notice_data = $notice->order('time desc')->limit('0,5')->select();
+		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
+		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 
 		$id = I('path.2','','');
 		$result = $passages->find($id);
 
-		$third = $passages->where("first='{$result['first']}'")->where("second='{$result['second']}'")->select();
-		array_splice($third, 4 ,1);
+		$sons = $passages->where("first='{$result['first']}'")->select();
 
 		$this->assign('news',$news_data);
 		$this->assign('notice',$notice_data);
-		$this->assign('third',$third);
+		$this->assign('study',$notice_study);
+		$this->assign('sons',$second);
 		$this->assign('result',$result);
 		$this->display();
 	}
@@ -75,7 +80,7 @@ class PassagesController extends Controller {
 		$ini = $time->order('year desc,month desc')->select();
 		foreach ($ini as $item) {
 			$year = $item['year'];
-			$month = $item['month'];
+			$month = $item['month']."/".$item['day'];
 			$result[$year][$month] = $item;
 		}
 
