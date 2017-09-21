@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <html>
 
@@ -9,19 +9,19 @@
     <!-- Title -->
     <title>浙江科技学院软件工程一流学科网</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{$Think.config.HOMETOOLS}img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo (C("HOMETOOLS")); ?>img/favicon.ico">
     <!-- Stylesheets -->
-    <link href="{$Think.config.HOMETOOLS}css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="{$Think.config.HOMETOOLS}css/fontello.css" rel="stylesheet" type="text/css">
-    <link href="{$Think.config.HOMETOOLS}css/flexslider.css" rel="stylesheet" type="text/css">
-    <link href="{$Think.config.HOMETOOLS}js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css"
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/fontello.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/flexslider.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css"
           media="screen"/>
-    <link href="{$Think.config.HOMETOOLS}css/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link href="{$Think.config.HOMETOOLS}css/responsive-calendar.css" rel="stylesheet" type="text/css">
-    <link href="{$Think.config.HOMETOOLS}css/chosen.css" rel="stylesheet" type="text/css">
-    <link href="{$Think.config.HOMETOOLS}jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
-    <link href="{$Think.config.HOMETOOLS}css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
-    <link href="{$Think.config.HOMETOOLS}css/style.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/responsive-calendar.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/chosen.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo (C("HOMETOOLS")); ?>jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo (C("HOMETOOLS")); ?>css/style.css" rel="stylesheet" type="text/css">
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
@@ -36,8 +36,8 @@
         }
     </style>
     <!-- JQuery -->
-    <script src="{$Think.config.HOMETOOLS}js/jquery-1.11.0.min.js"></script>
-    <script src="{$Think.config.HOMETOOLS}js/jquery-ui-1.10.4.min.js"></script>
+    <script src="<?php echo (C("HOMETOOLS")); ?>js/jquery-1.11.0.min.js"></script>
+    <script src="<?php echo (C("HOMETOOLS")); ?>js/jquery-ui-1.10.4.min.js"></script>
     <script>
         $(function () {
             $('.tp-banner').revolution({
@@ -75,7 +75,7 @@
                 <div class="row">
                     <!-- Logo -->
                     <div id="logo" class="col-lg-12 col-md-12 col-sm-12">
-                        <a href="{$Think.config.GOTO}"><img src="{$Think.config.HOMETOOLS}img/logo.png" alt="Logo"></a>
+                        <a href="<?php echo (C("GOTO")); ?>"><img src="<?php echo (C("HOMETOOLS")); ?>img/logo.png" alt="Logo"></a>
                     </div>
                     <!-- /Logo -->
                 </div>
@@ -99,62 +99,62 @@
                 <ul id="navigation">
 
                     <li class="home-button current-menu-item">
-                        <a href="{$Think.config.GOTO}"><i class="icons icon-home"></i></a>
+                        <a href="<?php echo (C("GOTO")); ?>"><i class="icons icon-home"></i></a>
                     </li>
 
                     <li>
                         <span><i class="icons icon-book"></i> 学科介绍</span>
                         <ul>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/1">一流学科</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/time">大事记</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/1">一流学科</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/time">大事记</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <span><i class="icons icon-thumbs-up"></i> 学术研究</span>
                         <ul>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/2">学科方向</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/3">学科团队</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages3/4">学科成果</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/2">学科方向</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/3">学科团队</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages3/4">学科成果</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <span><i class="icons icon-user"></i> 人才培养</span>
                         <ul>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/9">本科教育</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/10">研究生教育</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/9">本科教育</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/10">研究生教育</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <span><i class="icons icon-fire"></i> 学生成果</span>
                         <ul>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/11">项目介绍</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/12">竞赛介绍</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/13">竞赛获奖</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/11">项目介绍</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/12">竞赛介绍</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/13">竞赛获奖</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <span><i class="icons icon-globe"></i> 资源环境</span>
                         <ul>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/14">硬件条件</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/15">校企合作</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/14">硬件条件</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/15">校企合作</a></li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="{$Think.config.GOTO}Home/Student/showList/p/1"><i class="icons icon-group"></i>
+                        <a href="<?php echo (C("GOTO")); ?>Home/Student/showList/p/1"><i class="icons icon-group"></i>
                             学子风采</a>
                     </li>
 
                     <li>
                         <span><i class="icons icon-comment"></i> 招生就业</span>
                         <ul>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist">招生介绍</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/16">实习信息</a></li>
-                            <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/17">就业信息</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist">招生介绍</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/16">实习信息</a></li>
+                            <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/17">就业信息</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -171,7 +171,7 @@
         <section class="section page-heading animate-onscroll">
 
             <h1>学科动态</h1>
-            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> -> 学科动态</p>
+            <p class="breadcrumb"><a href="<?php echo (C("GOTO")); ?>">首页</a> -> 学科动态</p>
 
         </section>
         <!-- Page Heading -->
@@ -191,53 +191,49 @@
                     <div id="right">
                         <div id="aboutcontent1" class="right">
                         <ul class="upcoming-events">
-                            <volist name="notice" id="vo">
-                                <!-- Event -->
+                            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
                                 <li>
                                     <div class="date">
 									<span>
-										<span class="day">{$vo.day}</span>
-										<span class="month">{$vo.month}月</span>
+										<span class="day"><?php echo ($vo["day"]); ?></span>
+										<span class="month"><?php echo ($vo["month"]); ?>月</span>
 									</span>
                                     </div>
 
                                     <div class="event-content">
-                                        <h6><if condition="$vo.istop eq 1">[置顶]</if>
-                                            <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                        <h6><?php if($vo["istop"] == 1): ?>[置顶]<?php endif; ?>
+                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
                                         </h6>
 
                                     </div>
                                 </li>
-                                <!-- /Event -->
-                            </volist>
+                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
-                        <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
+                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
                            class="button transparent button-arrow">更多公告</a>
                         </div>
 
                         <div id="aboutcontent2" class="right">
                         <ul class="upcoming-events">
-                            <volist name="study" id="vo">
-                                <!-- Event -->
+                            <?php if(is_array($study)): $i = 0; $__LIST__ = $study;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
                                 <li>
                                     <div class="date">
                                     <span>
-                                        <span class="day">{$vo.day}</span>
-                                        <span class="month">{$vo.month}月</span>
+                                        <span class="day"><?php echo ($vo["day"]); ?></span>
+                                        <span class="month"><?php echo ($vo["month"]); ?>月</span>
                                     </span>
                                     </div>
 
                                     <div class="event-content">
-                                        <h6><if condition="$vo.istop eq 1">[置顶]</if>
-                                            <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                        <h6><?php if($vo["istop"] == 1): ?>[置顶]<?php endif; ?>
+                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
                                         </h6>
 
                                     </div>
                                 </li>
-                                <!-- /Event -->
-                            </volist>
+                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
-                        <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
+                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
                            class="button transparent button-arrow">更多活动</a>
                         </div>
                     </div>
@@ -248,33 +244,31 @@
                 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
-                            <volist name="list" id="vo">
-                                <!-- Blog Post -->
+                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Blog Post -->
                                 <div class="list-passage">
                                     <div class="blog-post animate-onscroll">
                                         <div class="post-content">
                                             <div class="post-side-meta">
                                                 <div class="date">
-                                                    <span class="day">{$vo.day}</span>
-                                                    <span class="month">{$vo.month}月</span>
+                                                    <span class="day"><?php echo ($vo["day"]); ?></span>
+                                                    <span class="month"><?php echo ($vo["month"]); ?>月</span>
                                                 </div>
                                             </div>
                                             <div class="post-header">
-                                                <h2><a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">{$vo.title}</a>
+                                                <h2><a href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
                                                 </h2>
                                                 <div class="post-meta">
-                                                    <span>作者：{$vo.author}</span>
-                                                    <span>{$vo.time}</span>
+                                                    <span>作者：<?php echo ($vo["author"]); ?></span>
+                                                    <span><?php echo ($vo["time"]); ?></span>
                                                 </div>
                                             </div>
                                             <div class="post-exceprt">
-                                                <p>{$vo.content|msubstr=0,50,'utf-8',true}</p>
+                                                <p><?php echo (msubstr($vo["content"],0,50,'utf-8',true)); ?></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /Blog Post -->
-                            </volist>
+                                <!-- /Blog Post --><?php endforeach; endif; else: echo "" ;endif; ?>
 
                         </div>
                     </div>
@@ -282,7 +276,7 @@
                     <div class="text-center animate-onscroll">
 
                         <div class="yahoo2">
-                            {$page}
+                            <?php echo ($page); ?>
                         </div>
 
                     </div>
@@ -305,7 +299,7 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-10 col-xs-offset-1 animate-onscroll">
-                    <img src="{$Think.config.HOMETOOLS}img/logo.png" class="img-responsive center-block"
+                    <img src="<?php echo (C("HOMETOOLS")); ?>img/logo.png" class="img-responsive center-block"
                          style=" vertical-align:middle">
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-2 animate-onscroll">
@@ -354,44 +348,44 @@
 <!-- JavaScript -->
 
 <!-- Bootstrap -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/bootstrap.min.js"></script>
 
 <!-- Modernizr -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/modernizr.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/modernizr.js"></script>
 
 <!-- Sliders/Carousels -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/owl.carousel.min.js"></script>
 
 <!-- Revolution Slider  -->
 <script type="text/javascript"
-        src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
+        src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
 <script type="text/javascript"
-        src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+        src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
 
 <!-- Calendar -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/responsive-calendar.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/responsive-calendar.min.js"></script>
 
 <!-- Raty -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/jquery.raty.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/jquery.raty.min.js"></script>
 
 <!-- Chosen -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/chosen.jquery.min.js"></script>
 
 <!-- InstaFeed -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/instafeed.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/instafeed.min.js"></script>
 
 <!-- MixItUp -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/jquery.mixitup.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/jquery.mixitup.js"></script>
 
 <!-- JackBox -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}jackbox/js/jackbox-packed.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>jackbox/js/jackbox-packed.min.js"></script>
 
 <!-- CloudZoom -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/zoomsl-3.0.min.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/zoomsl-3.0.min.js"></script>
 
 <!-- Main Script -->
-<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/script.js"></script>
+<script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/script.js"></script>
 
 
 <!--[if lt IE 9]>
