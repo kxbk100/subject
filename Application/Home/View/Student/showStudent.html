@@ -204,7 +204,7 @@
                                     </div>
 
                                     <div class="event-content">
-                                        <h6>
+                                        <h6><if condition="$vo.istop eq 1">[置顶]</if>
                                             <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
                                         </h6>
 
@@ -219,7 +219,7 @@
 
                         <div id="aboutcontent2" class="right">
                         <ul class="upcoming-events">
-                            <volist name="notice" id="vo">
+                            <volist name="study" id="vo">
                                 <!-- Event -->
                                 <li>
                                     <div class="date">
@@ -230,7 +230,7 @@
                                     </div>
 
                                     <div class="event-content">
-                                        <h6>
+                                        <h6><if condition="$vo.istop eq 1">[置顶]</if>
                                             <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
                                         </h6>
 
@@ -239,7 +239,7 @@
                                 <!-- /Event -->
                             </volist>
                         </ul>
-                        <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
+                        <a href="{$Think.config.GOTO}Home/Notice/showStudyList/p/1"
                            class="button transparent button-arrow">更多活动</a>
                         </div>
                     </div>
