@@ -21,8 +21,10 @@ class StudentController extends Controller {
 	    //var_dump($list1);
 
 	   	$notice = M('notice');
-	    $notice_data = $notice->order('time desc')->select();
+		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
+		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 	    $this->assign('notice',$notice_data);
+	    $this->assign('study',$notice_study);
 	    $this->display(); // 输出模板
 	}
 
@@ -37,9 +39,11 @@ class StudentController extends Controller {
 		$result['pre'] = ($id-1<=0)?$id:$id-1;
 		$result['next'] = ($id+1>$max)?$max:$id+1;
 
-		$notice_data = $notice->order('time desc')->limit(0,5)->select();
+		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
+		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 		$news_data = $news->order('time desc')->limit(0,3)->select();
 		$this->assign('notice',$notice_data);
+	    $this->assign('study',$notice_study);
 		$this->assign('news',$news_data);
 		$this->assign('result',$result);
 		$this->display();
