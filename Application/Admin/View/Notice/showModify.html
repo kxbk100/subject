@@ -340,10 +340,10 @@
                                     </label>
                                     <div class="col-md-2">
                                         <select name="type" class="form-control">
-                                            <option value="0">
+                                            <option value="0" <if condition="$result['type'] eq 0">selected="selected"</if> >
                                                 公告通知
                                             </option>
-                                            <option value="1">
+                                            <option value="1" <if condition="$result['type'] eq 1">selected="selected"</if> >
                                                 学术活动
                                             </option>
                                         </select>
