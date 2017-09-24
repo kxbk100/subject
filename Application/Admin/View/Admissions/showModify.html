@@ -329,10 +329,10 @@
                                     </label>
                                     <div class="col-md-2">
                                         <select name="type" class="form-control">
-                                            <option value="0" >招生简章</option>
-                                            <option value="1">招生通知</option>
-                                            <option value="2">招生流程</option>
-                                            <option value="3">招生问答</option>
+                                            <option value="0" <if condition="$result['type'] eq 0">selected="selected"</if> >招生简章</option>
+                                            <option value="1" <if condition="$result['type'] eq 1">selected="selected"</if> >招生通知</option>
+                                            <option value="2" <if condition="$result['type'] eq 2">selected="selected"</if> >招生流程</option>
+                                            <option value="3" <if condition="$result['type'] eq 3">selected="selected"</if> >招生问答</option>
                                         </select>
                                     </div>
                                 </div>
