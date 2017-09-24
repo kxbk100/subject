@@ -197,17 +197,6 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator   sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">招生信息管理</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showAdd">招生信息发布</a>
-                                        </li>
-                                        <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showManage">招生信息删改</a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                             <div class="sidebar-separator push">
                                 <i class="fa fa-ellipsis-h">
@@ -317,7 +306,7 @@
                             </div>
                             <!-- END Get Started Title -->
                             <!-- Get Started Content -->
-                            <form action="{$Think.config.GOTO}Admin/Notice/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                            <form action="{$Think.config.GOTO}/Admin/Admissions/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="example-text-input">
                                         标题
@@ -340,34 +329,13 @@
                                     </label>
                                     <div class="col-md-2">
                                         <select name="type" class="form-control">
-                                            <option value="0">
-                                                公告通知
-                                            </option>
-                                            <option value="1">
-                                                学术活动
-                                            </option>
+                                            <option value="0" >招生简章</option>
+                                            <option value="1">招生通知</option>
+                                            <option value="2">招生流程</option>
+                                            <option value="3">招生问答</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="example-text-input">
-                                        是否置顶
-                                    </label>
-                                    <label class="col-md-1 control-label">
-                                        <input type="radio" name="first" value="1"  <if condition="$result['istop'] eq 1">
-                                        checked
-                                    </if>
-                                    />
-                                    是
-                                </label>
-                                <label class="control-label">
-                                    <input type="radio" name="first" value="0"  <if condition="$result['istop'] eq 0">
-                                    checked
-                                </if>
-                                />
-                                否
-                            </label>
-                        </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="example-textarea-input">
                                 内容

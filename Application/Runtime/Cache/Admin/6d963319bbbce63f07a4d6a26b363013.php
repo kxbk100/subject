@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="ch-zn"> <![endif]-->
 <!--[if gt IE 9]><!-->
@@ -15,22 +15,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <!-- Stylesheets -->
         <!-- Bootstrap is included in its original form, unaltered -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}bootstrap.min.css"/>
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>bootstrap.min.css"/>
         <!-- Related styles of various icon packs and plugins -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}plugins.css"/>
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>plugins.css"/>
         <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}main.css"/>
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}themes.css"/>
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>main.css"/>
+        <link rel="stylesheet" href="<?php echo (C("CSS_PATH")); ?>themes.css"/>
         <!-- END Stylesheets -->
         <!-- Modernizr (browser feature detection library) -->
-        <script src="{$Think.config.JS_PATH}vendor/modernizr-3.3.1.min.js"></script>
+        <script src="<?php echo (C("JS_PATH")); ?>vendor/modernizr-3.3.1.min.js"></script>
         <!--富文本编辑器部分 开头-->
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-        <script type="text/javascript" charset="utf-8" src="{$Think.config.PUBLIC}UEditor/ueditor.config.js"></script>
-        <script type="text/javascript" charset="utf-8" src="{$Think.config.PUBLIC}UEditor/ueditor.all.min.js"> </script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo (C("PUBLIC")); ?>UEditor/ueditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo (C("PUBLIC")); ?>UEditor/ueditor.all.min.js"> </script>
         <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
         <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
-        <script type="text/javascript" charset="utf-8" src="{$Think.config.PUBLIC}UEditor/lang/zh-cn/zh-cn.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo (C("PUBLIC")); ?>UEditor/lang/zh-cn/zh-cn.js"></script>
         <!--富文本编辑器部分 结尾-->
     </head>
     <body>
@@ -54,7 +54,7 @@
                 <div id="sidebar">
                     <!-- Sidebar Brand -->
                     <div id="sidebar-brand" class="themed-background">
-                        <a href="{$Think.config.GOTO}Admin/index/showAdmin" class="sidebar-title">
+                        <a href="<?php echo (C("GOTO")); ?>Admin/index/showAdmin" class="sidebar-title">
                             <span class="sidebar-nav-mini-hide">
                                 <strong>
                                     ZUST软件工程管理中
@@ -81,12 +81,12 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Notice/showAdd">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showAdd">
                                                 公告发布
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Notice/showManage">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Notice/showManage">
                                                 公告删改
                                             </a>
                                         </li>
@@ -104,12 +104,12 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showAdd">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/News/showAdd">
                                                 学科动态发布
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showManage">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/News/showManage">
                                                 学科动态删改
                                             </a>
                                         </li>
@@ -127,7 +127,7 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Passages/showManage">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Passages/showManage">
                                                 文章修改
                                             </a>
                                         </li>
@@ -145,12 +145,12 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Student/showAdd">
                                                 学子风采发布
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Student/showManage">
                                                 学子风采删改
                                             </a>
                                         </li>
@@ -168,7 +168,7 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Picture/showModify">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Picture/showModify">
                                                 首页幻灯片修改
                                             </a>
                                         </li>
@@ -186,25 +186,14 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showAdd">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Time/showAdd">
                                                 大事记发布
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showManage">
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Time/showManage">
                                                 大事记删改
                                             </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator   sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">招生信息管理</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showAdd">招生信息发布</a>
-                                        </li>
-                                        <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showManage">招生信息删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -223,7 +212,7 @@
                             <small>
                                 Copyright &copy; 2012-2017 ZUST ITEE All Rights Reserved
                                 <br/>
-                                <a herf="{$Think.config.GOTO}">
+                                <a herf="<?php echo (C("GOTO")); ?>">
                                     浙江科技学院 信息与电子工程学院
                                 </a>
                                 版权所有
@@ -255,19 +244,19 @@
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:20px; ">
                                     <strong>
-                                        欢迎您，{$name}
+                                        欢迎您，<?php echo ($name); ?>
                                     </strong>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
-                                        <a href="{$Think.config.GOTO}">
+                                        <a href="<?php echo (C("GOTO")); ?>">
                                             <i class="hi hi-home pull-right" style="line-height: 20px;">
                                             </i>
                                             网站首页
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Admin/User/logout">
+                                        <a href="<?php echo (C("GOTO")); ?>Admin/User/logout">
                                             <i class="hi hi-off pull-right" style="line-height: 20px;">
                                             </i>
                                             注销账号
@@ -317,13 +306,13 @@
                             </div>
                             <!-- END Get Started Title -->
                             <!-- Get Started Content -->
-                            <form action="{$Think.config.GOTO}Admin/Notice/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                            <form action="<?php echo (C("GOTO")); ?>/Admin/Admissions/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="example-text-input">
                                         标题
                                     </label>
                                     <div class="col-md-6">
-                                        <input type="text" id="example-text-input" name="title" class="form-control" required="required" value="{$result['title']}"/>
+                                        <input type="text" id="example-text-input" name="title" class="form-control" required="required" value="<?php echo ($result['title']); ?>"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -331,7 +320,7 @@
                                         发布人
                                     </label>
                                     <div class="col-md-6">
-                                        <input type="text" id="example-text-input" name="author" class="form-control" required="required" value="{$result['author']}"/>
+                                        <input type="text" id="example-text-input" name="author" class="form-control" required="required" value="<?php echo ($result['author']); ?>"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -340,43 +329,22 @@
                                     </label>
                                     <div class="col-md-2">
                                         <select name="type" class="form-control">
-                                            <option value="0">
-                                                公告通知
-                                            </option>
-                                            <option value="1">
-                                                学术活动
-                                            </option>
+                                            <option value="0" >招生简章</option>
+                                            <option value="1">招生通知</option>
+                                            <option value="2">招生流程</option>
+                                            <option value="3">招生问答</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="example-text-input">
-                                        是否置顶
-                                    </label>
-                                    <label class="col-md-1 control-label">
-                                        <input type="radio" name="first" value="1"  <if condition="$result['istop'] eq 1">
-                                        checked
-                                    </if>
-                                    />
-                                    是
-                                </label>
-                                <label class="control-label">
-                                    <input type="radio" name="first" value="0"  <if condition="$result['istop'] eq 0">
-                                    checked
-                                </if>
-                                />
-                                否
-                            </label>
-                        </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="example-textarea-input">
                                 内容
                             </label>
                             <div class="col-md-8">
-                                <script id="editor" type="text/plain" style="height: 300px;">{$result['content']}</script>
+                                <script id="editor" type="text/plain" style="height: 300px;"><?php echo ($result['content']); ?></script>
                             </div>
                         </div>
-                        <input type="hidden" value="{$result['id']}" name="id"/>
+                        <input type="hidden" value="<?php echo ($result['id']); ?>" name="id"/>
                         <div class="form-group form-actions">
                             <div class="col-md-9 col-md-offset-3">
                                 <button type="submit" class="btn btn-effect-ripple btn-primary">
@@ -400,10 +368,10 @@
 </div>
 <!-- END Page Wrapper -->
 <!-- jQuery, Bootstrap, jQuery plugins and Custom JS code -->
-<script src="{$Think.config.JS_PATH}vendor/jquery-2.2.4.min.js"></script>
-<script src="{$Think.config.JS_PATH}vendor/bootstrap.min.js"></script>
-<script src="{$Think.config.JS_PATH}plugins.js"></script>
-<script src="{$Think.config.JS_PATH}app.js"></script>
+<script src="<?php echo (C("JS_PATH")); ?>vendor/jquery-2.2.4.min.js"></script>
+<script src="<?php echo (C("JS_PATH")); ?>vendor/bootstrap.min.js"></script>
+<script src="<?php echo (C("JS_PATH")); ?>plugins.js"></script>
+<script src="<?php echo (C("JS_PATH")); ?>app.js"></script>
 <!--富文本编辑器的脚本-->
 <script type="text/javascript">
 
