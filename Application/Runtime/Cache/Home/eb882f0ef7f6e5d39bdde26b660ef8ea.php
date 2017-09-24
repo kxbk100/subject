@@ -331,7 +331,7 @@
                                             </li>
                                             <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </ul>
-                                    <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1" class="button transparent button-arrow">
+                                    <a href="<?php echo (C("GOTO")); ?>Home/Notice/showStudyList/p/1" class="button transparent button-arrow">
                                         更多活动
                                     </a>
                                 </div>

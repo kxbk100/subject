@@ -23,17 +23,17 @@
         <link href="<?php echo (C("HOMETOOLS")); ?>css/style.css" rel="stylesheet" type="text/css"/>
         <!-- Style -->
         <style type="text/css">
-            .no-fouc {
-                display: none;
-            }
-            .right {
-            display: none;
-            }
-
-            .right:first-child {
-            display: block
-            }
-        </style>
+                .no-fouc {
+                    display: none;
+                }
+                .right {
+                    display: none;
+                }
+        
+                .right:first-child {
+                    display: block
+                }
+            </style>
         <!-- JQuery -->
         <script src="<?php echo (C("HOMETOOLS")); ?>js/jquery-1.11.0.min.js"></script>
         <script src="<?php echo (C("HOMETOOLS")); ?>js/jquery-ui-1.10.4.min.js"></script>
@@ -45,45 +45,22 @@
                     navigationType: "none",
                 });
             });
-            
-            $(document).ready(function(){
-                let x = window.location.toString();
-                
-                if(x.substr(x.length-1,1)==4) {
-                    let child = $('.banner')[0];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[3];
-                    $(title).css('color',"white"); 
-                } else if(x.substr(x.length-1,1)==5) {
-                    let child = $('.banner')[1];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[4];
-                    $(title).css('color',"white");
-                } else if(x.substr(x.length-1,1)==6) {
-                    let child = $('.banner')[2];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[5];
-                    $(title).css('color',"white");
-                }
-            });
         </script>
         <script>
-        var currentNode = "content1";
-        var changeContent = function (obj) {
-            //之前的选项恢复原状
-            document.getElementById(currentNode).style.color = "black";
-            document.getElementById("about" + currentNode).style.display = "none";
-            //currentNode指向新的节点
-            currentNode = obj.getAttribute("id");
-            //设置新的选项
-            document.getElementById(currentNode).style.color = "#4174c5";
-            document.getElementById("about" + currentNode).style.display = "block";
+            var currentNode = "content1";
+            var changeContent = function (obj) {
+                //之前的选项恢复原状
+                document.getElementById(currentNode).style.color = "black";
+                document.getElementById("about" + currentNode).style.display = "none";
+                //currentNode指向新的节点
+                currentNode = obj.getAttribute("id");
+                //设置新的选项
+                document.getElementById(currentNode).style.color = "#4174c5";
+                document.getElementById("about" + currentNode).style.display = "block";
             }
         </script>
     </head>
     <body class="sticky-header-on tablet-sticky-header">
-        <div id="fb-root">
-        </div>
         <!-- Container -->
         <div class="container">
             <!-- Header -->
@@ -271,11 +248,7 @@
                 <!-- Page Heading -->
                 <section class="section page-heading animate-onscroll">
                     <h1>
-                        <?php if($type == ''): ?>招生介绍
-                        <?php elseif($type == 0): ?>招生简章
-                        <?php elseif($type == 1): ?>招生通知
-                        <?php elseif($type == 2): ?>招生流程
-                        <?php elseif($type == 3): ?>招生问答<?php endif; ?>
+                        <?php echo ($result['title']); ?>
                     </h1>
                     <p class="breadcrumb">
                         <a href="<?php echo (C("GOTO")); ?>">
@@ -283,10 +256,10 @@
                         </a>
                         ->
                         招生就业 ->
-                        招生介绍<?php if($type == ''): elseif($type == 0): ?>->招生简章
-                                <?php elseif($type == 1): ?>->招生通知
-                                <?php elseif($type == 2): ?>->招生流程
-                                <?php elseif($type == 3): ?>->招生问答<?php endif; ?>
+                        招生介绍<?php if($result['type'] == 0): ?>->招生简章<?php endif; ?>
+                                <?php if($result['type'] == 1): ?>->招生通知<?php endif; ?>
+                                <?php if($result['type'] == 2): ?>->招生流程<?php endif; ?>
+                                <?php if($result['type'] == 3): ?>->招生问答<?php endif; ?>
                     </p>
                 </section>
                 <!-- Page Heading -->
@@ -294,222 +267,139 @@
                 <section class="section full-width-bg gray-bg">
                     <div class="row">
                         <!-- Sidebar -->
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 sidebar">
-                            <div class="sidebar-box white">
-                                <h3>
-                                    <i class="icon-comment">
-                                    </i>
-                                    招生介绍
-                                </h3>
-                                
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=0">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                招生简章
-                                            </h4>
-                                        </a>
-                                    </div>
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=1">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                招生通知
-                                            </h4>
-                                        </a>
-                                    </div>
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=2">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                招生流程
-                                            </h4>
-                                        </a>
-                                    </div>
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=3">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                招生问答
-                                            </h4>
-                                        </a>
-                                    </div>
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=4">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                联系我们
-                                            </h4>
-                                        </a>
-                                    </div>
-                            </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
                             <!-- /Featured Video -->                        <!--
                             Upcoming Events
                         -->
-                        <div class="hidden-xs">
-                            <div class="sidebar-box white">
-                        <h3><span style="padding-right: 8px;color: #4174c5;" id="content1"
-                              onmouseover="changeContent(this)">公告通知</span>|
-                              <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
-                        </h3>
-                    <div id="right">
-                        <div id="aboutcontent1" class="right">
-                        <ul class="upcoming-events">
-                            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
-                                <li>
-                                    <div class="date">
-                                    <span>
-                                        <span class="day"><?php echo ($vo["day"]); ?></span>
-                                        <span class="month"><?php echo ($vo["month"]); ?>月</span>
-                                    </span>
-                                    </div>
-
-                                    <div class="event-content">
-                                        <h6><?php if($vo["istop"] == 1): ?>[置顶]<?php endif; ?>
-                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
-                                        </h6>
-
-                                    </div>
-                                </li>
-                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
-                           class="button transparent button-arrow">更多公告</a>
-                        </div>
-
-                        <div id="aboutcontent2" class="right">
-                        <ul class="upcoming-events">
-                            <?php if(is_array($study)): $i = 0; $__LIST__ = $study;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
-                                <li>
-                                    <div class="date">
-                                    <span>
-                                        <span class="day"><?php echo ($vo["day"]); ?></span>
-                                        <span class="month"><?php echo ($vo["month"]); ?>月</span>
-                                    </span>
-                                    </div>
-
-                                    <div class="event-content">
-                                        <h6><?php if($vo["istop"] == 1): ?>[置顶]<?php endif; ?>
-                                            <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
-                                        </h6>
-
-                                    </div>
-                                </li>
-                                <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1"
-                           class="button transparent button-arrow">更多活动</a>
-                        </div>
-                    </div>
-                    </div>
+                        <div class="sidebar-box white">
+                            <h3>
+                                <span style="padding-right: 8px;color: #4174c5;" id="content1" onmouseover="changeContent(this)">
+                                    公告通知
+                                </span>
+                                |
+                                <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">
+                                    学术活动
+                                </span>
+                            </h3>
+                            <div id="right">
+                                <div id="aboutcontent1" class="right">
+                                    <ul class="upcoming-events">
+                                        <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
+                                            <li>
+                                                <div class="date">
+                                                    <span>
+                                                        <span class="day">
+                                                            <?php echo ($vo["day"]); ?>
+                                                        </span>
+                                                        <span class="month">
+                                                            <?php echo ($vo["month"]); ?>月
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="event-content">
+                                                    <h6><?php if($vo["istop"] == 1): ?>[置顶]<?php endif; ?>
+                                                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>">
+                                                            <?php echo ($vo["title"]); ?>
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                            </li>
+                                            <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </ul>
+                                    <a href="<?php echo (C("GOTO")); ?>Home/Notice/showList/p/1" class="button transparent button-arrow">
+                                        更多公告
+                                    </a>
+                                </div>
+                                <div id="aboutcontent2" class="right">
+                                    <ul class="upcoming-events">
+                                        <?php if(is_array($study)): $i = 0; $__LIST__ = $study;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- Event -->
+                                            <li>
+                                                <div class="date">
+                                                    <span>
+                                                        <span class="day">
+                                                            <?php echo ($vo["day"]); ?>
+                                                        </span>
+                                                        <span class="month">
+                                                            <?php echo ($vo["month"]); ?>月
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="event-content">
+                                                    <h6><?php if($vo["istop"] == 1): ?>[置顶]<?php endif; ?>
+                                                        <a href="<?php echo (C("GOTO")); ?>Home/Notice/showNotice/<?php echo ($vo["id"]); ?>">
+                                                            <?php echo ($vo["title"]); ?>
+                                                        </a>
+                                                    </h6>
+                                                </div>
+                                            </li>
+                                            <!-- /Event --><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </ul>
+                                    <a href="<?php echo (C("GOTO")); ?>Home/Notice/showStudyList/p/1" class="button transparent button-arrow">
+                                        更多活动
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- /Sidebar -->
-                    <!--<div class="col-lg-9 col-md-9 col-sm-8">-->
-                    <!--&lt;!&ndash; Single Blog Post &ndash;&gt;-->
-                    <!--<div class="blog-post-single">-->
-                    <!--<div class="post-content">-->
-                    <!--<p class="animate-onscroll"><?php echo ($result['content']); ?></p>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; Pagination &ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="row animate-onscroll">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['pre']); ?>"&ndash;&gt;-->
-                    <!--&lt;!&ndash;class="button big previous">上一篇</a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['next']); ?>"&ndash;&gt;-->
-                    <!--&lt;!&ndash;class="button big next">下一篇</a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash; /Pagination &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; /Single Blog Post &ndash;&gt;-->
-                    <!--&lt;!&ndash; Related Articles &ndash;&gt;-->
-                    <!--<div class="related-articles">-->
-                    <!--<h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 更多动态<a-->
-                    <!--href="<?php echo (C("GOTO")); ?>Home/News/showList/p/1"-->
-                    <!--class="pull-right">More</a>-->
-                    <!--</h3>-->
-                    <!--<div class="row">-->
-                    <!--<?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>-->
-                    <!--<div class="col-lg-4 col-md-4 col-sm-4">-->
-                    <!--&lt;!&ndash; Blog Post &ndash;&gt;-->
-                    <!--<div class="blog-post animate-onscroll">-->
-                    <!--<div class="post-image">-->
-                    <!--<img src="<?php echo ($vo["small_path"]); ?>" alt="">-->
-                    <!--</div>-->
-                    <!--<h4 class="post-title"><a-->
-                    <!--href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>-->
-                    <!--</h4>-->
-                    <!--<div class="post-meta">-->
-                    <!--<span>作者：<?php echo ($vo["author"]); ?></span>-->
-                    <!--<span><?php echo ($vo["time"]); ?></span>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; /Blog Post &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; /Related Articles &ndash;&gt;-->
-                    <!--</div>-->
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                            <?php if(is_array($admissions)): $i = 0; $__LIST__ = $admissions;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="list-passage">
-                                    <div class="blog-post animate-onscroll">
-                                        <div class="post-content">
-                                            <div class="post-side-meta">
-                                                <div class="date">
-                                                    <span class="day">
-                                                        <?php echo ($vo["day"]); ?>
-                                                    </span>
-                                                    <span class="month">
-                                                        <?php echo ($vo["month"]); ?>
-                                                    </span>
-                                                </div>
+                        <!-- Single Blog Post -->
+                        <div class="blog-post-single">
+                            <div class="post-content">
+                                <p class="animate-onscroll">
+                                    <?php echo ($result['content']); ?>
+                                </p>
+                            </div>
+                            <!-- Pagination -->
+                            <!--<div class="row animate-onscroll">-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">-->
+                            <!--<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['pre']); ?>"-->
+                            <!--class="button big previous">上一篇</a>-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">-->
+                            <!--<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['next']); ?>"-->
+                            <!--class="button big next">下一篇</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!-- /Pagination -->
+                        </div>
+                        <!-- /Single Blog Post -->
+                        <!-- Related Articles -->
+                        <div class="related-articles">
+                            <h3 class="page-header animate-onscroll">
+                                <i class="icon-bookmark">
+                                </i>
+                                更多动态
+                                <a href="<?php echo (C("GOTO")); ?>Home/News/showList/p/1" class="pull-right">
+                                    More
+                                </a>
+                            </h3>
+                            <div class="row">
+                                <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 col-md-4 col-sm-4">
+                                        <!-- Blog Post -->
+                                        <div class="blog-post animate-onscroll">
+                                            <div class="post-image">
+                                                <img src="<?php echo ($vo["small_path"]); ?>" alt=""/>
                                             </div>
-                                            <div class="post-header">
-                                                <h2>
-                                                    <a href="<?php echo (C("GOTO")); ?>Home/Passages/showAdmissions/<?php echo ($vo["id"]); ?>">
-                                                        <?php echo ($vo["title"]); ?>
-                                                    </a>
-                                                </h2>
-                                            </div>
-                                            <div class="post-header">
-                                                <h2>
-                                                    <a href="<?php echo (C("GOTO")); ?>Home/Passages/showAdmissions/<?php echo ($vo["id"]); ?>">
-                                                        <?php echo ($vo["title"]); ?>
-                                                    </a>
-                                                </h2>
-                                                <div class="post-meta">
-                                                    <span>
-                                                        分类：[
-                                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=<?php echo ($vo["type"]); ?>">
-                                                            <?php if($vo["type"] == 0): ?>招生简章<?php endif; ?>
-                                                            <?php if($vo["type"] == 1): ?>招生通知<?php endif; ?>
-                                                            <?php if($vo["type"] == 2): ?>招生流程<?php endif; ?>
-                                                            <?php if($vo["type"] == 3): ?>招生问答<?php endif; ?>
-                                                        </a>
-                                                        ]
-                                                    </span>
-                                                </div>
+                                            <h4 class="post-title">
+                                                <a href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>">
+                                                    <?php echo ($vo["title"]); ?>
+                                                </a>
+                                            </h4>
+                                            <div class="post-meta">
+                                                <span>
+                                                    作者：<?php echo ($vo["author"]); ?>
+                                                </span>
+                                                <span>
+                                                    <?php echo ($vo["time"]); ?>
+                                                </span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
-
-                        <div class="text-center animate-onscroll">
-                            <div class="yahoo2">
-                                <?php echo ($page); ?>
+                                        <!-- /Blog Post -->
+                                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
                             </div>
                         </div>
+                        <!-- /Related Articles -->
                     </div>
                 </div>
             </section>
@@ -573,9 +463,9 @@
     <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/owl.carousel.min.js"></script>
     <!-- Revolution Slider  -->
     <script type="text/javascript"
-    src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
+            src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
     <script type="text/javascript"
-    src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+            src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
     <!-- Calendar -->
     <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/responsive-calendar.min.js"></script>
     <!-- Raty -->
