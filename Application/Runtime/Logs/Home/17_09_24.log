@@ -1699,3 +1699,34 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001274s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001395s ]
 
+[ 2017-09-24T10:41:16+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001798s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001725s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 417 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 426 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 440 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 510 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002378s ]
+

@@ -354,11 +354,17 @@
                                                     {$vo.title}
                                                 </td>
                                                 <td class="text-center">
-                                                    <if condition="$vo.type eq 1">
-                                                        学术活动
-                                                    </if>
                                                     <if condition="$vo.type eq 0">
-                                                        公告通知
+                                                        招生简章
+                                                    </if>
+                                                    <if condition="$vo.type eq 1">
+                                                        招生通知
+                                                    </if>
+                                                    <if condition="$vo.type eq 2">
+                                                        招生流程
+                                                    </if>
+                                                    <if condition="$vo.type eq 3">
+                                                        招生问答
                                                     </if>
                                                 </td>
                                                 <td class="text-center">

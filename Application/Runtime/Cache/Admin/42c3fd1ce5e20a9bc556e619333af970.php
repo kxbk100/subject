@@ -353,8 +353,10 @@
                                                     <?php echo ($vo["title"]); ?>
                                                 </td>
                                                 <td class="text-center">
-                                                    <?php if($vo["type"] == 1): ?>学术活动<?php endif; ?>
-                                                    <?php if($vo["type"] == 0): ?>公告通知<?php endif; ?>
+                                                    <?php if($vo["type"] == 0): ?>招生简章<?php endif; ?>
+                                                    <?php if($vo["type"] == 1): ?>招生通知<?php endif; ?>
+                                                    <?php if($vo["type"] == 2): ?>招生流程<?php endif; ?>
+                                                    <?php if($vo["type"] == 3): ?>招生问答<?php endif; ?>
                                                 </td>
                                                 <td class="text-center">
                                                     <?php echo ($vo["time"]); ?>

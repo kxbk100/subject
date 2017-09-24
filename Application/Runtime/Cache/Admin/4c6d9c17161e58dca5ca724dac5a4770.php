@@ -188,6 +188,17 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li>
+                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator   sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">招生信息管理</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Admissions/showAdd">招生信息发布</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo (C("GOTO")); ?>Admin/Admissions/showManage">招生信息删改</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                             <div class="sidebar-separator push">
                                 <i class="fa fa-ellipsis-h">
@@ -340,8 +351,8 @@
                                                     <?php echo ($vo["title"]); ?>
                                                 </td>
                                                 <td class="text-center">
-                                                    <?php if($vo["type"] == 1): ?>学术活动<?php endif; ?>
                                                     <?php if($vo["type"] == 0): ?>公告通知<?php endif; ?>
+                                                    <?php if($vo["type"] == 1): ?>学术活动<?php endif; ?>
                                                 </td>
                                                 <td class="text-center">
                                                     <?php echo ($vo["time"]); ?>
