@@ -24,10 +24,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ist</find>
-      <find>_START_ to _END_ of _TOTAL_ entries</find>
-      <find>of _TOTAL_ entries</find>
-      <find>res</find>
       <find>arr</find>
       <find>php</find>
       <find>block</find>
@@ -54,6 +50,10 @@
       <find>header</find>
       <find>footer</find>
       <find>标题</find>
+      <find>学术研究</find>
+      <find>招生就业</find>
+      <find>section full-width-bg gray-bg</find>
+      <find>col-xs-10</find>
     </findStrings>
     <replaceStrings>
       <replace>vo.</replace>
@@ -89,17 +89,18 @@
         <option value="$PROJECT_DIR$/Application/Home/View/News/showNews.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Notice/showList.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Notice/showNotice.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/News/showAdd.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/News/showModify.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Notice/showModify.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Notice/showAdd.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Passages/showAdmissions.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Passages/showPassages.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Passages/showPassages3.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Passages/showPassageslist.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Passages/time.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Student/showList.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Student/showStudent.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/News/showAdd.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/News/showModify.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Notice/showModify.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Notice/showAdd.html" />
       </list>
     </option>
   </component>
@@ -138,7 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,20 +156,28 @@
               <item name="subject" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="subject" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="subject" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="subject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="subject" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
               <item name="News" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -176,33 +185,31 @@
               <item name="subject" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
               <item name="Notice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="subject" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Passages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="subject" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
               <item name="Home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="subject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="subject" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Student" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,11 +259,12 @@
       <workItem from="1505639008003" duration="2321000" />
       <workItem from="1505663606437" duration="7487000" />
       <workItem from="1505807319604" duration="4329000" />
+      <workItem from="1506364829996" duration="1325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65481000" />
+    <option name="totallyTimeSpent" value="66806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -322,20 +330,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Admin/js/pages/uiTables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Admin/js/pages/uiProgress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Admin/js/pages/uiIcons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-42">
@@ -509,94 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showPassages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="321" column="13" lean-forward="false" selection-start-line="321" selection-start-column="13" selection-end-line="321" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showPassages3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="337" column="13" lean-forward="false" selection-start-line="337" selection-start-column="13" selection-end-line="337" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showPassageslist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="492" column="13" lean-forward="false" selection-start-line="492" selection-start-column="13" selection-end-line="492" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/time.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="658" column="17" lean-forward="false" selection-start-line="658" selection-start-column="17" selection-end-line="658" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/showStudent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="321" column="13" lean-forward="false" selection-start-line="321" selection-start-column="13" selection-end-line="321" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/showList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="271" column="9" lean-forward="false" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Notice/showNotice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="314" column="13" lean-forward="false" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Notice/showList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="215" column="15" lean-forward="false" selection-start-line="215" selection-start-column="15" selection-end-line="215" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/News/showNews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="317" column="13" lean-forward="false" selection-start-line="317" selection-start-column="13" selection-end-line="317" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/News/showList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="306" column="13" lean-forward="false" selection-start-line="306" selection-start-column="13" selection-end-line="306" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/News/showModify.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="240" column="39" lean-forward="false" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="39" />
-          <folding>
-            <element signature="n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Notice/showAdd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="276" column="27" lean-forward="true" selection-start-line="276" selection-start-column="27" selection-end-line="276" selection-end-column="27" />
-          <folding>
-            <element signature="n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,10 +514,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Notice/showManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="293" column="0" lean-forward="false" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Notice/showModify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="232" column="56" lean-forward="true" selection-start-line="232" selection-start-column="56" selection-end-line="232" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Notice/showAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="276" column="27" lean-forward="false" selection-start-line="276" selection-start-column="27" selection-end-line="276" selection-end-column="27" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -615,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="163" column="12" lean-forward="false" selection-start-line="163" selection-start-column="12" selection-end-line="163" selection-end-column="12" />
+        <state relative-caret-position="260">
+          <caret line="170" column="65" lean-forward="false" selection-start-line="170" selection-start-column="65" selection-end-line="170" selection-end-column="65" />
           <folding>
             <element signature="n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#section#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -630,23 +558,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Notice/showManage.html">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/News/showList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="293" column="0" lean-forward="false" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+        <state relative-caret-position="348">
+          <caret line="306" column="13" lean-forward="false" selection-start-line="306" selection-start-column="13" selection-end-line="306" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Notice/showModify.html">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/News/showNews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="232" column="56" lean-forward="true" selection-start-line="232" selection-start-column="56" selection-end-line="232" selection-end-column="56" />
+        <state relative-caret-position="348">
+          <caret line="317" column="13" lean-forward="false" selection-start-line="317" selection-start-column="13" selection-end-line="317" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Notice/showNotice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="314" column="13" lean-forward="false" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Notice/showStudyList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showPassageslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="508" column="69" lean-forward="false" selection-start-line="508" selection-start-column="69" selection-end-line="508" selection-end-column="69" />
           <folding>
-            <element signature="n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2230#3164#0" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/showStudent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="248" column="33" lean-forward="true" selection-start-line="248" selection-start-column="33" selection-end-line="248" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/showList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="246" column="51" lean-forward="false" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/time.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="412" column="7" lean-forward="true" selection-start-line="412" selection-start-column="7" selection-end-line="412" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Notice/showList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="215" column="15" lean-forward="false" selection-start-line="215" selection-start-column="15" selection-end-line="215" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showPassages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="417" column="26" lean-forward="true" selection-start-line="417" selection-start-column="26" selection-end-line="417" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showAdmissions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="465" column="141" lean-forward="true" selection-start-line="465" selection-start-column="141" selection-end-line="465" selection-end-column="141" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Passages/showPassages3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="461" column="116" lean-forward="true" selection-start-line="461" selection-start-column="116" selection-end-line="461" selection-end-column="116" />
+          <folding>
+            <element signature="e#2059#3138#0" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#section#1;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

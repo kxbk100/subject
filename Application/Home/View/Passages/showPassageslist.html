@@ -48,11 +48,11 @@
             
             $(document).ready(function(){
                 let x = window.location.toString();
-                
-                if(x.substr(x.length-1,1)==4) {
+                let s = x.substr(x.length-1,1)
+                if(s=='t' || s==0 || s==1 || s==2 || s==3) {
                     let child = $('.banner')[0];
                     $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[3];
+                    let title = $('h4')[0];
                     $(title).css('color',"white"); 
                 } else if(x.substr(x.length-1,1)==5) {
                     let child = $('.banner')[1];
@@ -297,56 +297,38 @@
                 <section class="section full-width-bg gray-bg">
                     <div class="row">
                         <!-- Sidebar -->
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 sidebar">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 sidebar">
                             <div class="sidebar-box white">
                                 <h3>
                                     <i class="icon-comment">
                                     </i>
-                                    招生介绍
+                                    招生就业
                                 </h3>
                                 
                                     <div class="banner-wrapper">
-                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=0">
+                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist">
                                             <i class="icons icon-calendar">
                                             </i>
                                             <h4>
-                                                招生简章
+                                                招生介绍
                                             </h4>
                                         </a>
                                     </div>
                                     <div class="banner-wrapper">
-                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=1">
+                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassages/16">
                                             <i class="icons icon-calendar">
                                             </i>
                                             <h4>
-                                                招生通知
+                                                实习信息
                                             </h4>
                                         </a>
                                     </div>
                                     <div class="banner-wrapper">
-                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=2">
+                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassages/17">
                                             <i class="icons icon-calendar">
                                             </i>
                                             <h4>
-                                                招生流程
-                                            </h4>
-                                        </a>
-                                    </div>
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=3">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                招生问答
-                                            </h4>
-                                        </a>
-                                    </div>
-                                    <div class="banner-wrapper">
-                                        <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=4">
-                                            <i class="icons icon-calendar">
-                                            </i>
-                                            <h4>
-                                                联系我们
+                                                就业信息
                                             </h4>
                                         </a>
                                     </div>
@@ -466,7 +448,7 @@
                     <!--</div>-->
                     <!--&lt;!&ndash; /Related Articles &ndash;&gt;-->
                     <!--</div>-->
-                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                             <volist name="admissions" id="vo">
@@ -489,14 +471,9 @@
                                                         {$vo.title}
                                                     </a>
                                                 </h2>
-                                            </div>
-                                            <div class="post-header">
-                                                <h2>
-                                                    <a href="{$Think.config.GOTO}Home/Passages/showAdmissions/{$vo.id}">
-                                                        {$vo.title}
-                                                    </a>
-                                                </h2>
                                                 <div class="post-meta">
+                                                    <span>作者：{$vo.author}</span>
+                                                    <span>{$vo.time}</span><br><br>
                                                     <span>
                                                         分类：[
                                                         <a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type={$vo.type}">
@@ -529,7 +506,7 @@
             <!-- Main Footer -->
             <div id="main-footer">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-10 col-xs-offset-1 animate-onscroll">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animate-onscroll">
                         <img src="{$Think.config.HOMETOOLS}img/logo.png" class="img-responsive center-block" style=" vertical-align:middle"/>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-2 animate-onscroll">

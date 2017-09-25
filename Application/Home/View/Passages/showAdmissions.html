@@ -58,6 +58,18 @@
                 document.getElementById(currentNode).style.color = "#4174c5";
                 document.getElementById("about" + currentNode).style.display = "block";
             }
+
+            $(document).ready(function(){
+                let x = window.location.toString();
+                let s = x.substr(x.length-4,1)
+                if(s=='n') {
+                    let child = $('.banner')[0];
+                    $(child).css('background',"rgb(99,178,245)");
+                    let title = $('h4')[0];
+                    $(title).css('color',"white");
+                }
+            });
+
         </script>
     </head>
     <body class="sticky-header-on tablet-sticky-header">
@@ -256,10 +268,10 @@
                         </a>
                         ->
                         招生就业 ->
-                        招生介绍<if condition="$result['type'] eq 0">->招生简章</if>
-                                <if condition="$result['type'] eq 1">->招生通知</if>
-                                <if condition="$result['type'] eq 2">->招生流程</if>
-                                <if condition="$result['type'] eq 3">->招生问答</if>
+                                招生介绍 <if condition="$result['type'] eq 0">-> 招生简章</if>
+                                <if condition="$result['type'] eq 1">-> 招生通知</if>
+                                <if condition="$result['type'] eq 2">-> 招生流程</if>
+                                <if condition="$result['type'] eq 3">-> 招生问答</if>
                     </p>
                 </section>
                 <!-- Page Heading -->
@@ -267,11 +279,45 @@
                 <section class="section full-width-bg gray-bg">
                     <div class="row">
                         <!-- Sidebar -->
-                        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
-                            <!-- /Featured Video -->                        <!--
-                            Upcoming Events
-                        -->
-                        <div class="sidebar-box white">
+                        <div class="col-lg-3 col-md-3 col-sm-4 sidebar">
+                            <div class="sidebar-box white">
+                                <h3>
+                                    <i class="icon-comment">
+                                    </i>
+                                    招生就业
+                                </h3>
+
+                                <div class="banner-wrapper">
+                                    <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassageslist">
+                                        <i class="icons icon-calendar">
+                                        </i>
+                                        <h4>
+                                            招生介绍
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div class="banner-wrapper">
+                                    <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassages/16">
+                                        <i class="icons icon-calendar">
+                                        </i>
+                                        <h4>
+                                            实习信息
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div class="banner-wrapper">
+                                    <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassages/17">
+                                        <i class="icons icon-calendar">
+                                        </i>
+                                        <h4>
+                                            就业信息
+                                        </h4>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="sidebar-box white hidden-xs">
                             <h3>
                                 <span style="padding-right: 8px;color: #4174c5;" id="content1" onmouseover="changeContent(this)">
                                     公告通知
@@ -346,7 +392,7 @@
                         </div>
                     </div>
                     <!-- /Sidebar -->
-                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                         <!-- Single Blog Post -->
                         <div class="blog-post-single">
                             <div class="post-content">
@@ -416,7 +462,7 @@
             <!-- Main Footer -->
             <div id="main-footer">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-10 col-xs-offset-1 animate-onscroll">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animate-onscroll">
                         <img src="{$Think.config.HOMETOOLS}img/logo.png" class="img-responsive center-block" style=" vertical-align:middle"/>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-2 animate-onscroll">
