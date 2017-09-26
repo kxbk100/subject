@@ -172,7 +172,7 @@
                 <span>作者：{$result['author']}</span>
                 <span>{$result['time']}</span>
             </div>
-            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> -> 通知公告</p>
+            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> -><if condition="$result['type'] eq 0">公告通知 <else/>学术活动</if> </p>
 
         </section>
         <!-- Page Heading -->
