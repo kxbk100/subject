@@ -1,0 +1,1563 @@
+[ 2017-09-26T11:28:18+08:00 ] ::1 /subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001819s ]
+
+[ 2017-09-26T11:28:22+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002207s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0841s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0326s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000230s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002369s ]
+
+[ 2017-09-26T11:28:33+08:00 ] ::1 /subject/index.php/Home/Passages/showAdmissions/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0136s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admissions` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `admissions` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000219s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001178s ]
+
+[ 2017-09-26T11:28:44+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admissions` WHERE ( type='1' ) ORDER BY time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001656s ]
+
+[ 2017-09-26T11:29:04+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001625s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0138s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0158s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000239s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001734s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001884s ]
+
+[ 2017-09-26T11:29:09+08:00 ] ::1 /subject/index.php/Home/Passages/showAdmissions/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admissions` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `admissions` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2017-09-26T11:29:23+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001323s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `admissions` WHERE ( type='1' ) ORDER BY time desc LIMIT 6   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2017-09-26T11:29:26+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001289s ]
+
+[ 2017-09-26T11:29:38+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0142s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001322s ]
+
+[ 2017-09-26T11:31:35+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001504s ]
+
+[ 2017-09-26T16:29:29+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013782s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.1613s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0261s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0216s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0659s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0174s ]
+SQL: SELECT * FROM `passages` WHERE ( second='学科成果' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000904s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001065s ]
+NOTIC: [8] Undefined index: pre D:\php\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 393 行.
+NOTIC: [8] Undefined index: next D:\php\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 397 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016307s ]
+
+[ 2017-09-26T16:29:50+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001634s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002263s ]
+
+[ 2017-09-26T16:29:54+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002941s ]
+
+[ 2017-09-26T16:30:04+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages3/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001809s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.1209s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE ( second='学科成果' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8] Undefined index: pre D:\php\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 393 行.
+NOTIC: [8] Undefined index: next D:\php\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 397 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030769s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001966s ]
+
+[ 2017-09-26T16:30:09+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages3/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001802s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE ( second='学科成果' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8] Undefined index: pre D:\php\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 393 行.
+NOTIC: [8] Undefined index: next D:\php\subject\Application\Runtime\Cache\Home\31d2c4e66d9ee22f581773c09e62e33a.php 第 397 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030738s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002333s ]
+
+[ 2017-09-26T16:30:20+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001520s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0354s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002201s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002351s ]
+
+[ 2017-09-26T16:30:30+08:00 ] ::1 /subject/index.php/Home/Passages/showAdmissions/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001597s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0173s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `admissions` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `admissions` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.148999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003826s ]
+
+[ 2017-09-26T16:31:00+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2017-09-26T16:31:18+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001426s ]
+
+[ 2017-09-26T16:39:24+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001688s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0095s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001927s ]
+
+[ 2017-09-26T16:39:42+08:00 ] ::1 /subject/index.php/Home/Passages/showAdmissions/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `admissions` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `admissions` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001309s ]
+
+[ 2017-09-26T16:39:52+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0131s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001607s ]
+
+[ 2017-09-26T16:39:55+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001382s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admissions` WHERE ( type='1' ) ORDER BY time desc LIMIT 6   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000251s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001606s ]
+
+[ 2017-09-26T16:40:29+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001816s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001918s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002063s ]
+
+[ 2017-09-26T16:42:22+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001282s ]
+
+[ 2017-09-26T16:48:05+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001490s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0095s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002259s ]
+
+[ 2017-09-26T16:49:01+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001955s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002112s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0930s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026351s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002468s ]
+
+[ 2017-09-26T16:49:05+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000360s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000498s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001357s ]
+
+[ 2017-09-26T16:49:11+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001628s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0094s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学术研究' )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001569s ]
+
+[ 2017-09-26T16:49:20+08:00 ] ::1 /subject/index.php/Home/Passages/time
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001326s ]
+SQL: SHOW COLUMNS FROM `time` [ RunTime:0.0886s ]
+SQL: SELECT * FROM `time` ORDER BY year desc,month desc  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036127s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001462s ]
+
+[ 2017-09-26T16:49:24+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001474s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='学科介绍' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001560s ]
+
+[ 2017-09-26T16:49:29+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0131s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001756s ]
+
+[ 2017-09-26T16:49:43+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001604s ]
+
+[ 2017-09-26T16:49:48+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001743s ]
+
+[ 2017-09-26T16:57:27+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001466s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001605s ]
+
+[ 2017-09-26T17:01:23+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 251 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 258 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 259 行.
+NOTIC: [8] Undefined variable: notice D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 319 行.
+NOTIC: [8] Undefined variable: study D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 347 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 382 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 388 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 392 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\cbad3fbb719d74275b74d929fd106ce7.php 第 410 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002021s ]
+
+[ 2017-09-26T17:10:23+08:00 ] ::1 /subject/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002533s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `student` [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.0159s ]
+SQL: SELECT * FROM `picture` ORDER BY id  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `news` ORDER BY istop desc,time desc LIMIT 3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `student` ORDER BY time desc LIMIT 8   [ RunTime:0.0108s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002240s ]
+
+[ 2017-09-26T17:10:29+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001217s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE ( first='资源环境' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001608s ]
+
+[ 2017-09-26T17:11:59+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='资源环境' )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000381s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001251s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001372s ]
+
+[ 2017-09-26T17:12:13+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001631s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='资源环境' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001684s ]
+
+[ 2017-09-26T17:48:27+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001604s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001507s ]
+
+[ 2017-09-26T17:49:54+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='人才培养' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026372s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2017-09-26T17:49:58+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000356s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001621s ]
+
+[ 2017-09-26T17:50:03+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001455s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002847s ]
+
+[ 2017-09-26T17:50:41+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001455s ]
+
+[ 2017-09-26T17:51:14+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001419s ]
+
+[ 2017-09-26T17:51:18+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001572s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000955s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001439s ]
+
+[ 2017-09-26T17:51:32+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001662s ]
+
+[ 2017-09-26T17:51:38+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001700s ]
+
+[ 2017-09-26T17:51:42+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001617s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001470s ]
+
+[ 2017-09-26T17:51:46+08:00 ] ::1 /subject/index.php/Home/Passages/showPassageslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `admissions` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admissions` ORDER BY time desc LIMIT 6   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 399 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 404 行.
+NOTIC: [8] Undefined variable: result D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 408 行.
+NOTIC: [8] Undefined variable: news D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 422 行.
+NOTIC: [8] Undefined variable: page D:\php\subject\Application\Runtime\Cache\Home\d188c6e5f73dc6c26e8b5a07facf430f.php 第 487 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034487s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001587s ]
+
+[ 2017-09-26T17:57:05+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001421s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026684s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001848s ]
+
+[ 2017-09-26T17:57:08+08:00 ] ::1 /subject/index.php/Home/Passages/showPassages/17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001108s ]
+SQL: SHOW COLUMNS FROM `passages` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `notice` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `news` ORDER BY time desc LIMIT 0,3   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `notice` WHERE ( type='0' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `notice` WHERE ( type='1' ) ORDER BY istop desc,time desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `passages` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT MAX(id) AS tp_Max FROM `passages` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `passages` WHERE ( first='招生就业' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001243s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001365s ]
+
