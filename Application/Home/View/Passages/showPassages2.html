@@ -264,11 +264,7 @@
                 <section class="section full-width-bg gray-bg">
                     <div class="row">
                         <!-- Sidebar -->
-                        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
-                            <!-- /Featured Video -->                        <!--
-                            Upcoming Events
-                        -->
-                        <if condition="($result['id'] eq 16) OR ($result['id'] eq 17)">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 sidebar">
                             <div class="sidebar-box white">
                                 <h3>
                                     <i class="icon-comment">
@@ -304,9 +300,10 @@
                                         </a>
                                     </div>
                             </div>
-                        </if>
-
-                        <div class="sidebar-box white">
+                            <!-- /Featured Video -->                        <!--
+                            Upcoming Events
+                        -->
+                        <div class="hidden-xs">
                             <h3>
                                 <span style="padding-right: 8px;color: #4174c5;" id="content1" onmouseover="changeContent(this)">
                                     公告通知
