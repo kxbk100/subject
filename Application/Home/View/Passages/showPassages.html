@@ -58,6 +58,22 @@
                 document.getElementById(currentNode).style.color = "#4174c5";
                 document.getElementById("about" + currentNode).style.display = "block";
             }
+
+            $(document).ready(function(){
+                let x = window.location.toString();
+                let s = x.substr(x.length-2,2)
+                if(s==16) {
+                    let child = $('.banner')[1];
+                    $(child).css('background',"rgb(99,178,245)");
+                    let title = $('h4')[1];
+                    $(title).css('color',"white");
+                }else if(s==17){
+                    let child = $('.banner')[2];
+                    $(child).css('background',"rgb(99,178,245)");
+                    let title = $('h4')[2];
+                    $(title).css('color',"white");
+                }
+            });
         </script>
     </head>
     <body class="sticky-header-on tablet-sticky-header">
