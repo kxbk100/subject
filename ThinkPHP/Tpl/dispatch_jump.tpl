@@ -24,7 +24,6 @@ body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16p
 <?php if(isset($message)) {?>
 <p class="success"><?php echo($message); ?></p>
 <?php }else{?>
-<h1>发生了一些错误</h1>
 <p class="error"><?php echo($error); ?></p>
 <?php }?>
 <p class="detail"></p>
