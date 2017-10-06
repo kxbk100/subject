@@ -1296,7 +1296,7 @@ h6.shortcodes-caption{
 .blog-post.big .post-image{
 	float:left;
 	width:50%;
-	margin-right:30px;
+	margin-right:25px;
 }
 
 .post-image img{
@@ -1312,7 +1312,7 @@ h6.shortcodes-caption{
 
 .blog-post.big .post-title{
 	margin-top:0;
-	font-size:24px;
+	font-size:20px;
 	font-weight:400;
 }
 
@@ -3835,9 +3835,9 @@ a.button.details-button:hover:after{
 
 
 .sidebar-box{
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
 	padding:20px;
 	margin-top: 30px;
 }

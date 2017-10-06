@@ -22,6 +22,8 @@
     <link href="{$Think.config.HOMETOOLS}jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
     <link href="{$Think.config.HOMETOOLS}css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
     <link href="{$Think.config.HOMETOOLS}css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="{$Think.config.HOMETOOLS}css/font-awesome.min.css" rel="stylesheet">
+    <link href="{$Think.config.HOMETOOLS}css/demo.css" rel="stylesheet">
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
@@ -86,6 +88,20 @@
             document.getElementById(currentNode).style.color = "#4174c5";
             document.getElementById("about" + currentNode).style.display = "block";
         }
+    </script>
+    <script>
+            $(function() {
+
+                $('#menu').metisMenu();
+
+                $('#menu2').metisMenu({
+                    toggle: false
+                });
+
+                $('#menu3').metisMenu({
+                    doubleTapToGo: true
+                });
+            });
     </script>
     <!-- Bootstrap -->
 </head>
@@ -304,17 +320,59 @@
                             </i>
                             {$result['first']}
                         </h3>
-                        <volist name="third" id="vo">
-                            <div class="banner-wrapper">
-                                <a class="banner" href="{$Think.config.GOTO}Home/Passages/showPassages3/{$vo.id}">
-                                    <i class="icons icon-calendar">
-                                    </i>
-                                    <h4>
-                                        {$vo.third}
-                                    </h4>
-                                </a>
-                            </div>
-                        </volist>
+                        <div class="clearfix">
+                    <aside class="sidebar">
+                        <nav class="sidebar-nav">
+                            <ul id="menu2">
+                                <li>
+                                    <a href="#">Menu 0 <i class="icon-repeat"></i></a>
+                                    <ul>
+                                        <li><a href="#">item 0.1</a></li>
+                                        <li><a href="#">item 0.2</a></li>
+                                        <li><a href="" target="_blank">onokumus</a></li>
+                                        <li><a href="#">item 0.4</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Menu 1 <span class="icon-left-open arrow"></span></a>
+                                    <ul>
+                                        <li><a href="#">item 1.1</a></li>
+                                        <li><a href="#">item 1.2</a></li>
+                                        <li>
+                                            <a href="#">Menu 1.3 <span class="fa plus-times"></span></a>
+                                            <ul>
+                                                <li><a href="#">item 1.3.1</a></li>
+                                                <li><a href="#">item 1.3.2</a></li>
+                                                <li><a href="#">item 1.3.3</a></li>
+                                                <li><a href="#">item 1.3.4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">item 1.4</a></li>
+                                        <li>
+                                            <a href="#">Menu 1.5 <span class="fa plus-minus"></span></a>
+                                            <ul>
+                                                <li><a href="#">item 1.5.1</a></li>
+                                                <li><a href="#">item 1.5.2</a></li>
+                                                <li><a href="#">item 1.5.3</a></li>
+                                                <li><a href="#">item 1.5.4</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Menu 2 <span class="glyphicon arrow"></span></a>
+                                    <ul>
+                                        <li><a href="#">item 2.1</a></li>
+                                        <li><a href="#">item 2.2</a></li>
+                                        <li><a href="#">item 2.3</a></li>
+                                        <li><a href="#">item 2.4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    
+                </div>
                     </div>
                     <div class="hidden-xs">
                         <!-- /Featured Video -->                        <!--
@@ -528,6 +586,7 @@
 <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/zoomsl-3.0.min.js"></script>
 <!-- Main Script -->
 <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/script.js"></script>
+<script type="text/javascript" src="{$Think.config.HOMETOOLS}js/metismenu.js"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="js/jquery.placeholder.js"></script>
 <script type="text/javascript" src="js/script_ie.js"></script>

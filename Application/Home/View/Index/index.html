@@ -46,6 +46,14 @@
                 navigationType: "none",
             });
         });
+
+        $(function () {
+            $('.tp-banner-small').revolution({
+                delay: 3500,
+                startheight: 670,
+                navigationArrows: "none",
+            });
+        });
     </script>
     <script>
         var currentNode = "content1";
@@ -221,42 +229,90 @@
     <section class="section full-width-bg gray-bg">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <!--<div class="owl-header">-->
-                <!--<h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 学子风采</h3>-->
-
-                <!--<div class="carousel-arrows animate-onscroll">-->
-                <!--<span class="left-arrow"><i class="icons icon-left-dir"></i></span>-->
-                <!--<span class="right-arrow"><i class="icons icon-right-dir"></i></span>-->
-                <!--<a href="#" class="button read-more-button medium button-arrow">More</a>-->
-                <!--</div>-->
-
-                <!--</div>-->
-
                 <h3 class="page-header"><i class="icon-bookmark"></i> 学科动态<a
                         href="{$Think.config.GOTO}Home/News/showList/p/1" class="pull-right">More</a></h3>
                 <!-- Blog Post -->
-                <volist name="news" id="vo">
-                    <div class="blog-post big">
-                        <div class="post-image">
-                            <img src="{$vo.small_path}" alt="">
+                <div class="blog-post big">
+                    <div class="post-image">
+                        <div class="tp-banner-container">
+                            <div class="tp-banner-small">
+                                <ul>
+                                    <li data-transition="boxfade" data-link="#">
+                                        <img src="{$picture[0]['path']}" alt="">
+                                    </li>
+
+                                    <li data-transition="boxfade" data-link="#" class="">
+                                        <img src="{$picture[1]['path']}" alt="">
+
+                                    </li>
+
+                                    <li data-transition="boxfade" data-link="#">
+                                        <img src="{$picture[2]['path']}" alt="">
+                                    </li>
+                                </ul>
+
+                            </div>
+
                         </div>
-
-                        <h4 class="post-title"><if condition="$vo.istop eq 1">[置顶]</if> <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">{$vo.title}</a></h4>
-
-                        <div class="post-meta">
-                            <span>作者：{$vo.author}</span>
-                            <span>{$vo.time}</span>
-                        </div>
-
-                        <p>{$vo.content|msubstr=0,80,'utf-8',true}<!--限定字数--></p>
-
-                        <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}"
-                           class="button read-more-button big button-arrow">More</a>
 
                     </div>
-                </volist>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[More]</a>
+                        </p>
 
+                    </div>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[More]</a>
+                        </p>
 
+                    </div>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[More]</a>
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="blog-post big">
+                    <div class="post-image">
+                        <img src="{$vo.small_path}" alt="">
+                    </div>
+                    <h4 class="post-title">
+                        <if condition="$vo.istop eq 1">[置顶]</if>
+                        <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">{$vo.title}</a></h4>
+
+                    <p>{$vo.content|msubstr=0,80,'utf-8',true}<!--限定字数--></p>
+
+                    <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}"
+                       class="button read-more-button big button-arrow">More</a>
+
+                </div>
+                <div class="blog-post big">
+                    <div class="post-image">
+                        <img src="{$vo.small_path}" alt="">
+                    </div>
+                    <h4 class="post-title">
+                        <if condition="$vo.istop eq 1">[置顶]</if>
+                        <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">{$vo.title}</a></h4>
+
+                    <p>{$vo.content|msubstr=0,80,'utf-8',true}<!--限定字数--></p>
+
+                    <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}"
+                       class="button read-more-button big button-arrow">More</a>
+
+                </div>
             </div>
 
 
@@ -264,11 +320,13 @@
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sidebar">
 
                 <!-- Upcoming Events -->
-                <div class="sidebar-box white">
+                <div class="sidebar-box white" style="padding-top:10px;margin-top: 0px;">
                     <h3><i class="icon-camera"></i>
-                        <span style="padding-right: 15px;color: #4174c5;" id="content1"
-                              onmouseover="changeContent(this)">公告通知</span>|
-                        <span style="padding-left: 8px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
+                        <span style="padding-left:30px;padding-right: 15px;color: #4174c5;font-size: 23px;"
+                              id="content1"
+                              onmouseover="changeContent(this)">公告通知</span><span style="font-size:24px;">|</span>
+                        <span style="padding-left: 8px;font-size: 23px;" id="content2"
+                              onmouseover="changeContent(this)">学术活动</span>
                     </h3>
                     <div id="right">
                         <div id="aboutcontent1" class="right">
@@ -283,7 +341,8 @@
                                         </div>
 
                                         <div class="event-content">
-                                            <h6><if condition="$vo.istop eq 1">[置顶]</if> 
+                                            <h6>
+                                                <if condition="$vo.istop eq 1">[置顶]</if>
                                                 <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
                                             </h6>
                                             <ul class="event-meta">
@@ -309,7 +368,8 @@
                                         </div>
 
                                         <div class="event-content">
-                                            <h6><if condition="$vo.istop eq 1">[置顶]</if>
+                                            <h6>
+                                                <if condition="$vo.istop eq 1">[置顶]</if>
                                                 <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
                                             </h6>
                                             <ul class="event-meta">

@@ -9,7 +9,7 @@ class IndexController extends Controller {
 		$picture = M('picture');
 
 		$picture_data = $picture->order('id')->select();
-		$news_data = $news->order('istop desc,time desc')->limit(3)->select();
+		$news_data = $news->order('istop desc,time desc')->limit(9)->select();
 		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
 		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 
