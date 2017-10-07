@@ -22,26 +22,17 @@
     <link href="{$Think.config.HOMETOOLS}jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
     <link href="{$Think.config.HOMETOOLS}css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
     <link href="{$Think.config.HOMETOOLS}css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="{$Think.config.HOMETOOLS}css/font-awesome.min.css" rel="stylesheet">
     <link href="{$Think.config.HOMETOOLS}css/demo.css" rel="stylesheet">
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
             display: none;
         }
-
-        .right {
-            display: none;
-        }
-
-        .right:first-child {
-            display: block
-        }
     </style>
     <!-- JQuery -->
     <script src="{$Think.config.HOMETOOLS}js/jquery-1.11.0.min.js"></script>
     <script src="{$Think.config.HOMETOOLS}js/jquery-ui-1.10.4.min.js"></script>
-    <script>
+    <!-- <script>
         $(function () {
             $('.tp-banner').revolution({
                 delay: 5000,
@@ -75,7 +66,7 @@
                 $(title).css('color', "white");
             }
         });
-    </script>
+    </script> -->
     <script>
         var currentNode = "content1";
         var changeContent = function (obj) {
@@ -294,9 +285,7 @@
     <section id="content">
         <!-- Page Heading -->
         <section class="section page-heading animate-onscroll">
-            <h1>
-                {$result['title']}
-            </h1>
+
             <p class="breadcrumb">
                 <a href="{$Think.config.GOTO}">
                     首页
@@ -315,57 +304,84 @@
                 <!-- Sidebar -->
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 sidebar">
                     <div class="sidebar-box white">
-                        <h3>
+                        <!-- <h3>
                             <i class="icon-comment">
                             </i>
                             {$result['first']}
-                        </h3>
+                        </h3> -->
                         <div class="clearfix">
                     <aside class="sidebar">
                         <nav class="sidebar-nav">
                             <ul id="menu2">
                                 <li>
-                                    <a href="#">Menu 0 <i class="icon-repeat"></i></a>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">学科介绍</b></a>
                                     <ul>
-                                        <li><a href="#">item 0.1</a></li>
-                                        <li><a href="#">item 0.2</a></li>
-                                        <li><a href="" target="_blank">onokumus</a></li>
-                                        <li><a href="#">item 0.4</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/1">一流学科</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/time">大事记</a></li>
+                                       <!--  <li><a href="" target="_blank">onokumus</a></li>
+                                        <li><a href="#">item 0.4</a></li> -->
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Menu 1 <span class="icon-left-open arrow"></span></a>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">学术研究</b></a>
                                     <ul>
-                                        <li><a href="#">item 1.1</a></li>
-                                        <li><a href="#">item 1.2</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/2">学科方向</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/3">学科团队</a></li>
                                         <li>
-                                            <a href="#">Menu 1.3 <span class="fa plus-times"></span></a>
+                                            <a href="#" style="padding-right: 7px;">学科成果<span class="icon-down-open arrow"></span></a>
                                             <ul>
-                                                <li><a href="#">item 1.3.1</a></li>
-                                                <li><a href="#">item 1.3.2</a></li>
-                                                <li><a href="#">item 1.3.3</a></li>
-                                                <li><a href="#">item 1.3.4</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages3/4" style="font-size: 1em;">学科成果</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/5" style="font-size: 1em;">项目立项</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6" style="font-size: 1em;">论文发表</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/7" style="font-size: 1em;">专著教材</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/8" style="font-size: 1em;">知识产权</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="#">item 1.4</a></li>
-                                        <li>
-                                            <a href="#">Menu 1.5 <span class="fa plus-minus"></span></a>
-                                            <ul>
-                                                <li><a href="#">item 1.5.1</a></li>
-                                                <li><a href="#">item 1.5.2</a></li>
-                                                <li><a href="#">item 1.5.3</a></li>
-                                                <li><a href="#">item 1.5.4</a></li>
-                                            </ul>
-                                        </li>
+                                        </li>                                        
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Menu 2 <span class="glyphicon arrow"></span></a>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">人才培养</b></a>
                                     <ul>
-                                        <li><a href="#">item 2.1</a></li>
-                                        <li><a href="#">item 2.2</a></li>
-                                        <li><a href="#">item 2.3</a></li>
-                                        <li><a href="#">item 2.4</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/9">本科教育</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/10">研究生教育</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">学生成果</b></a>
+                                    <ul>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/11">项目介绍</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/12">竞赛介绍</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/13">竞赛获奖</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">资源环境</b></a>
+                                    <ul>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/14">硬件条件</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/15">校企合作</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">学子风采</b></a>
+                                    <ul>
+                                        <li><a href="{$Think.config.GOTO}Home/Student/showList/p/1">学子风采</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center"><b style="font-size:1.3em;">招生就业</b></a>
+                                    <ul>
+                                        <li>
+                                            <a href="#" style="padding-right: 7px;">招生介绍<span class="icon-down-open arrow"></span></a>
+                                            <ul>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist" style="font-size: 1em;">招生介绍</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=0" style="font-size: 1em;">招生简章</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=1" style="font-size: 1em;">招生通知</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=2" style="font-size: 1em;">招生流程</a></li>
+                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=3" style="font-size: 1em;">招生问答</a></li>
+                                            </ul>
+                                        </li>   
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/16">实习信息</a></li>
+                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/17">就业信息</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -373,79 +389,16 @@
                     </aside>
                     
                 </div>
-                    </div>
-                    <div class="hidden-xs">
-                        <!-- /Featured Video -->                        <!--
-                                Upcoming Events
-                            -->
-                        <div class="sidebar-box white">
-                            <h3><span style="padding-right: 8px;color: #4174c5;" id="content1"
-                                      onmouseover="changeContent(this)">公告通知</span>|
-                                <span style="padding-left: 3px;" id="content2"
-                                      onmouseover="changeContent(this)">学术活动</span>
-                            </h3>
-                            <div id="right">
-                                <div id="aboutcontent1" class="right">
-                                    <ul class="upcoming-events">
-                                        <volist name="notice" id="vo">
-                                            <!-- Event -->
-                                            <li>
-                                                <div class="date">
-                                    <span>
-                                        <span class="day">{$vo.day}</span>
-                                        <span class="month">{$vo.month}月</span>
-                                    </span>
-                                                </div>
-
-                                                <div class="event-content">
-                                                    <h6>
-                                                        <if condition="$vo.istop eq 1">[置顶]</if>
-                                                        <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
-                                                    </h6>
-
-                                                </div>
-                                            </li>
-                                            <!-- /Event -->
-                                        </volist>
-                                    </ul>
-                                    <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
-                                       class="button transparent button-arrow">更多公告</a>
-                                </div>
-
-                                <div id="aboutcontent2" class="right">
-                                    <ul class="upcoming-events">
-                                        <volist name="study" id="vo">
-                                            <!-- Event -->
-                                            <li>
-                                                <div class="date">
-                                    <span>
-                                        <span class="day">{$vo.day}</span>
-                                        <span class="month">{$vo.month}月</span>
-                                    </span>
-                                                </div>
-
-                                                <div class="event-content">
-                                                    <h6>
-                                                        <if condition="$vo.istop eq 1">[置顶]</if>
-                                                        <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
-                                                    </h6>
-
-                                                </div>
-                                            </li>
-                                            <!-- /Event -->
-                                        </volist>
-                                    </ul>
-                                    <a href="{$Think.config.GOTO}Home/Notice/showStudyList/p/1"
-                                       class="button transparent button-arrow">更多活动</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+                <div class="hidden-xs"></div>
+        </div>
                 <!-- /Sidebar -->
                 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                     <!-- Single Blog Post -->
                     <div class="blog-post-single">
+                        <h1 class="text-center">
+                            {$result['title']}
+                        </h1>
                         <div class="post-content">
                             <p class="animate-onscroll">
                                 {$result['content']}

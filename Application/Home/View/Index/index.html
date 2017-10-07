@@ -49,11 +49,28 @@
 
         $(function () {
             $('.tp-banner-small').revolution({
-                delay: 3500,
+                delay: 4000,
                 startheight: 670,
                 navigationArrows: "none",
             });
         });
+
+        $(function () {
+            $('.tp-banner-small1').revolution({
+                delay: 4000,
+                startheight: 670,
+                navigationArrows: "none",
+            });
+        });
+
+        $(function () {
+            $('.tp-banner-small2').revolution({
+                delay: 4000,
+                startheight: 670,
+                navigationArrows: "none",
+            });
+        });
+
     </script>
     <script>
         var currentNode = "content1";
@@ -261,7 +278,7 @@
                             <if condition="$vo.istop eq 1">[置顶]</if>
                             <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
                         <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
-                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[More]</a>
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
                         </p>
 
                     </div>
@@ -270,7 +287,7 @@
                             <if condition="$vo.istop eq 1">[置顶]</if>
                             <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
                         <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
-                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[More]</a>
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
                         </p>
 
                     </div>
@@ -279,7 +296,7 @@
                             <if condition="$vo.istop eq 1">[置顶]</if>
                             <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
                         <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
-                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[More]</a>
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
                         </p>
 
                     </div>
@@ -287,30 +304,108 @@
                 </div>
                 <div class="blog-post big">
                     <div class="post-image">
-                        <img src="{$vo.small_path}" alt="">
+                        <div class="tp-banner-container">
+                            <div class="tp-banner-small1">
+                                <ul>
+                                    <li data-transition="boxfade" data-link="#">
+                                        <img src="{$picture[0]['path']}" alt="">
+                                    </li>
+
+                                    <li data-transition="boxfade" data-link="#" class="">
+                                        <img src="{$picture[1]['path']}" alt="">
+
+                                    </li>
+
+                                    <li data-transition="boxfade" data-link="#">
+                                        <img src="{$picture[2]['path']}" alt="">
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                    <h4 class="post-title">
-                        <if condition="$vo.istop eq 1">[置顶]</if>
-                        <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">{$vo.title}</a></h4>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
+                        </p>
 
-                    <p>{$vo.content|msubstr=0,80,'utf-8',true}<!--限定字数--></p>
+                    </div>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
+                        </p>
 
-                    <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}"
-                       class="button read-more-button big button-arrow">More</a>
+                    </div>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
+                        </p>
+
+                    </div>
 
                 </div>
                 <div class="blog-post big">
                     <div class="post-image">
-                        <img src="{$vo.small_path}" alt="">
+                        <div class="tp-banner-container">
+                            <div class="tp-banner-small2">
+                                <ul>
+                                    <li data-transition="boxfade" data-link="#">
+                                        <img src="{$picture[0]['path']}" alt="">
+                                    </li>
+
+                                    <li data-transition="boxfade" data-link="#" class="">
+                                        <img src="{$picture[1]['path']}" alt="">
+
+                                    </li>
+
+                                    <li data-transition="boxfade" data-link="#">
+                                        <img src="{$picture[2]['path']}" alt="">
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                    <h4 class="post-title">
-                        <if condition="$vo.istop eq 1">[置顶]</if>
-                        <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">{$vo.title}</a></h4>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
+                        </p>
 
-                    <p>{$vo.content|msubstr=0,80,'utf-8',true}<!--限定字数--></p>
+                    </div>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
+                        </p>
 
-                    <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}"
-                       class="button read-more-button big button-arrow">More</a>
+                    </div>
+                    <div>
+                        <h4 class="post-title">
+                            <if condition="$vo.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">啦啦啦啦啦啦啦啦啦啦啦啦啦</a></h4>
+                        <p><a>[2017-10-6]</a> 给付对价发动机附近反的机房的啊啊啊啊加肥加大就浮动飞的浮动飞飞术开发加快<!--限定字数--><a
+                                href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}" class="pull-right">[MORE]</a>
+                        </p>
+
+                    </div>
 
                 </div>
             </div>

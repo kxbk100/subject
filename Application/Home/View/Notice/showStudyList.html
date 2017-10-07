@@ -30,15 +30,6 @@
     <!-- JQuery -->
     <script src="{$Think.config.HOMETOOLS}js/jquery-1.11.0.min.js"></script>
     <script src="{$Think.config.HOMETOOLS}js/jquery-ui-1.10.4.min.js"></script>
-    <script>
-        $(function () {
-            $('.tp-banner').revolution({
-                delay: 5000,
-                startheight: 420,
-                navigationType: "none",
-            });
-        });
-    </script>
 </head>
 
 <body class="sticky-header-on tablet-sticky-header">
@@ -149,7 +140,6 @@
         <!-- Page Heading -->
         <section class="section page-heading animate-onscroll">
 
-            <h1>学术活动</h1>
             <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> -> 学术活动</p>
 
         </section>
@@ -164,6 +154,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
+                            <h1>学术活动</h1>
                             <volist name="list" id="vo">
                             <!-- Blog Post -->
                             <div class="list-passage">

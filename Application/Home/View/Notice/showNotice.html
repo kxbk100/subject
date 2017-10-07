@@ -24,9 +24,10 @@
     <!-- Style -->
     <style type="text/css">
         .no-fouc {
-            display: none;          
+            display: none;
         }
-         .right {
+
+        .right {
             display: none;
         }
 
@@ -167,12 +168,13 @@
         <!-- Page Heading -->
         <section class="section page-heading animate-onscroll">
 
-            <h1>{$result['title']}</h1>
-            <div class="post-meta animate-onscroll">
-                <span>作者：{$result['author']}</span>
-                <span>{$result['time']}</span>
-            </div>
-            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> -> <if condition="$result['type'] eq 0">公告通知 <else/>学术活动</if> </p>
+
+            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> ->
+                <if condition="$result['type'] eq 0">公告通知
+                    <else/>
+                    学术活动
+                </if>
+            </p>
 
         </section>
         <!-- Page Heading -->
@@ -186,62 +188,64 @@
                     <!-- /Featured Video -->                        <!-- Upcoming Events -->
                     <div class="sidebar-box white">
                         <h3><span style="padding-right: 8px;color: #4174c5;" id="content1"
-                              onmouseover="changeContent(this)">公告通知</span>|
-                              <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
+                                  onmouseover="changeContent(this)">公告通知</span>|
+                            <span style="padding-left: 3px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
                         </h3>
-                    <div id="right">
-                        <div id="aboutcontent1" class="right">
-                        <ul class="upcoming-events">
-                            <volist name="notice" id="vo">
-                                <!-- Event -->
-                                <li>
-                                    <div class="date">
+                        <div id="right">
+                            <div id="aboutcontent1" class="right">
+                                <ul class="upcoming-events">
+                                    <volist name="notice" id="vo">
+                                        <!-- Event -->
+                                        <li>
+                                            <div class="date">
                                     <span>
                                         <span class="day">{$vo.day}</span>
                                         <span class="month">{$vo.month}月</span>
                                     </span>
-                                    </div>
+                                            </div>
 
-                                    <div class="event-content">
-                                        <h6><if condition="$vo.istop eq 1">[置顶]</if>
-                                            <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
-                                        </h6>
+                                            <div class="event-content">
+                                                <h6>
+                                                    <if condition="$vo.istop eq 1">[置顶]</if>
+                                                    <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                                </h6>
 
-                                    </div>
-                                </li>
-                                <!-- /Event -->
-                            </volist>
-                        </ul>
-                        <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
-                           class="button transparent button-arrow">更多公告</a>
-                        </div>
+                                            </div>
+                                        </li>
+                                        <!-- /Event -->
+                                    </volist>
+                                </ul>
+                                <a href="{$Think.config.GOTO}Home/Notice/showList/p/1"
+                                   class="button transparent button-arrow">更多公告</a>
+                            </div>
 
-                        <div id="aboutcontent2" class="right">
-                        <ul class="upcoming-events">
-                            <volist name="study" id="vo">
-                                <!-- Event -->
-                                <li>
-                                    <div class="date">
+                            <div id="aboutcontent2" class="right">
+                                <ul class="upcoming-events">
+                                    <volist name="study" id="vo">
+                                        <!-- Event -->
+                                        <li>
+                                            <div class="date">
                                     <span>
                                         <span class="day">{$vo.day}</span>
                                         <span class="month">{$vo.month}月</span>
                                     </span>
-                                    </div>
+                                            </div>
 
-                                    <div class="event-content">
-                                        <h6><if condition="$vo.istop eq 1">[置顶]</if>
-                                            <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
-                                        </h6>
+                                            <div class="event-content">
+                                                <h6>
+                                                    <if condition="$vo.istop eq 1">[置顶]</if>
+                                                    <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                                </h6>
 
-                                    </div>
-                                </li>
-                                <!-- /Event -->
-                            </volist>
-                        </ul>
-                        <a href="{$Think.config.GOTO}Home/Notice/showStudyList/p/1"
-                           class="button transparent button-arrow">更多活动</a>
+                                            </div>
+                                        </li>
+                                        <!-- /Event -->
+                                    </volist>
+                                </ul>
+                                <a href="{$Think.config.GOTO}Home/Notice/showStudyList/p/1"
+                                   class="button transparent button-arrow">更多活动</a>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                 </div>
@@ -252,7 +256,13 @@
 
 
                         <div class="post-content">
-
+                            <div class="text-center">
+                                <h1>{$result['title']}</h1>
+                                <div class="post-meta animate-onscroll">
+                                    <span>作者：{$result['author']}</span>
+                                    <span>{$result['time']}</span>
+                                </div>
+                            </div>
                             <p class="animate-onscroll">{$result['content']}</p>
 
                         </div>
@@ -279,8 +289,9 @@
                     <!-- related-articles -->
                     <div class="related-articles">
 
-                        <h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 更多动态<a href="{$Think.config.GOTO}Home/News/showList/p/1"
-                                                                                                      class="pull-right">More</a>
+                        <h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 更多动态<a
+                                href="{$Think.config.GOTO}Home/News/showList/p/1"
+                                class="pull-right">More</a>
                         </h3>
                         <div class="row">
                             <volist name="news" id="vo">
