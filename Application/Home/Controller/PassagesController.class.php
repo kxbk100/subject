@@ -6,11 +6,8 @@ class PassagesController extends Controller {
 	public function showPassages(){
 		$passages = M('passages');
 		$news = M('news');
-		$notice = M('notice');
 
 		$news_data = $news->order('time desc')->limit('0,3')->select();
-		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
-		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 
 		$id = I('path.2','','');
 		$result = $passages->find($id);
@@ -22,8 +19,6 @@ class PassagesController extends Controller {
 		$sons = $passages->where("first='{$result['first']}'")->select();
 
 		$this->assign('news',$news_data);
-		$this->assign('notice',$notice_data);
-		$this->assign('study',$notice_study);
 		$this->assign('sons',$sons);
 		$this->assign('result',$result);
 		$this->display();
@@ -88,6 +83,18 @@ class PassagesController extends Controller {
 		$this->assign('years',$years);
 		$this->assign('result',$result);
 	    $this->display();
+	}
+
+	public function showTime(){
+		$id = I('path.2','','');
+		$news = M('news');
+		$time = M('time');
+
+		$news_data = $news->order('time desc')->limit('0,3')->select();
+		$result = $time->find($id);
+		$this->assign('result',$result);
+		$this->assign('news',$news_data);
+		$this->display();
 	}
 
 	public function showAdmissions(){
