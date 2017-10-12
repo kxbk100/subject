@@ -24,14 +24,14 @@
         <link href="{$Think.config.HOMETOOLS}css/demo.css" rel="stylesheet">
         <!-- Style -->
         <style type="text/css">
-            .no-fouc {
-                display: none;
-            }
-        </style>
+                .no-fouc {
+                    display: none;
+                }
+            </style>
         <!-- JQuery -->
         <script src="{$Think.config.HOMETOOLS}js/jquery-1.11.0.min.js"></script>
         <script src="{$Think.config.HOMETOOLS}js/jquery-ui-1.10.4.min.js"></script>
-        <!-- <script>
+        <script>
             $(function () {
                 $('.tp-banner').revolution({
                     delay: 5000,
@@ -39,28 +39,7 @@
                     navigationType: "none",
                 });
             });
-            
-            $(document).ready(function(){
-                let x = window.location.toString();
-                let s = x.substr(x.length-1,1)
-                if(s=='t' || s==0 || s==1 || s==2 || s==3) {
-                    let child = $('.banner')[0];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[0];
-                    $(title).css('color',"white"); 
-                } else if(x.substr(x.length-1,1)==5) {
-                    let child = $('.banner')[1];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[4];
-                    $(title).css('color',"white");
-                } else if(x.substr(x.length-1,1)==6) {
-                    let child = $('.banner')[2];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[5];
-                    $(title).css('color',"white");
-                }
-            });
-        </script> -->
+        </script>
         <script>
             $(function() {
 
@@ -74,11 +53,9 @@
                     doubleTapToGo: true
                 });
             });
-        </script>
+    </script>
     </head>
     <body class="sticky-header-on tablet-sticky-header">
-        <div id="fb-root">
-        </div>
         <!-- Container -->
         <div class="container">
             <!-- Header -->
@@ -270,13 +247,8 @@
                             首页
                         </a>
                         ->
-                        招生就业 ->
-                        招生介绍<if condition="$type eq ''">
-                                <elseif condition="$type eq 0"/> -> 招生简章
-                                <elseif condition="$type eq 1"/> -> 招生通知
-                                <elseif condition="$type eq 2"/> -> 招生流程
-                                <elseif condition="$type eq 3"/> -> 招生问答
-                                </if>
+                        学科介绍 ->
+                        大事件文章
                     </p>
                 </section>
                 <!-- Page Heading -->
@@ -284,14 +256,14 @@
                 <section class="section full-width-bg gray-bg">
                     <div class="row">
                         <!-- Sidebar -->
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 sidebar">
-                            
+                        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
                             <!-- /Featured Video -->                        <!--
                             Upcoming Events
                         -->
-                        <div class="hidden-xs">
-                            <div class="sidebar-box white">
-                        <div class="clearfix">
+                        
+
+                        <div class="sidebar-box white">
+                            <div class="clearfix">
                     <aside class="sidebar">
                         <nav class="sidebar-nav">
                             <ul id="menu2">
@@ -371,67 +343,72 @@
                     </aside>
                     
                 </div>
-                    
-                    </div>
                         </div>
                     </div>
-
+                    <!-- /Sidebar -->
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <h1>
-                                    <if condition="$type eq ''">招生介绍
-                                        <elseif condition="$type eq 0"/>招生简章
-                                        <elseif condition="$type eq 1"/>招生通知
-                                        <elseif condition="$type eq 2"/>招生流程
-                                        <elseif condition="$type eq 3"/>招生问答
-                                    </if>
-                                </h1>
-                                <volist name="admissions" id="vo">
-                                <div class="list-passage">
-                                    <div class="blog-post animate-onscroll">
-                                        <div class="post-content">
-                                            <div class="post-side-meta">
-                                                <div class="date">
-                                                    <span class="day">
-                                                        {$vo.day}
-                                                    </span>
-                                                    <span class="month">
-                                                        {$vo.month}月
-                                                    </span>
-                                                </div>
+                        <!-- Single Blog Post -->
+                        <div class="blog-post-single">
+                            <h1 class="text-center">
+                                {$result['title']}
+                            </h1>
+                            <div class="post-content">
+                                <p class="animate-onscroll">
+                                    {$result['content']}
+                                </p>
+                            </div>
+                            <!-- Pagination -->
+                            <!--<div class="row animate-onscroll">-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">-->
+                            <!--<a href="{$Think.config.GOTO}Home/Passages/showPassages/{$result['pre']}"-->
+                            <!--class="button big previous">上一篇</a>-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">-->
+                            <!--<a href="{$Think.config.GOTO}Home/Passages/showPassages/{$result['next']}"-->
+                            <!--class="button big next">下一篇</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!-- /Pagination -->
+                        </div>
+                        <!-- /Single Blog Post -->
+                        <!-- Related Articles -->
+                        <div class="related-articles">
+                            <h3 class="page-header animate-onscroll">
+                                <i class="icon-bookmark">
+                                </i>
+                                更多动态
+                                <a href="{$Think.config.GOTO}Home/News/showList/p/1" class="pull-right">
+                                    More
+                                </a>
+                            </h3>
+                            <div class="row">
+                                <volist name="news" id="vo">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <!-- Blog Post -->
+                                        <div class="blog-post animate-onscroll">
+                                            <div class="post-image">
+                                                <img src="{$vo.small_path}" alt=""/>
                                             </div>
-                                            <div class="post-header">
-                                                <h2>
-                                                    <a href="{$Think.config.GOTO}Home/Passages/showAdmissions/{$vo.id}">
-                                                        {$vo.title}
-                                                    </a>
-                                                </h2>
-                                                <div class="post-meta">
-                                                    <span>作者：{$vo.author}</span>
-                                                    <span>{$vo.time}</span><br><br>
-                                                    <span>
-                                                        分类：[
-                                                        <a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type={$vo.type}">
-                                                            <if condition="$vo.type eq 0">招生简章</if>
-                                                            <if condition="$vo.type eq 1">招生通知</if>
-                                                            <if condition="$vo.type eq 2">招生流程</if>
-                                                            <if condition="$vo.type eq 3">招生问答</if>
-                                                        </a>
-                                                        ]
-                                                    </span>
-                                                </div>
+                                            <h4 class="post-title">
+                                                <a href="{$Think.config.GOTO}Home/News/showNews/{$vo.id}">
+                                                    {$vo.title}
+                                                </a>
+                                            </h4>
+                                            <div class="post-meta">
+                                                <span>
+                                                    作者：{$vo.author}
+                                                </span>
+                                                <span>
+                                                    {$vo.time}
+                                                </span>
                                             </div>
                                         </div>
+                                        <!-- /Blog Post -->
                                     </div>
-                                </div>
-                            </volist>
-
-                        <div class="text-center animate-onscroll">
-                            <div class="yahoo2">
-                                {$page}
+                                </volist>
                             </div>
                         </div>
+                        <!-- /Related Articles -->
                     </div>
                 </div>
             </section>
@@ -495,9 +472,9 @@
     <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/owl.carousel.min.js"></script>
     <!-- Revolution Slider  -->
     <script type="text/javascript"
-    src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
+            src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
     <script type="text/javascript"
-    src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+            src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
     <!-- Calendar -->
     <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/responsive-calendar.min.js"></script>
     <!-- Raty -->

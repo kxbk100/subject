@@ -18,6 +18,18 @@ class IndexController extends Controller {
 	    	$news_data[$i]['content'] = strip_tags($news_data[$i]['content']);
 	    }
 
+	    //格式化news的数据
+	    $i=0;$j=0;
+	    foreach ($news_data as $data) {
+	    	$news_result[$i][$j] = $data;
+	    	if($j>=2){
+	    		$i++;
+	    		$j=0;
+	    	}else{
+	    		$j++;
+	    	}
+	    }
+
 	    //去除notice内容的html标记
 	    for($i=0;$i<count($notice_data);$i++){
 	    	$notice_data[$i]['content'] = strip_tags($notice_data[$i]['content']);
@@ -30,12 +42,15 @@ class IndexController extends Controller {
 	    for($i=0;$i<count($list);$i++){
 	    	$list[$i]['content'] = strip_tags($list[$i]['content']);
 	    }
-	    $this->assign('news',$news_data);
+
+	    //显示页面
+	    $this->assign('news',$news_result);
 	    $this->assign('notice',$notice_data);
 	    $this->assign('study',$notice_study);
 	    $this->assign('list',$list);
 	    $this->assign('picture',$picture_data);
 		$this->display();
+
 	}
 
 

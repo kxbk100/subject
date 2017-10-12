@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
     <head>
         <!-- meta -->
@@ -9,29 +9,29 @@
             浙江科技学院软件工程一流学科网
         </title>
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{$Think.config.HOMETOOLS}img/favicon.ico"/>
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo (C("HOMETOOLS")); ?>img/favicon.ico"/>
         <!-- Stylesheets -->
-        <link href="{$Think.config.HOMETOOLS}css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/fontello.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/flexslider.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="{$Think.config.HOMETOOLS}css/owl.carousel.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/responsive-calendar.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/chosen.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="{$Think.config.HOMETOOLS}css/demo.css" rel="stylesheet">
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/fontello.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/flexslider.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/responsive-calendar.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/chosen.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo (C("HOMETOOLS")); ?>css/demo.css" rel="stylesheet">
         <!-- Style -->
         <style type="text/css">
-            .no-fouc {
-                display: none;
-            }
-        </style>
+                .no-fouc {
+                    display: none;
+                }
+            </style>
         <!-- JQuery -->
-        <script src="{$Think.config.HOMETOOLS}js/jquery-1.11.0.min.js"></script>
-        <script src="{$Think.config.HOMETOOLS}js/jquery-ui-1.10.4.min.js"></script>
-        <!-- <script>
+        <script src="<?php echo (C("HOMETOOLS")); ?>js/jquery-1.11.0.min.js"></script>
+        <script src="<?php echo (C("HOMETOOLS")); ?>js/jquery-ui-1.10.4.min.js"></script>
+        <script>
             $(function () {
                 $('.tp-banner').revolution({
                     delay: 5000,
@@ -39,28 +39,7 @@
                     navigationType: "none",
                 });
             });
-            
-            $(document).ready(function(){
-                let x = window.location.toString();
-                let s = x.substr(x.length-1,1)
-                if(s=='t' || s==0 || s==1 || s==2 || s==3) {
-                    let child = $('.banner')[0];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[0];
-                    $(title).css('color',"white"); 
-                } else if(x.substr(x.length-1,1)==5) {
-                    let child = $('.banner')[1];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[4];
-                    $(title).css('color',"white");
-                } else if(x.substr(x.length-1,1)==6) {
-                    let child = $('.banner')[2];
-                    $(child).css('background',"rgb(99,178,245)");
-                    let title = $('h4')[5];
-                    $(title).css('color',"white");
-                }
-            });
-        </script> -->
+        </script>
         <script>
             $(function() {
 
@@ -74,11 +53,9 @@
                     doubleTapToGo: true
                 });
             });
-        </script>
+    </script>
     </head>
     <body class="sticky-header-on tablet-sticky-header">
-        <div id="fb-root">
-        </div>
         <!-- Container -->
         <div class="container">
             <!-- Header -->
@@ -89,8 +66,8 @@
                         <div class="row">
                             <!-- Logo -->
                             <div id="logo" class="col-lg-12 col-md-12 col-sm-12">
-                                <a href="{$Think.config.GOTO}">
-                                    <img src="{$Think.config.HOMETOOLS}img/logo.png" alt="Logo"/>
+                                <a href="<?php echo (C("GOTO")); ?>">
+                                    <img src="<?php echo (C("HOMETOOLS")); ?>img/logo.png" alt="Logo"/>
                                 </a>
                             </div>
                             <!-- /Logo -->
@@ -116,7 +93,7 @@
                         </div>
                         <ul id="navigation">
                             <li class="home-button current-menu-item">
-                                <a href="{$Think.config.GOTO}">
+                                <a href="<?php echo (C("GOTO")); ?>">
                                     <i class="icons icon-home">
                                     </i>
                                 </a>
@@ -129,12 +106,12 @@
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/1">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/1">
                                             一流学科
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/time">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/time">
                                             大事记
                                         </a>
                                     </li>
@@ -148,17 +125,17 @@
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/2">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/2">
                                             学科方向
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/3">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/3">
                                             学科团队
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages3/4">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages3/4">
                                             学科成果
                                         </a>
                                     </li>
@@ -172,12 +149,12 @@
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/9">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/9">
                                             本科教育
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/10">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/10">
                                             研究生教育
                                         </a>
                                     </li>
@@ -191,17 +168,17 @@
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/11">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/11">
                                             项目介绍
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/12">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/12">
                                             竞赛介绍
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/13">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/13">
                                             竞赛获奖
                                         </a>
                                     </li>
@@ -215,19 +192,19 @@
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/14">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/14">
                                             硬件条件
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/15">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/15">
                                             校企合作
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="{$Think.config.GOTO}Home/Student/showList/p/1">
+                                <a href="<?php echo (C("GOTO")); ?>Home/Student/showList/p/1">
                                     <i class="icons icon-group">
                                     </i>
                                     学子风采
@@ -241,17 +218,17 @@
                                 </span>
                                 <ul>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassageslist">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist">
                                             招生介绍
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/16">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/16">
                                             实习信息
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{$Think.config.GOTO}Home/Passages/showPassages/17">
+                                        <a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/17">
                                             就业信息
                                         </a>
                                     </li>
@@ -266,17 +243,12 @@
                 <!-- Page Heading -->
                 <section class="section page-heading animate-onscroll">
                     <p class="breadcrumb">
-                        <a href="{$Think.config.GOTO}">
+                        <a href="<?php echo (C("GOTO")); ?>">
                             首页
                         </a>
                         ->
-                        招生就业 ->
-                        招生介绍<if condition="$type eq ''">
-                                <elseif condition="$type eq 0"/> -> 招生简章
-                                <elseif condition="$type eq 1"/> -> 招生通知
-                                <elseif condition="$type eq 2"/> -> 招生流程
-                                <elseif condition="$type eq 3"/> -> 招生问答
-                                </if>
+                        <?php echo ($result['first']); ?> ->
+                        <?php echo ($result['second']); ?>
                     </p>
                 </section>
                 <!-- Page Heading -->
@@ -284,22 +256,22 @@
                 <section class="section full-width-bg gray-bg">
                     <div class="row">
                         <!-- Sidebar -->
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 sidebar">
-                            
+                        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs sidebar">
                             <!-- /Featured Video -->                        <!--
                             Upcoming Events
                         -->
-                        <div class="hidden-xs">
-                            <div class="sidebar-box white">
-                        <div class="clearfix">
+                        
+
+                        <div class="sidebar-box white">
+                            <div class="clearfix">
                     <aside class="sidebar">
                         <nav class="sidebar-nav">
                             <ul id="menu2">
                                 <li>
                                     <a href="#" class="text-center"><b style="font-size:1.3em;">学科介绍</b></a>
                                     <ul>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/1">一流学科</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/time">大事记</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/1">一流学科</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/time">大事记</a></li>
                                        <!--  <li><a href="" target="_blank">onokumus</a></li>
                                         <li><a href="#">item 0.4</a></li> -->
                                     </ul>
@@ -307,16 +279,16 @@
                                 <li>
                                     <a href="#" class="text-center"><b style="font-size:1.3em;">学术研究</b></a>
                                     <ul>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/2">学科方向</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/3">学科团队</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/2">学科方向</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/3">学科团队</a></li>
                                         <li>
                                             <a href="#" style="padding-right: 7px;">学科成果<span class="icon-down-open arrow"></span></a>
                                             <ul>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages3/4" style="font-size: 1em;">学科成果</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/5" style="font-size: 1em;">项目立项</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6" style="font-size: 1em;">论文发表</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/7" style="font-size: 1em;">专著教材</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/8" style="font-size: 1em;">知识产权</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages3/4" style="font-size: 1em;">学科成果</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/5" style="font-size: 1em;">项目立项</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/6" style="font-size: 1em;">论文发表</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/7" style="font-size: 1em;">专著教材</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/8" style="font-size: 1em;">知识产权</a></li>
                                             </ul>
                                         </li>                                        
                                     </ul>
@@ -324,29 +296,29 @@
                                 <li>
                                     <a href="#" class="text-center"><b style="font-size:1.3em;">人才培养</b></a>
                                     <ul>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/9">本科教育</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/10">研究生教育</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/9">本科教育</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/10">研究生教育</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#" class="text-center"><b style="font-size:1.3em;">学生成果</b></a>
                                     <ul>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/11">项目介绍</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/12">竞赛介绍</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/13">竞赛获奖</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/11">项目介绍</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/12">竞赛介绍</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/13">竞赛获奖</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#" class="text-center"><b style="font-size:1.3em;">资源环境</b></a>
                                     <ul>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/14">硬件条件</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/15">校企合作</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/14">硬件条件</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/15">校企合作</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#" class="text-center"><b style="font-size:1.3em;">学子风采</b></a>
                                     <ul>
-                                        <li><a href="{$Think.config.GOTO}Home/Student/showList/p/1">学子风采</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Student/showList/p/1">学子风采</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -355,15 +327,15 @@
                                         <li>
                                             <a href="#" style="padding-right: 7px;">招生介绍<span class="icon-down-open arrow"></span></a>
                                             <ul>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist" style="font-size: 1em;">招生介绍</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=0" style="font-size: 1em;">招生简章</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=1" style="font-size: 1em;">招生通知</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=2" style="font-size: 1em;">招生流程</a></li>
-                                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type=3" style="font-size: 1em;">招生问答</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist" style="font-size: 1em;">招生介绍</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=0" style="font-size: 1em;">招生简章</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=1" style="font-size: 1em;">招生通知</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=2" style="font-size: 1em;">招生流程</a></li>
+                                                <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassageslist?type=3" style="font-size: 1em;">招生问答</a></li>
                                             </ul>
                                         </li>   
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/16">实习信息</a></li>
-                                        <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/17">就业信息</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/16">实习信息</a></li>
+                                        <li><a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/17">就业信息</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -371,67 +343,70 @@
                     </aside>
                     
                 </div>
-                    
-                    </div>
                         </div>
                     </div>
-
+                    <!-- /Sidebar -->
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <h1>
-                                    <if condition="$type eq ''">招生介绍
-                                        <elseif condition="$type eq 0"/>招生简章
-                                        <elseif condition="$type eq 1"/>招生通知
-                                        <elseif condition="$type eq 2"/>招生流程
-                                        <elseif condition="$type eq 3"/>招生问答
-                                    </if>
-                                </h1>
-                                <volist name="admissions" id="vo">
-                                <div class="list-passage">
-                                    <div class="blog-post animate-onscroll">
-                                        <div class="post-content">
-                                            <div class="post-side-meta">
-                                                <div class="date">
-                                                    <span class="day">
-                                                        {$vo.day}
-                                                    </span>
-                                                    <span class="month">
-                                                        {$vo.month}月
-                                                    </span>
-                                                </div>
+                        <!-- Single Blog Post -->
+                        <div class="blog-post-single">
+                            <h1 class="text-center">
+                                <?php echo ($result['title']); ?>
+                            </h1>
+                            <div class="post-content">
+                                <p class="animate-onscroll">
+                                    <?php echo ($result['content']); ?>
+                                </p>
+                            </div>
+                            <!-- Pagination -->
+                            <!--<div class="row animate-onscroll">-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">-->
+                            <!--<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['pre']); ?>"-->
+                            <!--class="button big previous">上一篇</a>-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">-->
+                            <!--<a href="<?php echo (C("GOTO")); ?>Home/Passages/showPassages/<?php echo ($result['next']); ?>"-->
+                            <!--class="button big next">下一篇</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!-- /Pagination -->
+                        </div>
+                        <!-- /Single Blog Post -->
+                        <!-- Related Articles -->
+                        <div class="related-articles">
+                            <h3 class="page-header animate-onscroll">
+                                <i class="icon-bookmark">
+                                </i>
+                                更多动态
+                                <a href="<?php echo (C("GOTO")); ?>Home/News/showList/p/1" class="pull-right">
+                                    More
+                                </a>
+                            </h3>
+                            <div class="row">
+                                <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 col-md-4 col-sm-4">
+                                        <!-- Blog Post -->
+                                        <div class="blog-post animate-onscroll">
+                                            <div class="post-image">
+                                                <img src="<?php echo ($vo["small_path"]); ?>" alt=""/>
                                             </div>
-                                            <div class="post-header">
-                                                <h2>
-                                                    <a href="{$Think.config.GOTO}Home/Passages/showAdmissions/{$vo.id}">
-                                                        {$vo.title}
-                                                    </a>
-                                                </h2>
-                                                <div class="post-meta">
-                                                    <span>作者：{$vo.author}</span>
-                                                    <span>{$vo.time}</span><br><br>
-                                                    <span>
-                                                        分类：[
-                                                        <a href="{$Think.config.GOTO}Home/Passages/showPassageslist?type={$vo.type}">
-                                                            <if condition="$vo.type eq 0">招生简章</if>
-                                                            <if condition="$vo.type eq 1">招生通知</if>
-                                                            <if condition="$vo.type eq 2">招生流程</if>
-                                                            <if condition="$vo.type eq 3">招生问答</if>
-                                                        </a>
-                                                        ]
-                                                    </span>
-                                                </div>
+                                            <h4 class="post-title">
+                                                <a href="<?php echo (C("GOTO")); ?>Home/News/showNews/<?php echo ($vo["id"]); ?>">
+                                                    <?php echo ($vo["title"]); ?>
+                                                </a>
+                                            </h4>
+                                            <div class="post-meta">
+                                                <span>
+                                                    作者：<?php echo ($vo["author"]); ?>
+                                                </span>
+                                                <span>
+                                                    <?php echo ($vo["time"]); ?>
+                                                </span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </volist>
-
-                        <div class="text-center animate-onscroll">
-                            <div class="yahoo2">
-                                {$page}
+                                        <!-- /Blog Post -->
+                                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
                             </div>
                         </div>
+                        <!-- /Related Articles -->
                     </div>
                 </div>
             </section>
@@ -443,7 +418,7 @@
             <div id="main-footer">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 animate-onscroll">
-                        <img src="{$Think.config.HOMETOOLS}img/logo.png" class="img-responsive center-block" style=" vertical-align:middle"/>
+                        <img src="<?php echo (C("HOMETOOLS")); ?>img/logo.png" class="img-responsive center-block" style=" vertical-align:middle"/>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-2 animate-onscroll">
                         <ul class="list-unstyled">
@@ -487,34 +462,34 @@
     <!-- /Container -->
     <!-- JavaScript -->
     <!-- Bootstrap -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/bootstrap.min.js"></script>
     <!-- Modernizr -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/modernizr.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/modernizr.js"></script>
     <!-- Sliders/Carousels -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/owl.carousel.min.js"></script>
     <!-- Revolution Slider  -->
     <script type="text/javascript"
-    src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
+            src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
     <script type="text/javascript"
-    src="{$Think.config.HOMETOOLS}js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+            src="<?php echo (C("HOMETOOLS")); ?>js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
     <!-- Calendar -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/responsive-calendar.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/responsive-calendar.min.js"></script>
     <!-- Raty -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/jquery.raty.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/jquery.raty.min.js"></script>
     <!-- Chosen -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/chosen.jquery.min.js"></script>
     <!-- InstaFeed -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/instafeed.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/instafeed.min.js"></script>
     <!-- MixItUp -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/jquery.mixitup.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/jquery.mixitup.js"></script>
     <!-- JackBox -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}jackbox/js/jackbox-packed.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>jackbox/js/jackbox-packed.min.js"></script>
     <!-- CloudZoom -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/zoomsl-3.0.min.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/zoomsl-3.0.min.js"></script>
     <!-- Main Script -->
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/script.js"></script>
-    <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/metismenu.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/script.js"></script>
+    <script type="text/javascript" src="<?php echo (C("HOMETOOLS")); ?>js/metismenu.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     <script type="text/javascript" src="js/script_ie.js"></script>
