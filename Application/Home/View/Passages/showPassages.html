@@ -49,10 +49,19 @@
                     toggle: false
                 });
 
+                
+
                 $('#menu3').metisMenu({
                     doubleTapToGo: true
                 });
             });
+
+            $(document).ready(function () {
+            let x = window.location.toString();
+            if (x.substr(x.length - 1,1) == 1) {
+                $('#xkjs').addClass("collapse in");
+            }
+        });
     </script>
     </head>
     <body class="sticky-header-on tablet-sticky-header">
@@ -268,8 +277,8 @@
                         <nav class="sidebar-nav">
                             <ul id="menu2">
                                 <li>
-                                    <a href="#" class="text-center"><b style="font-size:1.3em;">学科介绍</b></a>
-                                    <ul>
+                                    <a class="text-center"><b style="font-size:1.3em;">学科介绍</b></a>
+                                    <ul id="xkjs">
                                         <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/1">一流学科</a></li>
                                         <li><a href="{$Think.config.GOTO}Home/Passages/time">大事记</a></li>
                                        <!--  <li><a href="" target="_blank">onokumus</a></li>
