@@ -14,12 +14,12 @@
 	<link href="{$Think.config.HOMETOOLS}css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="{$Think.config.HOMETOOLS}css/fontello.css" rel="stylesheet" type="text/css">
 	<link href="{$Think.config.HOMETOOLS}css/flexslider.css" rel="stylesheet" type="text/css">
-	<link href="{$Think.config.HOMETOOLS}js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="{$Think.config.HOMETOOLS}js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="{$Think.config.HOMETOOLS}css/owl.carousel.css" rel="stylesheet" type="text/css">
 	<link href="{$Think.config.HOMETOOLS}css/responsive-calendar.css" rel="stylesheet" type="text/css">
 	<link href="{$Think.config.HOMETOOLS}css/chosen.css" rel="stylesheet" type="text/css">
-	<link href="jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css">
-	<link href="{$Think.config.HOMETOOLS}css/cloud-zoom.css" rel="stylesheet" type="text/css">
+	<link href="jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css" />
+	<link href="{$Think.config.HOMETOOLS}css/cloud-zoom.css" rel="stylesheet" type="text/css" />
 	<link href="{$Think.config.HOMETOOLS}css/style.css" rel="stylesheet" type="text/css">
 	<!-- Style -->
 	<style type="text/css">
@@ -39,7 +39,7 @@
 	<script src="{$Think.config.HOMETOOLS}js/jquery-1.11.0.min.js"></script>
 	<script src="{$Think.config.HOMETOOLS}js/jquery-ui-1.10.4.min.js"></script>
 	<script>
-		$(function () {
+		$(function() {
 			$('.tp-banner').revolution({
 				delay: 5000,
 				startheight: 420,
@@ -47,26 +47,35 @@
 			});
 		});
 
-		$(function () {
-			$('.tp-banner-small').revolution({
+		
+
+		$(function() {
+			$('.tp-banner-small1').revolution({
 				delay: 4000,
 				startheight: 670,
 				navigationArrows: "none",
 			});
 		});
 
-		$(function () {
-			$('.tp-banner-small4').revolution({
+		$(function() {
+			$('.tp-banner-small2').revolution({
 				delay: 4000,
 				startheight: 670,
 				navigationArrows: "none",
 			});
 		});
 
+		$(function() {
+			$('.tp-banner-small3').revolution({
+				delay: 4000,
+				startheight: 670,
+				navigationArrows: "none",
+			});
+		});
 	</script>
 	<script>
 		var currentNode = "content1";
-		var changeContent = function (obj) {
+		var changeContent = function(obj) {
 			//之前的选项恢复原状
 			document.getElementById(currentNode).style.color = "black";
 			document.getElementById("about" + currentNode).style.display = "none";
@@ -116,101 +125,62 @@
 					<ul id="navigation">
 
 						<li class="home-button current-menu-item">
-							<a href="{$Think.config.GOTO}">
-								<i class="icons icon-home"></i>
-							</a>
+							<a href="{$Think.config.GOTO}"><i class="icons icon-home"></i></a>
 						</li>
 
 						<li>
-							<span>
-								<i class="icons icon-book"></i> 学科介绍</span>
+							<span><i class="icons icon-book"></i> 学科介绍</span>
 							<ul>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/1">一流学科</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/time">大事记</a>
-								</li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/1">一流学科</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/time">大事记</a></li>
 							</ul>
 						</li>
 
 						<li>
-							<span>
-								<i class="icons icon-thumbs-up"></i> 学术研究</span>
+							<span><i class="icons icon-thumbs-up"></i> 学术研究</span>
 							<ul>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/2">学科方向</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/3">学科团队</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages3/4">学科成果</a>
-								</li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/2">学科方向</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/3">学科团队</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages3/4">学科成果</a></li>
 							</ul>
 						</li>
 
 						<li>
-							<span>
-								<i class="icons icon-user"></i> 人才培养</span>
+							<span><i class="icons icon-user"></i> 人才培养</span>
 							<ul>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/9">本科教育</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/10">研究生教育</a>
-								</li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/9">本科教育</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/10">研究生教育</a></li>
 							</ul>
 						</li>
 
 						<li>
-							<span>
-								<i class="icons icon-fire"></i> 学生成果</span>
+							<span><i class="icons icon-fire"></i> 学生成果</span>
 							<ul>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/11">项目介绍</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/12">竞赛介绍</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/13">竞赛获奖</a>
-								</li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/11">项目介绍</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/12">竞赛介绍</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/13">竞赛获奖</a></li>
 							</ul>
 						</li>
 
 						<li>
-							<span>
-								<i class="icons icon-globe"></i> 资源环境</span>
+							<span><i class="icons icon-globe"></i> 资源环境</span>
 							<ul>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/14">硬件条件</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/15">校企合作</a>
-								</li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/14">硬件条件</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/15">校企合作</a></li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="{$Think.config.GOTO}Home/Student/showList/p/1">
-								<i class="icons icon-group"></i>
-								学子风采</a>
+							<a href="{$Think.config.GOTO}Home/Student/showList/p/1"><i class="icons icon-group"></i>
+                            学子风采</a>
 						</li>
 
 						<li>
-							<span>
-								<i class="icons icon-comment"></i> 招生就业</span>
+							<span><i class="icons icon-comment"></i> 招生就业</span>
 							<ul>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassageslist">招生介绍</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/16">实习信息</a>
-								</li>
-								<li>
-									<a href="{$Think.config.GOTO}Home/Passages/showPassages/17">就业信息</a>
-								</li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist">招生介绍</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/16">实习信息</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/17">就业信息</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -236,26 +206,34 @@
 									<li data-transition="papercut" data-slotamount="7" data-link="#">
 										<img src="{$picture[0]['path']}" alt="">
 										<div class="tp-caption" data-x="left" data-y="200" data-speed="700" data-start="1000" data-easing="easeOutBack">
-											<h2>{$picture[0]['description']}</h2>
-										</div>
+											<h2>{$picture[0]['description']}</h2></div>
 									</li>
 
 									<li data-transition="papercut" data-slotamount="7" data-link="#">
 										<img src="{$picture[1]['path']}" alt="">
 										<div class="tp-caption align-center" data-x="left" data-y="300" data-speed="500" data-start="1200" data-easing="easeOutBack">
 											<h2>
-												{$picture[1]['description']}</h2>
-										</div>
+                                        {$picture[1]['description']}</h2></div>
 									</li>
 
 									<li data-transition="papercut" data-slotamount="7" data-link="#">
 										<img src="{$picture[2]['path']}" alt="">
 										<div class="tp-caption align-right" data-x="right" data-y="100" data-speed="700" data-start="1000" data-easing="easeOutBack">
-											<h2>{$picture[2]['description']}</h2>
+											<h2>
+                                        {$picture[2]['description']}</h2>
 										</div>
+										<!--
+
+                                    <div class="tp-caption align-right" data-x="right" data-y="225" data-speed="500"
+                                         data-start="1200" data-easing="easeOutBack"><p>
+                                        我校学子在省大学生多媒体作品竞赛中获历史最佳成绩我校学子在省大学生多媒体作品竞赛<br>中获历史最佳成绩我校学子在省大学生多媒体作品竞赛中获历史最佳成绩</p>
+                                    </div>
+                                    -->
 									</li>
 								</ul>
+
 							</div>
+
 						</div>
 						<!-- /Revolution Slider -->
 
@@ -268,42 +246,54 @@
 		<section class="section full-width-bg gray-bg">
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<h3 class="page-header">
-						<i class="icon-bookmark"></i> 学科动态
-						<a href="{$Think.config.GOTO}Home/News/showList/p/1" class="pull-right">More</a>
-					</h3>
+					<h3 class="page-header"><i class="icon-bookmark"></i> 学科动态<a
+                        href="{$Think.config.GOTO}Home/News/showList/p/1" class="pull-right">More</a></h3>
 					<!-- Blog Post -->
-					<volist name="news" id="newss">
-						<div class="blog-post big">
-							<div class="post-image">
-								<div class="tp-banner-container">
-									<div class="tp-banner-small">
-										<ul>
-											<volist name="newss" id="news">
-												<li data-transition="boxfade" data-link="{$Think.config.GOTO}Home/News/showNews/{$news.id}">
-													<img src="{$news.titlephoto}" alt="">
-												</li>
-											</volist>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<volist name="newss" id="news">
-								<div>
-									<h4 class="post-title">
-										<if condition="$news.istop eq 1">[置顶]</if>
-										<a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}">{$news.title|msubstr=0,18,'utf-8'}</a>
-									</h4>
-									<p style="margin-top: 5px;">
-										<a>[{$news.time|msubstr=0,10,'utf-8',false}]</a> {$news.content|msubstr=0,34,'utf-8',true}
-										<!--限定字数-->
-										<a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}" class="pull-right">[MORE]</a>
-									</p>
+					
+
+
+
+					<volist name="news" id="newss" key="k">
+
+					<div class="blog-post big">
+						<div class="post-image">
+							<div class="tp-banner-container">
+								<div class="tp-banner-small{$k}">
+									<ul>
+										<volist name="newss" id="news">
+											<li data-transition="boxfade" data-link="{$Think.config.GOTO}Home/News/showNews/{$news.id}">
+												<img src="{$news.titlephoto}" alt="">
+											</li>
+										</volist>
+									</ul>
 
 								</div>
-							</volist>
+
+							</div>
+
 						</div>
+
+						<volist name="newss" id="news">
+						<div>
+							<h4 class="post-title">
+                            <if condition="$news.istop eq 1">[置顶]</if>
+                            <a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}">{$news.title|msubstr=0,18,'utf-8'}</a></h4>
+							<p><a>[{$news.time|msubstr=0,10,'utf-8',false}]</a> {$news.content|msubstr=0,34,'utf-8',true}
+								<!--限定字数--><a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}" class="pull-right">[MORE]</a>
+							</p>
+
+						</div>
+						</volist>
+
+					</div>
+
+
 					</volist>
+
+
+
+
+
 				</div>
 
 
@@ -312,12 +302,13 @@
 
 					<!-- Upcoming Events -->
 					<div class="sidebar-box white" style="padding-top:10px;margin-top: 0px;">
-						<h3>
-							<i class="icon-camera"></i>
-							<span style="padding-left:30px;padding-right: 15px;color: #4174c5;font-size: 23px;" id="content1" onmouseover="changeContent(this)">公告通知</span>
-							<span style="font-size:24px;">|</span>
-							<span style="padding-left: 8px;font-size: 23px;" id="content2" onmouseover="changeContent(this)">学术活动</span>
-						</h3>
+						<h3><i class="icon-camera"></i>
+                        <span style="padding-left:30px;padding-right: 15px;color: #4174c5;font-size: 23px;"
+                              id="content1"
+                              onmouseover="changeContent(this)">公告通知</span><span style="font-size:24px;">|</span>
+                        <span style="padding-left: 8px;font-size: 23px;" id="content2"
+                              onmouseover="changeContent(this)">学术活动</span>
+                    </h3>
 						<div id="right">
 							<div id="aboutcontent1" class="right">
 								<ul class="upcoming-events">
@@ -325,16 +316,16 @@
 										<li>
 											<div class="date">
 												<span>
-													<span class="day">{$vo.day}</span>
-													<span class="month">{$vo.month}月</span>
+                                        <span class="day">{$vo.day}</span>
+												<span class="month">{$vo.month}月</span>
 												</span>
 											</div>
 
 											<div class="event-content">
 												<h6>
-													<if condition="$vo.istop eq 1">[置顶]</if>
-													<a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
-												</h6>
+                                                <if condition="$vo.istop eq 1">[置顶]</if>
+                                                <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                            </h6>
 												<ul class="event-meta">
 													<p>{$vo.content|msubstr=0,80,'utf-8',true}
 														<!--限定字数-->
@@ -353,16 +344,16 @@
 										<li>
 											<div class="date">
 												<span>
-													<span class="day">{$vo.day}</span>
-													<span class="month">{$vo.month}月</span>
+                                        <span class="day">{$vo.day}</span>
+												<span class="month">{$vo.month}月</span>
 												</span>
 											</div>
 
 											<div class="event-content">
 												<h6>
-													<if condition="$vo.istop eq 1">[置顶]</if>
-													<a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
-												</h6>
+                                                <if condition="$vo.istop eq 1">[置顶]</if>
+                                                <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
+                                            </h6>
 												<ul class="event-meta">
 													<p>{$vo.content|msubstr=0,80,'utf-8',true}
 														<!--限定字数-->
@@ -379,6 +370,7 @@
 					<!-- /Upcoming Events -->
 				</div>
 				<!-- /Sidebar -->
+
 			</div>
 
 
@@ -392,17 +384,13 @@
 					<div class="owl-carousel-container">
 
 						<div class="owl-header">
-							<h3 class="page-header animate-onscroll">
-								<i class="icon-bookmark"></i> 学子风采
-								<a href="{$Think.config.GOTO}Home/Student/showList/p/1" class="pull-right">More</a>
-							</h3>
+							<h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 学子风采<a
+                                href="{$Think.config.GOTO}Home/Student/showList/p/1"
+                                class="pull-right">More</a>
+                        </h3>
 							<div class="carousel-arrows animate-onscroll">
-								<span class="left-arrow">
-									<i class="icons icon-left-dir"></i>
-								</span>
-								<span class="right-arrow">
-									<i class="icons icon-right-dir"></i>
-								</span>
+								<span class="left-arrow"><i class="icons icon-left-dir"></i></span>
+								<span class="right-arrow"><i class="icons icon-right-dir"></i></span>
 							</div>
 
 						</div>
@@ -419,9 +407,9 @@
 											<img src="{$vo.small_path}" alt="">
 										</div>
 
-										<h4 class="post-title">
-											<a href="{$Think.config.GOTO}Home/Student/showStudent/{$vo.id}">{$vo.title}</a>
-										</h4>
+										<h4 class="post-title"><a
+                                            href="{$Think.config.GOTO}Home/Student/showStudent/{$vo.id}">{$vo.title}</a>
+                                    </h4>
 										<p>{$vo.content|msubstr=0,50,'utf-8',true}
 											<!--限定字数-->
 										</p>
@@ -545,9 +533,7 @@
 
 
 		<!-- Back To Top -->
-		<a href="#" id="button-to-top">
-			<i class="icons icon-up-dir"></i>
-		</a>
+		<a href="#" id="button-to-top"><i class="icons icon-up-dir"></i></a>
 
 	</div>
 	<!-- /Container -->
