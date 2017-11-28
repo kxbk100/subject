@@ -1,8 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-//文章管理
-class NewsController extends Controller {
+class WritingsController extends Controller {
 
 	public function showAdd(){
 		if(is_null(I('session.name','',''))||(I('session.name','','')=='')){
@@ -208,24 +207,4 @@ class NewsController extends Controller {
 		}
 	}
 
-	public function showPassageAdd(){
-		if(is_null(I('session.name','',''))||(I('session.name','','')=='')){
-			$this->error('非法进入',U('Admin/Index/index'));
-		}
-		$this->assign('name',I('session.name','',''));
-		$this->display();
-	}
-
-	public function showPassageManage(){
-		if(is_null(I('session.name','',''))||(I('session.name','','')=='')){
-			$this->error('非法进入',U('Admin/Index/index'));
-		}
-		$list_passages = M('list_passages');
-		$result = $list_passages->order('time desc')->select();
-		//var_dump($result);
-		$this->assign('name',I('session.name','',''));
-		$this->assign('result',$result);
-		//var_dump($result);
-		$this->display();
-	}
 }

@@ -4,20 +4,6 @@ use Think\Controller;
 class NewsController extends Controller {
 
 	public function showList(){
-		/*$news = M('news');
-		$notice = M('notice');
-
-		$news_data = $news->order('time')->select();
-		$notice_data = $notice->order('time')->select();
-
-		$data[0] = $news_data;
-		$data[1] = $notice_data;
-
-
-		$this->assign('data',$data);
-		$this->display();*/
-
-
 	    $news = M('news'); // 实例化Data数据对象  date 是你的表名
 	    $count = $news->count();// 查询满足要求的总记录数 $map表示查询条件
 	    $Page = new \Think\Page($count,10);// 实例化分页类 传入总记录数

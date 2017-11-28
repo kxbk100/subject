@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+//栏目管理
 class PassagesController extends Controller {
 
 	public function showManage(){
