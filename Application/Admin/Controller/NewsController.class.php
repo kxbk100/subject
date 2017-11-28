@@ -208,6 +208,7 @@ class NewsController extends Controller {
 		}
 	}
 
+	//文章发布页面
 	public function showPassageAdd(){
 		if(is_null(I('session.name','',''))||(I('session.name','','')=='')){
 			$this->error('非法进入',U('Admin/Index/index'));
@@ -216,6 +217,39 @@ class NewsController extends Controller {
 		$this->display();
 	}
 
+	//添加文章
+	public function passageAdd(){
+		$list_passages = M('list_passages');
+		$data = $list_passages->create();
+		$data['istop'] = I('post.istop','','');
+		$data['first'] = I('post.first','','');
+		$data['second'] = I('post.second','','');
+		$data['content'] = I('post.editorValue','','');
+
+		$maxId = $list_passages->max('id');
+		$data['id'] = $maxId+1;
+
+		date_default_timezone_set('PRC');
+		$time = date("Y-m-d H:i:s");
+		$data['time'] = $time;
+
+		//获得月和日
+		$time = str_replace(" ", "-", $time);
+		$date = explode('-',$time);
+		$month = $date[1];
+		$day = $date[2];
+		$data['month'] = $month;
+		$data['day'] = $day;
+
+		$flag = $list_passages->add($data);
+		if($flag){
+			$this->success('添加成功','');
+		}else{
+			$this->erro('添加失败','');
+		}
+	}
+
+	//文章管理页面
 	public function showPassageManage(){
 		if(is_null(I('session.name','',''))||(I('session.name','','')=='')){
 			$this->error('非法进入',U('Admin/Index/index'));
@@ -227,5 +261,61 @@ class NewsController extends Controller {
 		$this->assign('result',$result);
 		//var_dump($result);
 		$this->display();
+	}
+
+	//文章修改界面
+	public function showPassageModify(){
+		if(is_null(I('session.name','',''))||(I('session.name','','')=='')){
+			$this->error('非法进入',U('Admin/Index/index'));
+		}
+		$list_passages = M('list_passages');
+		$id = I('get.id','','');
+		$result = $list_passages->find($id);
+		$this->assign('name',I('session.name','',''));
+		$this->assign('result',$result);
+		$this->display();
+	}
+
+	//文章修改
+	public function passageModify(){
+		$list_passages = M('list_passages');
+		$data = $list_passages->create();
+		$data['istop'] = I('post.istop','','');
+		$data['first'] = I('post.first','','');
+		$data['second'] = I('post.second','','');
+		$data['content'] = I('post.editorValue','','');
+		$data['id'] = I('post.id','','');
+
+		date_default_timezone_set('PRC');
+		$time = date("Y-m-d H:i:s");
+		$data['time'] = $time;
+
+		//获得月和日
+		$time = str_replace(" ", "-", $time);
+		$date = explode('-',$time);
+		$month = $date[1];
+		$day = $date[2];
+		$data['month'] = $month;
+		$data['day'] = $day;
+
+		$flag = $list_passages->save($data);
+		if($flag){
+			$this->success('修改成功',U('Admin/News/showPassageManage'));
+		}else{
+			$this->erro('修改失败','');
+		}
+	}
+
+	//文章删除
+	public function passageDelete(){
+		$list_passages = M('list_passages');
+		$id = I('get.id','','');
+
+		$flag = $list_passages->delete($id);
+		if($flag){
+			$this->success('删除成功',U('Admin/News/showPassageManage'));
+		}else{
+			$this->error('删除失败');
+		}
 	}
 }

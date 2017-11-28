@@ -112,6 +112,12 @@
 											学科动态删改
 										</a>
 									</li>
+									<li>
+										<a href="{$Think.config.GOTO}Admin/News/showPassageAdd">文章发布</a>
+									</li>
+									<li>
+										<a href="{$Think.config.GOTO}Admin/News/showPassageManage" class="active">文章删改</a>
+									</li>
 								</ul>
 							</li>
 							<li>
@@ -121,13 +127,13 @@
 									<i class="gi gi-notes_2 sidebar-nav-icon">
 									</i>
 									<span class="sidebar-nav-mini-hide">
-										文章管理
+										栏目管理
 									</span>
 								</a>
 								<ul>
 									<li>
 										<a href="{$Think.config.GOTO}Admin/Passages/showManage">
-											文章修改
+											栏目内容修改
 										</a>
 									</li>
 								</ul>
@@ -218,8 +224,7 @@
 							<br/>
 							<a herf="{$Think.config.GOTO}">
 								浙江科技学院 信息与电子工程学院
-							</a>
-							版权所有
+							</a> 版权所有
 						</small>
 					</div>
 				</div>
@@ -281,7 +286,7 @@
 							<div class="col-sm-6">
 								<div class="header-section">
 									<h1>
-										学科动态管理
+										文章管理
 									</h1>
 								</div>
 							</div>
@@ -304,9 +309,9 @@
 					<div class="block full">
 						<!-- Get Started Title -->
 						<div class="block-title">
-							<h2>学科动态修改</h2>
+							<h2>文章修改</h2>
 						</div>
-						<form action="{$Think.config.GOTO}Admin/News/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+						<form action="{$Think.config.GOTO}Admin/News/passageModify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
 							<div class="form-group">
 								<label class="col-md-3 control-label" for="example-text-input">标题</label>
 								<div class="col-md-6">
@@ -321,25 +326,35 @@
 									 required="required" />
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="col-md-3 control-label" for="example-file-input">已上传标题图片</label>
-								<div class="col-md-9">
-									<img src="{$result['small_path']}" />
+							<div class="form-group form-inline">
+								<label class="col-md-3 control-label" for="example-text-input">栏目</label>
+								<div class="col-md-4">
+									<select name="first" class="form-control" id="first" onchange="getName()">
+                                        <option value="academicResearch" <if condition="$result['first'] eq academicResearch">selected</if> >学术研究</option>
+                                        <option value="studentPractice" <if condition="$result['first'] eq studentPractice">selected</if> >学生实践</option>
+                                        <option value="integratedService" <if condition="$result['first'] eq integratedService">selected</if> >综合服务</option>
+                                    </select>
+									<select name="second" class="form-control" id="second">
+                                        <option value="research" <if condition="$result['second'] eq research">selected</if> >科研项目</option>
+                                        <option value="academic" <if condition="$result['second'] eq academic">selected</if> >学术论文</option>
+                                        <option value="treatise" <if condition="$result['second'] eq treatise">selected</if> >专著教材</option>
+                                        <option value="property" <if condition="$result['second'] eq property">selected</if> >知识产权</option>
+                                        <option value="studentProject" <if condition="$result['second'] eq studentProject">selected</if> >学生项目</option>
+                                        <option value="competition" <if condition="$result['second'] eq competition">selected</if> >竞赛获奖</option>
+                                        <option value="studentThesis" <if condition="$result['second'] eq studentThesis">selected</if> >学生论文</option>
+                                        <option value="studentProperty" <if condition="$result['second'] eq studentProperty">selected</if> >知识产权</option>
+                                        <option value="video" <if condition="$result['second'] eq video">selected</if> >视频资料</option>
+                                        <option value="dataDownload" <if condition="$result['second'] eq dataDownload">selected</if> >资料下载</option>
+                                    </select>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-md-3 control-label" for="example-file-input">
-									上传新标题图片
-								</label>
-								<div class="col-md-9"> <input type="file" id="example-file-input" name="titlePhoto" /> </div>
 							</div>
 							<div class="form-group">
 								<label class="col-md-3 control-label" for="example-text-input">是否置顶</label>
 								<label class="col-md-1 control-label">
-									<input type="radio" name="first" value="1" <if condition="$result['istop'] eq 1">checked</if> />是
+									<input type="radio" name="istop" value="1" <if condition="$result['istop'] eq 1">checked</if> />是
 								</label>
 								<label class="control-label">
-									<input type="radio" name="first" value="0" <if condition="$result['istop'] eq 0">checked</if> />否
+									<input type="radio" name="istop" value="0" <if condition="$result['istop'] eq 0">checked</if> />否
 								</label>
 							</div>
 							<div class="form-group">
@@ -500,6 +515,24 @@
 			UE.getEditor('editor').execCommand("clearlocaldata");
 			alert("已清空草稿箱")
 		}
+	</script>
+
+	<script>
+		var item = [
+			["科研项目", "学术论文", "专著教材", "知识产权"],
+			["学生项目", "竞赛获奖", "学生论文", "知识产权"],
+			["视频资料", "资料下载"]
+		];
+		function getName() {
+			var first = document.getElementById("first");
+			var second = document.getElementById("second");
+			var firstitem = item[first.selectedIndex];
+			second.length = 1;
+			for (var i = 0; i < firstitem.length; i++) {
+				second[i] = new Option(firstitem[i], firstitem[i]);
+			}
+		}
+		window.onload = getName;
 	</script>
 </body>
 

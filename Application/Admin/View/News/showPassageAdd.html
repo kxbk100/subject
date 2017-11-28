@@ -93,8 +93,8 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="active">
+                        </li>
+                        <li class="active">
                                 <a href="#" class="sidebar-nav-menu">
                                     <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
                                     </i>
@@ -110,16 +110,20 @@
                                             学科动态发布
                                         </a>
                                     </li>
-                                    <li>
+                        <li>
                                         <a href="{$Think.config.GOTO}Admin/News/showManage">
                                             学科动态删改
                                         </a>
                                     </li>
-                                    <li> <a href="{$Think.config.GOTO}Admin/writings/showAdd" class="active">文章发布</a> </li>
-                                    <li> <a href="{$Think.config.GOTO}Admin/writings/showManage">文章删改</a> </li>
-                                </ul>
-                            </li>
-                            <li>
+                        <li> 
+                                        <a href="{$Think.config.GOTO}Admin/News/showPassageAdd" class="active">文章发布</a> 
+                                    </li>
+                        <li>
+                                        <a href="{$Think.config.GOTO}Admin/News/showPassageManage">文章删改</a> 
+                                    </li>
+                        </ul>
+                        </li>
+                        <li>
                                 <a href="#" class="sidebar-nav-menu">
                                     <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
                                     </i>
@@ -135,9 +139,9 @@
                                             栏目内容修改
                                         </a>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
+                        </ul>
+                        </li>
+                        <li>
                                 <a href="#" class="sidebar-nav-menu">
                                     <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
                                     </i>
@@ -153,14 +157,14 @@
                                             学子风采发布
                                         </a>
                                     </li>
-                                    <li>
+                        <li>
                                         <a href="{$Think.config.GOTO}Admin/Student/showManage">
                                             学子风采删改
                                         </a>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
+                        </ul>
+                        </li>
+                        <li>
                                 <a href="#" class="sidebar-nav-menu">
                                     <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
                                     </i>
@@ -176,9 +180,9 @@
                                             首页幻灯片修改
                                         </a>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
+                        </ul>
+                        </li>
+                        <li>
                                 <a href="#" class="sidebar-nav-menu">
                                     <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
                                     </i>
@@ -192,14 +196,14 @@
                                             大事记发布
                                         </a>
                                     </li>
-                                    <li>
+                        <li>
                                         <a href="{$Think.config.GOTO}Admin/Time/showManage">
                                             大事记删改
                                         </a>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
+                        </ul>
+                        </li>
+                        <li>
                                 <a href="#" class="sidebar-nav-menu">
                                     <i class="fa fa-chevron-left sidebar-nav-indicator   sidebar-nav-mini-hide"></i>
                                     <i class="fa fa-pencil sidebar-nav-icon"></i>
@@ -209,11 +213,11 @@
                                     <li>
                                         <a href="{$Think.config.GOTO}Admin/Admissions/showAdd">招生信息发布</a>
                                     </li>
-                                    <li>
+                        <li>
                                         <a href="{$Think.config.GOTO}Admin/Admissions/showManage">招生信息删改</a>
                                     </li>
-                                </ul>
-                            </li>
+                        </ul>
+                        </li>
                         </ul>
                         <div class="sidebar-separator push">
                             <i class="fa fa-ellipsis-h">
@@ -229,8 +233,7 @@
                             <br/>
                             <a herf="{$Think.config.GOTO}">
                                 浙江科技学院 信息与电子工程学院
-                            </a>
-                            版权所有
+                            </a> 版权所有
                         </small>
                     </div>
                 </div>
@@ -276,8 +279,8 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <!-- END User Dropdown -->
+                    </li>
+                    <!-- END User Dropdown -->
                     </ul>
                     <!-- END Right Header Navigation -->
                 </header>
@@ -290,7 +293,7 @@
                             <div class="col-sm-6">
                                 <div class="header-section">
                                     <h1>
-                                        学科动态管理
+                                        文章管理
                                     </h1>
                                 </div>
                             </div>
@@ -312,9 +315,9 @@
                     <div class="block full">
                         <!-- Get Started Title -->
                         <div class="block-title">
-                            <h2>学科动态发布</h2>
+                            <h2>文章发布</h2>
                         </div>
-                        <form action="{$Think.config.GOTO}Admin/News/add" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                        <form action="{$Think.config.GOTO}Admin/News/passageAdd" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="example-text-input">标题</label>
                                 <div class="col-md-6">
@@ -327,23 +330,27 @@
                                     <input type="text" id="example-text-input" name="author" class="form-control" required="required" />
                                 </div>
                             </div>
-                            <div class="form-group">
-                            <label class="col-md-3 control-label" for="example-text-input">一级栏目</label>
-                                <div class="col-md-2">
-                                    <select name="type" class="form-control">
-                                        <option value="0">学术研究</option>
-                                        <option value="1">学生实践</option>
-                                        <option value="2">综合服务</option>
+                            <div class="form-group form-inline">
+                                <label class="col-md-3 control-label" for="example-text-input">栏目</label>
+                                <div class="col-md-4">
+                                    <select name="first" class="form-control" id="first" onchange="getName()">
+                                        <option value="0">请选择一级栏目</option>
+                                        <option value="academicResearch">学术研究</option>
+                                        <option value="studentPractice">学生实践</option>
+                                        <option value="integratedService">综合服务</option>
+                                    </select>
+                                    <select name="second" class="form-control" id="second">
+                                        <option value="0">请选择二级栏目</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="example-text-input">是否置顶</label>
                                 <label class="col-md-1 control-label">
-                                    <input type="radio" name="first" value="1" /> 是
+                                    <input type="radio" name="istop" value="1" /> 是
                                 </label>
                                 <label class="control-label">
-                                    <input type="radio" name="first" value="0" checked="checked" /> 否
+                                    <input type="radio" name="istop" value="0" checked="checked" /> 否
                                 </label>
                             </div>
                             <div class="form-group">
@@ -509,6 +516,24 @@
         function clearLocalData() {
             UE.getEditor('editor').execCommand("clearlocaldata");
             alert("已清空草稿箱")
+        }
+
+    </script>
+
+    <script>
+        var item = [
+            ["科研项目", "学术论文", "专著教材", "知识产权"],
+            ["学生项目", "竞赛获奖", "学生论文", "知识产权"],
+            ["视频资料", "资料下载"]
+        ];
+        function getName() {
+            var first = document.getElementById("first");
+            var second = document.getElementById("second");
+            var firstitem = item[first.selectedIndex - 1];
+            second.length = 1;
+            for (var i = 0; i < firstitem.length; i++) {
+                second[i + 1] = new Option(firstitem[i], firstitem[i]);
+            }
         }
     </script>
 </body>
