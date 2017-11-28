@@ -85,7 +85,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-book sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学科动态管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-book sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">文章管理</span></a>
                                     <ul>
                                         <li>
                                             <a href="{$Think.config.GOTO}Admin/News/showAdd">学科动态发布</a>
@@ -93,8 +93,8 @@
                                         <li>
                                             <a href="{$Think.config.GOTO}Admin/News/showManage">学科动态删改</a>
                                         </li>
-                                        <li> 
-                                            <a href="{$Think.config.GOTO}Admin/News/showPassageAdd">文章发布</a> 
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/News/showPassageAdd">文章发布</a>
                                         </li>
                                         <li>
                                             <a href="{$Think.config.GOTO}Admin/News/showPassageManage">文章删改</a>
@@ -110,13 +110,13 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">学子风采管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">图片文章管理</span></a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd">学子风采发布</a>
+                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd">图片文章发布</a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">学子风采删改</a>
+                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">图片文章删改</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -222,7 +222,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="header-section">
-                                        <h1>学子风采管理</h1>
+                                        <h1>图片文章管理</h1>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 hidden-xs">
@@ -240,13 +240,23 @@
                         <div class="block full">
                             <!-- Get Started Title -->
                             <div class="block-title">
-                                <h2>学子风采修改</h2>
+                                <h2>图片文章修改</h2>
                             </div>
                             <form action="{$Think.config.GOTO}Admin/Student/modify" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
                                         <div class="form-group">
                                             <label class="col-md-3 control-label" for="example-text-input">标题</label>
                                             <div class="col-md-6">
                                                 <input type="text" id="example-text-input" name="title" class="form-control" required="required" value="{$result['title']}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-text-input">栏目</label>
+                                            <div class="col-md-2">
+                                                <select class="form-control" name="type">
+                                                    <option value="subjectTeam" <if condition="$result['type'] eq subjectTeam">selected</if> >学科团队</option>
+                                                    <option value="teachTeam" <if condition="$result['type'] eq teachTeam">selected</if> >教学团队</option>
+                                                    <option value="student" <if condition="$result['type'] eq student">selected</if> >学子风采</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">

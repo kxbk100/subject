@@ -5,7 +5,7 @@ class IndexController extends Controller {
 	public function index(){
 		$news = M('news');
 		$notice = M('notice');
-		$student = M('student');
+		$photo_passages = M('photo_passages');
 		$picture = M('picture');
 
 		$picture_data = $picture->order('id')->select();
@@ -37,7 +37,7 @@ class IndexController extends Controller {
 	   	for($i=0;$i<count($notice_study);$i++){
 	    	$notice_study[$i]['content'] = strip_tags($notice_study[$i]['content']);
 	    }
-	    $list = $student->order('time desc')->limit(8)->select();
+	    $list = $photo_passages->where("type='student'")->order('time desc')->limit(8)->select();
 	    //去除student内容的html标记
 	    for($i=0;$i<count($list);$i++){
 	    	$list[$i]['content'] = strip_tags($list[$i]['content']);

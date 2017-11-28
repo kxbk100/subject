@@ -354,7 +354,11 @@
                     </div>
                     <!-- /Sidebar -->
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                        <h1>学子风采</h1>
+                        <h1> <if condition="$list[0]['type'] eq 'student'">学子风采
+                             <elseif condition="$list[0]['type'] eq 'subjectTeam'"/>学科团队
+                             <elseif condition="$list[0]['type'] eq 'teachTeam'"/>教学团队
+                            </if>
+                        </h1>
 
                         <volist name="list" id="vo">
                             <div class="blog-post big">
@@ -363,7 +367,7 @@
                                 </div>
 
                                 <h4 class="post-title">
-                                    <a href="{$Think.config.GOTO}Home/Student/showStudent/{$vo.id}">{$vo.title}</a>
+                                    <a href="{$Think.config.GOTO}Home/Student/showPhotoPassage/{$vo.id}">{$vo.title}</a>
                                 </h4>
 
                                 <div class="post-meta">
@@ -374,7 +378,7 @@
                                     <!--限定字数-->
                                 </p>
 
-                                <a href="{$Think.config.GOTO}Home/Student/showStudent/{$vo.id}" class="button read-more-button big button-arrow">More</a>
+                                <a href="{$Think.config.GOTO}Home/Student/showPhotoPassage/{$vo.id}" class="button read-more-button big button-arrow">More</a>
                             </div>
                         </volist>
                     </div>

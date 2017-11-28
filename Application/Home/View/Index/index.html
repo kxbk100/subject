@@ -133,7 +133,7 @@
 							<ul>
 								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/1">学科介绍</a></li>
 								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/2">建设目标</a></li>
-								<li><a href="#">学科团队</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/subjectTeam/1">学科团队</a></li>
 								<li><a href="{$Think.config.GOTO}Home/Passages/time">大事记</a></li>
 							</ul>
 						</li>
@@ -153,7 +153,7 @@
 							<span><i class="icons icon-user"></i> 本科教育</span>
 							<ul>
 								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/4">专业介绍</a></li>
-								<li><a href="#">教学团队</a></li>
+								<li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/teachTeam/1">教学团队</a></li>
 								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/5">培养计划</a></li>
 								<li><a href="#">本科招生</a></li>
 								<li><a href="#">本科就业</a></li>
@@ -161,7 +161,7 @@
 						</li>
 						
 						<li>
-							<span><i class="icons icon-adn"></i> 硕士培养</span>
+							<span><i class="icons icon-beaker"></i> 硕士培养</span>
 							<ul>
 								<li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6">硕士点介绍</a></li>
 								<li><a href="#">硕导介绍</a></li>
@@ -190,7 +190,7 @@
 						</li>
 
 						<li>
-							<a href="{$Think.config.GOTO}Home/Student/showList/p/1"><i class="icons icon-group"></i>
+							<a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/student/1"><i class="icons icon-group"></i>
                             学子风采</a>
 						</li>
 
@@ -412,7 +412,7 @@
 
 						<div class="owl-header">
 							<h3 class="page-header animate-onscroll"><i class="icon-bookmark"></i> 学子风采<a
-                                href="{$Think.config.GOTO}Home/Student/showList/p/1"
+                                href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/student/1"
                                 class="pull-right">More</a>
                         </h3>
 							<div class="carousel-arrows animate-onscroll">
@@ -435,7 +435,7 @@
 										</div>
 
 										<h4 class="post-title"><a
-                                            href="{$Think.config.GOTO}Home/Student/showStudent/{$vo.id}">{$vo.title}</a>
+                                            href="{$Think.config.GOTO}Home/Student/showPhotoPassage/{$vo.id}">{$vo.title}</a>
                                     </h4>
 										<p>{$vo.content|msubstr=0,50,'utf-8',true}
 											<!--限定字数-->

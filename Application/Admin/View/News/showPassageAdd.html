@@ -101,7 +101,7 @@
                                     <i class="fa fa-book sidebar-nav-icon">
                                     </i>
                                     <span class="sidebar-nav-mini-hide">
-                                        学科动态管理
+                                        文章管理
                                     </span>
                                 </a>
                                 <ul>
@@ -148,18 +148,18 @@
                                     <i class="fa fa-mortar-board sidebar-nav-icon">
                                     </i>
                                     <span class="sidebar-nav-mini-hide">
-                                        学子风采管理
+                                        图片文章管理
                                     </span>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="{$Think.config.GOTO}Admin/Student/showAdd">
-                                            学子风采发布
+                                            图片文章发布
                                         </a>
                                     </li>
                         <li>
                                         <a href="{$Think.config.GOTO}Admin/Student/showManage">
-                                            学子风采删改
+                                            图片文章删改
                                         </a>
                                     </li>
                         </ul>
@@ -334,13 +334,13 @@
                                 <label class="col-md-3 control-label" for="example-text-input">栏目</label>
                                 <div class="col-md-4">
                                     <select name="first" class="form-control" id="first" onchange="getName()">
-                                        <option value="0">请选择一级栏目</option>
+                                        <option value="academicResearch">请选择一级栏目</option>
                                         <option value="academicResearch">学术研究</option>
                                         <option value="studentPractice">学生实践</option>
                                         <option value="integratedService">综合服务</option>
                                     </select>
                                     <select name="second" class="form-control" id="second">
-                                        <option value="0">请选择二级栏目</option>
+                                        <option value="research">请选择二级栏目</option>
                                     </select>
                                 </div>
                             </div>
@@ -520,22 +520,28 @@
 
     </script>
 
-    <script>
-        var item = [
-            ["科研项目", "学术论文", "专著教材", "知识产权"],
-            ["学生项目", "竞赛获奖", "学生论文", "知识产权"],
-            ["视频资料", "资料下载"]
-        ];
-        function getName() {
-            var first = document.getElementById("first");
-            var second = document.getElementById("second");
-            var firstitem = item[first.selectedIndex - 1];
-            second.length = 1;
-            for (var i = 0; i < firstitem.length; i++) {
-                second[i + 1] = new Option(firstitem[i], firstitem[i]);
-            }
-        }
-    </script>
+<script>
+		var item = [
+			["科研项目", "学术论文", "专著教材", "知识产权"],
+			["学生项目", "竞赛获奖", "学生论文", "知识产权"],
+			["视频资料", "资料下载"]
+		];
+		var value = [
+			["research", "academic", "treatise", "property"],
+			["studentProject", "competition", "studentThesis", "studentProperty"],
+			["video", "download"]
+		];
+		function getName() {
+			var first = document.getElementById("first");
+			var second = document.getElementById("second");
+			var firstitem = item[first.selectedIndex];
+			var firstvalue = value[first.selectedIndex];
+			second.length = 1;
+			for (var i = 0; i < firstitem.length; i++) {
+				second[i] = new Option(firstitem[i], firstvalue[i]);
+			}
+		}
+	</script>
 </body>
 
 </html>

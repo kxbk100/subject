@@ -130,6 +130,8 @@ class PassagesController extends Controller {
 		competition 	竞赛获奖
 		studentThesis 	学生论文
 		studentProperty 	知识产权
+		video 	视频资料
+		download 	资料下载
 	*/
 	public function showPassageList(){
 		$type = I('path.2','','');

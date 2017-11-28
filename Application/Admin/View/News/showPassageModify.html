@@ -98,7 +98,7 @@
 									<i class="fa fa-book sidebar-nav-icon">
 									</i>
 									<span class="sidebar-nav-mini-hide">
-										学科动态管理
+										文章管理
 									</span>
 								</a>
 								<ul>
@@ -116,7 +116,7 @@
 										<a href="{$Think.config.GOTO}Admin/News/showPassageAdd">文章发布</a>
 									</li>
 									<li>
-										<a href="{$Think.config.GOTO}Admin/News/showPassageManage" class="active">文章删改</a>
+										<a href="{$Think.config.GOTO}Admin/News/showPassageManage">文章删改</a>
 									</li>
 								</ul>
 							</li>
@@ -145,18 +145,18 @@
 									<i class="fa fa-mortar-board sidebar-nav-icon">
 									</i>
 									<span class="sidebar-nav-mini-hide">
-										学子风采管理
+										图片文章管理
 									</span>
 								</a>
 								<ul>
 									<li>
 										<a href="{$Think.config.GOTO}Admin/Student/showAdd">
-											学子风采发布
+											图片文章发布
 										</a>
 									</li>
 									<li>
 										<a href="{$Think.config.GOTO}Admin/Student/showManage">
-											学子风采删改
+											图片文章删改
 										</a>
 									</li>
 								</ul>
@@ -344,7 +344,7 @@
                                         <option value="studentThesis" <if condition="$result['second'] eq studentThesis">selected</if> >学生论文</option>
                                         <option value="studentProperty" <if condition="$result['second'] eq studentProperty">selected</if> >知识产权</option>
                                         <option value="video" <if condition="$result['second'] eq video">selected</if> >视频资料</option>
-                                        <option value="dataDownload" <if condition="$result['second'] eq dataDownload">selected</if> >资料下载</option>
+                                        <option value="download" <if condition="$result['second'] eq download">selected</if> >资料下载</option>
                                     </select>
 								</div>
 							</div>
@@ -523,13 +523,19 @@
 			["学生项目", "竞赛获奖", "学生论文", "知识产权"],
 			["视频资料", "资料下载"]
 		];
+		var value = [
+			["research", "academic", "treatise", "property"],
+			["studentProject", "competition", "studentThesis", "studentProperty"],
+			["video", "download"]
+		];
 		function getName() {
 			var first = document.getElementById("first");
 			var second = document.getElementById("second");
 			var firstitem = item[first.selectedIndex];
+			var firstvalue = value[first.selectedIndex];
 			second.length = 1;
 			for (var i = 0; i < firstitem.length; i++) {
-				second[i] = new Option(firstitem[i], firstitem[i]);
+				second[i] = new Option(firstitem[i], firstvalue[i]);
 			}
 		}
 		window.onload = getName;
