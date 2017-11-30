@@ -133,7 +133,7 @@
                             <span><i class="icons icon-beaker"></i> 硕士培养</span>
                             <ul>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6">硕士点介绍</a></li>
-                                <li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/subjectTeam/1">硕导介绍</a></li>
+                                <li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/shuodaoTeam/1">硕导介绍</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/7">培养计划</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist/sZhaosheng">硕士招生</a></li>
                             </ul>
@@ -153,7 +153,7 @@
                             <ul>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentProject/1">学生项目</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/competition/1">竞赛获奖</a></li>
-                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentThesis/1"">学生论文</a></li>
+                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentThesis/1">学生论文</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentProperty/1">知识产权</a></li>
                             </ul>
                         </li>
@@ -192,8 +192,22 @@
         <!-- Page Heading -->
         <section class="section page-heading animate-onscroll">
 
-            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a> -> 学科动态</p>
-
+            <p class="breadcrumb"><a href="{$Think.config.GOTO}">首页</a>
+                <if condition="$list[0]['first'] eq 'academicResearch'"> -> 学术研究
+                    <elseif condition="$list[0]['first'] eq 'studentPractice'"/> -> 学生实践
+                    <elseif condition="$list[0]['first'] eq 'integratedService'"/> -> 综合服务
+                </if>
+                <if condition="$type eq 'research'"> -> 科研项目
+                    <elseif condition="$type eq 'academic'"/> -> 学术论文
+                    <elseif condition="$type eq 'treatise'"/> -> 专著教材
+                    <elseif condition="($type eq 'property') OR ($type eq 'studentProperty')"/> -> 知识产权
+                    <elseif condition="$type eq 'studentProject'"/> -> 学生项目
+                    <elseif condition="$type eq 'competition'"/> -> 竞赛获奖
+                    <elseif condition="$type eq 'studentThesis'"/> -> 学生论文
+                    <elseif condition="$type eq 'studentProperty'"/> -> 知识产权
+                    <elseif condition="$type eq 'video'"/> -> 视频资料
+                    <elseif condition="$type eq 'download'"/> -> 视频下载
+                </if>
         </section>
         <!-- Page Heading -->
 

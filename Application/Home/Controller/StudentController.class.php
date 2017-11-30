@@ -46,6 +46,7 @@ class StudentController extends Controller {
 		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
 		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
 		$news_data = $news->order('time desc')->limit(0,3)->select();
+
 		$this->assign('notice',$notice_data);
 	    $this->assign('study',$notice_study);
 		$this->assign('news',$news_data);

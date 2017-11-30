@@ -25,7 +25,6 @@ class StudentController extends Controller {
 		$result['photoName'] = $_FILES['titlePhoto']['name'];
 		$type = I('post.type','','');
 		$result['type'] = $type;
-
 		//加入时间
 		date_default_timezone_set('PRC');
 		$time = date("Y-m-d H:i:s");

@@ -47,22 +47,22 @@ class PassagesController extends Controller {
 		$this->display();
 	}
 
-	// public function showPassagesList(){
-	// 	$second = I('path.2','','');
-	// 	$type = I('path.3','','');
-	// 	$admissions = M('admissions');
+	public function showPassagesList(){
+		$second = I('path.2','','');
+		$type = I('path.3','','');
+		$admissions = M('admissions');
 
-	// 	if($type == ""){	
-	// 		$admissions_data = $admissions->where("second='{$second}'")->order('time desc')->limit(6)->select();
-	// 	}else{
-	// 		$admissions_data = $admissions->where("second='{$second}' AND type='{$type}'")->order('time desc')->limit(6)->select();
-	// 	}
+		if($type == ""){	
+			$admissions_data = $admissions->where("second='{$second}'")->order('time desc')->limit(6)->select();
+		}else{
+			$admissions_data = $admissions->where("second='{$second}' AND type='{$type}'")->order('time desc')->limit(6)->select();
+		}
 		
-	// 	$this->assign('second',$second);
-	// 	$this->assign('type',$type);
-	// 	$this->assign('admissions',$admissions_data);
-	// 	$this->display();
-	// }
+		$this->assign('second',$second);
+		$this->assign('type',$type);
+		$this->assign('admissions',$admissions_data);
+		$this->display();
+	}
 
 	public function time(){
 		$time = M('time');
@@ -119,7 +119,7 @@ class PassagesController extends Controller {
 	/*  显示文章列表
 		research 	科研项目
 		academic 	学术论文
-		treatise 	专著材料
+		treatise 	专著教材
 		property 	知识产权
 
 		studentProject 		学生项目
@@ -140,7 +140,9 @@ class PassagesController extends Controller {
 	    //去除内容的html标记
 	    for($i=0;$i<count($list);$i++){
 	    	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	    }
+		}
+		
+		$this->assign('type',$type);
 	    $this->assign('list',$list);// 赋值数据集
 	    $this->assign('page',$show);// 赋值分页输出
 	    $this->display('showList'); // 输出模板

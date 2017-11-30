@@ -1,35 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="ch-zn"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="ch-zn"> <!--<![endif]-->
-     <head>
-        <meta charset="utf-8">
-
-        <title>ZUST软件工程一流学科网站管理中心</title>
-
-       
-        <meta name="author" content="pixelcave">
-        <meta name="robots" content="noindex, nofollow">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="ch-zn">
+    <!--
+    <![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            ZUST软件工程一流学科网站管理中心
+        </title>
+        <meta name="author" content="pixelcave"/>
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <!-- Stylesheets -->
         <!-- Bootstrap is included in its original form, unaltered -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}bootstrap.min.css">
-
+        <link rel="stylesheet" href="{$Think.config.CSS_PATH}bootstrap.min.css"/>
         <!-- Related styles of various icon packs and plugins -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}plugins.css">
-
+        <link rel="stylesheet" href="{$Think.config.CSS_PATH}plugins.css"/>
         <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}main.css">
-
-       
-        <link rel="stylesheet" href="{$Think.config.CSS_PATH}themes.css">
+        <link rel="stylesheet" href="{$Think.config.CSS_PATH}main.css"/>
+        <link rel="stylesheet" href="{$Think.config.CSS_PATH}themes.css"/>
         <!-- END Stylesheets -->
-
         <!-- Modernizr (browser feature detection library) -->
-         <script src="{$Think.config.JS_PATH}vendor/modernizr-3.3.1.min.js"></script>
-
+        <script src="{$Think.config.JS_PATH}vendor/modernizr-3.3.1.min.js"></script>
         <!--富文本编辑器部分 开头-->
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
         <script type="text/javascript" charset="utf-8" src="{$Think.config.PUBLIC}UEditor/ueditor.config.js"></script>
@@ -38,34 +32,36 @@
         <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
         <script type="text/javascript" charset="utf-8" src="{$Think.config.PUBLIC}UEditor/lang/zh-cn/zh-cn.js"></script>
         <!--富文本编辑器部分 结尾-->
-
     </head>
     <body>
-       
         <div id="page-wrapper" class="page-loading">
-            
             <div class="preloader">
                 <div class="inner">
                     <!-- Animation spinner for all modern browsers -->
-                    <div class="preloader-spinner themed-background hidden-lt-ie10"></div>
-
+                    <div class="preloader-spinner themed-background hidden-lt-ie10">
+                    </div>
                     <!-- Text for IE9 -->
-                    <h3 class="text-primary visible-lt-ie10"><strong>Loading..</strong></h3>
+                    <h3 class="text-primary visible-lt-ie10">
+                        <strong>
+                            Loading..
+                        </strong>
+                    </h3>
                 </div>
             </div>
-            
             <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
-                
                 <!-- Main Sidebar -->
                 <div id="sidebar">
                     <!-- Sidebar Brand -->
                     <div id="sidebar-brand" class="themed-background">
                         <a href="{$Think.config.GOTO}Admin/index/showAdmin" class="sidebar-title">
-                             <span class="sidebar-nav-mini-hide"><strong>ZUST软件工程管理中心</strong></span>
+                            <span class="sidebar-nav-mini-hide">
+                                <strong>
+                                    ZUST软件工程管理中心
+                                </strong>
+                            </span>
                         </a>
                     </div>
                     <!-- END Sidebar Brand -->
-
                     <!-- Wrapper for scrolling functionality -->
                     <div id="sidebar-scroll">
                         <!-- Sidebar Content -->
@@ -73,137 +69,228 @@
                             <!-- Sidebar Navigation -->
                             <ul class="sidebar-nav">
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-list-alt sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">公告管理</span></a>
-                                    <ul>
-                                                <li>
-                                                    <a href="{$Think.config.GOTO}Admin/Notice/showAdd">公告发布</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{$Think.config.GOTO}Admin/Notice/showManage">公告删改</a>
-                                                </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-book sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">文章管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="fa fa-list-alt sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            公告管理
+                                        </span>
+                                    </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showAdd">学科动态发布</a>
+                                            <a href="{$Think.config.GOTO}Admin/Notice/showAdd">
+                                                公告发布
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showManage">学科动态删改</a>
-                                        </li>
-                                        <li> 
-                                            <a href="{$Think.config.GOTO}Admin/News/showPassageAdd">文章发布</a> 
-                                        </li>
-                                        <li>
-                                            <a href="{$Think.config.GOTO}Admin/News/showPassageManage">文章删改</a>
+                                            <a href="{$Think.config.GOTO}Admin/Notice/showManage">
+                                                公告删改
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-notes_2 sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">栏目管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="fa fa-book sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            文章管理
+                                        </span>
+                                    </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Passages/showManage">栏目内容修改</a>
+                                            <a href="{$Think.config.GOTO}Admin/News/showAdd">
+                                                学科动态发布
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/News/showManage">
+                                                学科动态删改
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/News/showPassageAdd">
+                                                文章发布
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/News/showPassageManage">
+                                                文章删改
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="gi gi-notes_2 sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            栏目管理
+                                        </span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{$Think.config.GOTO}Admin/Passages/showManage">
+                                                栏目内容修改
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="active">
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-mortar-board sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">图片文章管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="fa fa-mortar-board sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            图片文章管理
+                                        </span>
+                                    </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd" class="active">图片文章发布</a>
+                                            <a href="{$Think.config.GOTO}Admin/Student/showAdd" class="active">
+                                                图片文章发布
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">图片文章删改</a>
+                                            <a href="{$Think.config.GOTO}Admin/Student/showManage">
+                                                图片文章删改
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-picture sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">首页幻灯片管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="hi hi-picture sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            首页幻灯片管理
+                                        </span>
+                                    </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Picture/showModify">首页幻灯片修改</a>
+                                            <a href="{$Think.config.GOTO}Admin/Picture/showModify">
+                                                首页幻灯片修改
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="hi hi-time sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">大事记管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="hi hi-time sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            大事记管理
+                                        </span>
+                                    </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showAdd">大事记发布</a>
+                                            <a href="{$Think.config.GOTO}Admin/Time/showAdd">
+                                                大事记发布
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Time/showManage">大事记删改</a>
+                                            <a href="{$Think.config.GOTO}Admin/Time/showManage">
+                                                大事记删改
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator   sidebar-nav-mini-hide"></i><i class="fa fa-pencil sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">招生信息管理</span></a>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator   sidebar-nav-mini-hide">
+                                        </i>
+                                        <i class="fa fa-pencil sidebar-nav-icon">
+                                        </i>
+                                        <span class="sidebar-nav-mini-hide">
+                                            招生就业信息管理
+                                        </span>
+                                    </a>
                                     <ul>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showAdd">招生信息发布</a>
+                                            <a href="{$Think.config.GOTO}Admin/Admissions/showAdd">
+                                                招生就业信息发布
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="{$Think.config.GOTO}Admin/Admissions/showManage">招生信息删改</a>
+                                            <a href="{$Think.config.GOTO}Admin/Admissions/showManage">
+                                                招生就业信息删改
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
-                          
-                                <div class="sidebar-separator push">
-                                    <i class="fa fa-ellipsis-h"></i>
-                                </div>
+                            <div class="sidebar-separator push">
+                                <i class="fa fa-ellipsis-h">
+                                </i>
+                            </div>
                         </div>
                         <!-- END Sidebar Content -->
                     </div>
                     <!-- END Wrapper for scrolling functionality -->
-
                     <!-- Sidebar Extra Info -->
                     <div id="sidebar-extra-info" class="sidebar-content sidebar-nav-mini-hide">
                         <div class="text-center">
-                            <small>  Copyright &copy; 2012-2017 ZUST ITEE All Rights Reserved <br/>
-                                     <a herf="{$Think.config.GOTO}" >浙江科技学院 信息与电子工程学院</a> 版权所有</small>
+                            <small>
+                                Copyright &copy; 2012-2017 ZUST ITEE All Rights Reserved
+                                <br/>
+                                <a herf="{$Think.config.GOTO}">
+                                    浙江科技学院 信息与电子工程学院
+                                </a>
+                                版权所有
+                            </small>
                         </div>
                     </div>
                     <!-- END Sidebar Extra Info -->
                 </div>
                 <!-- END Main Sidebar -->
-
                 <!-- Main Container -->
                 <div id="main-container">
-                    
                     <header class="navbar navbar-inverse navbar-fixed-top">
                         <!-- Left Header Navigation -->
                         <ul class="nav navbar-nav-custom">
                             <!-- Main Sidebar Toggle Button -->
                             <li>
                                 <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
-                                    <i class="fa fa-ellipsis-v fa-fw animation-fadeInRight" id="sidebar-toggle-mini"></i>
-                                    <i class="fa fa-bars fa-fw animation-fadeInRight" id="sidebar-toggle-full"></i>
+                                    <i class="fa fa-ellipsis-v fa-fw animation-fadeInRight" id="sidebar-toggle-mini">
+                                    </i>
+                                    <i class="fa fa-bars fa-fw animation-fadeInRight" id="sidebar-toggle-full">
+                                    </i>
                                 </a>
                             </li>
                             <!-- END Main Sidebar Toggle Button -->
-
                         </ul>
                         <!-- END Left Header Navigation -->
-
                         <!-- Right Header Navigation -->
                         <ul class="nav navbar-nav-custom pull-right">
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:20px; ">
-                                    <strong>欢迎您，{$name}</strong>
+                                    <strong>
+                                        欢迎您，{$name}
+                                    </strong>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
                                         <a href="{$Think.config.GOTO}">
-                                            <i class="hi hi-home pull-right" style="line-height: 20px;"></i>
+                                            <i class="hi hi-home pull-right" style="line-height: 20px;">
+                                            </i>
                                             网站首页
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{$Think.config.GOTO}Admin/User/logout">
-                                            <i class="hi hi-off pull-right" style="line-height: 20px;"></i>
+                                            <i class="hi hi-off pull-right" style="line-height: 20px;">
+                                            </i>
                                             注销账号
                                         </a>
                                     </li>
@@ -214,7 +301,6 @@
                         <!-- END Right Header Navigation -->
                     </header>
                     <!-- END Header -->
-
                     <!-- Page content -->
                     <div id="page-content">
                         <!-- Blank Header -->
@@ -222,64 +308,91 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="header-section">
-                                        <h1>图片文章管理</h1>
+                                        <h1>
+                                            图片文章管理
+                                        </h1>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 hidden-xs">
                                     <div class="header-section">
                                         <ul class="breadcrumb breadcrumb-top">
-                                            <li><a href=""><i class="fa fa-rotate-right"></i></a></li>
+                                            <li>
+                                                <a href="">
+                                                    <i class="fa fa-rotate-right">
+                                                    </i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- END Blank Header -->
-
                         <!-- Get Started Block -->
                         <div class="block full">
                             <!-- Get Started Title -->
                             <div class="block-title">
-                                <h2>图片文章发布</h2>
+                                <h2>
+                                    图片文章发布
+                                </h2>
                             </div>
                             <form action="{$Think.config.GOTO}Admin/Student/add" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-text-input">标题</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="example-text-input" name="title" class="form-control" required="required">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-text-input">栏目</label>
-                                            <div class="col-md-2">
-                                                <select class="form-control" name="type">
-                                                    <option value="subjectTeam">学科团队</option>
-                                                    <option value="teachTeam">教学团队</option>
-                                                    <option value="student">学子风采</option>
-													<option value="student"></option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-file-input">上传标题图片</label>
-                                            <div class="col-md-9">
-                                                <input type="file" id="example-file-input" name="titlePhoto">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-textarea-input">内容</label>
-                                            <div class="col-md-8">
-                                                <script id="editor" type="text/plain" style="height: 300px;"></script>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group form-actions">
-                                            <div class="col-md-9 col-md-offset-3">
-                                                <button type="submit" class="btn btn-effect-ripple btn-primary">发布</button>
-                                                <button type="reset" class="btn btn-effect-ripple btn-danger">重置</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="example-text-input">
+                                        标题
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="example-text-input" name="title" class="form-control" required="required"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="example-text-input">
+                                        栏目
+                                    </label>
+                                    <div class="col-md-2">
+                                        <select class="form-control" name="type">
+                                            <option value="subjectTeam">
+                                                学科团队
+                                            </option>
+                                            <option value="teachTeam">
+                                                教学团队
+                                            </option>
+                                            <option value="student">
+                                                学子风采
+                                            </option>
+                                            <option value="shuodaoTeam">
+                                                硕导介绍
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="example-file-input">
+                                        上传标题图片
+                                    </label>
+                                    <div class="col-md-9">
+                                        <input type="file" id="example-file-input" name="titlePhoto"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="example-textarea-input">
+                                        内容
+                                    </label>
+                                    <div class="col-md-8">
+                                        <script id="editor" type="text/plain" style="height: 300px;"></script>
+                                    </div>
+                                </div>
+                                <div class="form-group form-actions">
+                                    <div class="col-md-9 col-md-offset-3">
+                                        <button type="submit" class="btn btn-effect-ripple btn-primary">
+                                            发布
+                                        </button>
+                                        <button type="reset" class="btn btn-effect-ripple btn-danger">
+                                            重置
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                         <!-- END Get Started Block -->
                     </div>
@@ -290,126 +403,124 @@
             <!-- END Page Container -->
         </div>
         <!-- END Page Wrapper -->
-
         <!-- jQuery, Bootstrap, jQuery plugins and Custom JS code -->
         <script src="{$Think.config.JS_PATH}vendor/jquery-2.2.4.min.js"></script>
         <script src="{$Think.config.JS_PATH}vendor/bootstrap.min.js"></script>
         <script src="{$Think.config.JS_PATH}plugins.js"></script>
         <script src="{$Think.config.JS_PATH}app.js"></script>
-
         <!--富文本编辑器的脚本-->
-<script type="text/javascript">
-
-    //实例化编辑器
-    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-    var ue = UE.getEditor('editor');
-
-
-    function isFocus(e){
-        alert(UE.getEditor('editor').isFocus());
-        UE.dom.domUtils.preventDefault(e)
-    }
-    function setblur(e){
-        UE.getEditor('editor').blur();
-        UE.dom.domUtils.preventDefault(e)
-    }
-    function insertHtml() {
-        var value = prompt('插入html代码', '');
-        UE.getEditor('editor').execCommand('insertHtml', value)
-    }
-    function createEditor() {
-        enableBtn();
-        UE.getEditor('editor');
-    }
-    function getAllHtml() {
-        alert(UE.getEditor('editor').getAllHtml())
-    }
-    function getContent() {
-        var arr = [];
-        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
-        arr.push("内容为：");
-        arr.push(UE.getEditor('editor').getContent());
-        alert(arr.join("\n"));
-    }
-    function getPlainTxt() {
-        var arr = [];
-        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
-        arr.push("内容为：");
-        arr.push(UE.getEditor('editor').getPlainTxt());
-        alert(arr.join('\n'))
-    }
-    function setContent(isAppendTo) {
-        var arr = [];
-        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
-        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
-        alert(arr.join("\n"));
-    }
-    function setDisabled() {
-        UE.getEditor('editor').setDisabled('fullscreen');
-        disableBtn("enable");
-    }
-
-    function setEnabled() {
-        UE.getEditor('editor').setEnabled();
-        enableBtn();
-    }
-
-    function getText() {
-        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
-        var range = UE.getEditor('editor').selection.getRange();
-        range.select();
-        var txt = UE.getEditor('editor').selection.getText();
-        alert(txt)
-    }
-
-    function getContentTxt() {
-        var arr = [];
-        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
-        arr.push("编辑器的纯文本内容为：");
-        arr.push(UE.getEditor('editor').getContentTxt());
-        alert(arr.join("\n"));
-    }
-    function hasContent() {
-        var arr = [];
-        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
-        arr.push("判断结果为：");
-        arr.push(UE.getEditor('editor').hasContents());
-        alert(arr.join("\n"));
-    }
-    function setFocus() {
-        UE.getEditor('editor').focus();
-    }
-    function deleteEditor() {
-        disableBtn();
-        UE.getEditor('editor').destroy();
-    }
-    function disableBtn(str) {
-        var div = document.getElementById('btns');
-        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
-        for (var i = 0, btn; btn = btns[i++];) {
-            if (btn.id == str) {
-                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
-            } else {
-                btn.setAttribute("disabled", "true");
+        <script type="text/javascript">
+        
+            //实例化编辑器
+            //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+            var ue = UE.getEditor('editor');
+        
+        
+            function isFocus(e){
+                alert(UE.getEditor('editor').isFocus());
+                UE.dom.domUtils.preventDefault(e)
             }
-        }
-    }
-    function enableBtn() {
-        var div = document.getElementById('btns');
-        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
-        for (var i = 0, btn; btn = btns[i++];) {
-            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
-        }
-    }
-
-    function getLocalData () {
-        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
-    }
-
-    function clearLocalData () {
-        UE.getEditor('editor').execCommand( "clearlocaldata" );
-        alert("已清空草稿箱")
-    }
-</script>
+            function setblur(e){
+                UE.getEditor('editor').blur();
+                UE.dom.domUtils.preventDefault(e)
+            }
+            function insertHtml() {
+                var value = prompt('插入html代码', '');
+                UE.getEditor('editor').execCommand('insertHtml', value)
+            }
+            function createEditor() {
+                enableBtn();
+                UE.getEditor('editor');
+            }
+            function getAllHtml() {
+                alert(UE.getEditor('editor').getAllHtml())
+            }
+            function getContent() {
+                var arr = [];
+                arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+                arr.push("内容为：");
+                arr.push(UE.getEditor('editor').getContent());
+                alert(arr.join("\n"));
+            }
+            function getPlainTxt() {
+                var arr = [];
+                arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+                arr.push("内容为：");
+                arr.push(UE.getEditor('editor').getPlainTxt());
+                alert(arr.join('\n'))
+            }
+            function setContent(isAppendTo) {
+                var arr = [];
+                arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+                UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+                alert(arr.join("\n"));
+            }
+            function setDisabled() {
+                UE.getEditor('editor').setDisabled('fullscreen');
+                disableBtn("enable");
+            }
+        
+            function setEnabled() {
+                UE.getEditor('editor').setEnabled();
+                enableBtn();
+            }
+        
+            function getText() {
+                //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+                var range = UE.getEditor('editor').selection.getRange();
+                range.select();
+                var txt = UE.getEditor('editor').selection.getText();
+                alert(txt)
+            }
+        
+            function getContentTxt() {
+                var arr = [];
+                arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+                arr.push("编辑器的纯文本内容为：");
+                arr.push(UE.getEditor('editor').getContentTxt());
+                alert(arr.join("\n"));
+            }
+            function hasContent() {
+                var arr = [];
+                arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+                arr.push("判断结果为：");
+                arr.push(UE.getEditor('editor').hasContents());
+                alert(arr.join("\n"));
+            }
+            function setFocus() {
+                UE.getEditor('editor').focus();
+            }
+            function deleteEditor() {
+                disableBtn();
+                UE.getEditor('editor').destroy();
+            }
+            function disableBtn(str) {
+                var div = document.getElementById('btns');
+                var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+                for (var i = 0, btn; btn = btns[i++];) {
+                    if (btn.id == str) {
+                        UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+                    } else {
+                        btn.setAttribute("disabled", "true");
+                    }
+                }
+            }
+            function enableBtn() {
+                var div = document.getElementById('btns');
+                var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+                for (var i = 0, btn; btn = btns[i++];) {
+                    UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+                }
+            }
+        
+            function getLocalData () {
+                alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+            }
+        
+            function clearLocalData () {
+                UE.getEditor('editor').execCommand( "clearlocaldata" );
+                alert("已清空草稿箱")
+            }
+        </script>
     </body>
 </html>

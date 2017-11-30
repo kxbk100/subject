@@ -146,7 +146,7 @@
                             <span><i class="icons icon-beaker"></i> 硕士培养</span>
                             <ul>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6">硕士点介绍</a></li>
-                                <li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/subjectTeam/1">硕导介绍</a></li>
+                                <li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/shuodaoTeam/1">硕导介绍</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/7">培养计划</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist/sZhaosheng">硕士招生</a></li>
                             </ul>
@@ -166,7 +166,7 @@
                             <ul>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentProject/1">学生项目</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/competition/1">竞赛获奖</a></li>
-                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentThesis/1"">学生论文</a></li>
+                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentThesis/1">学生论文</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentProperty/1">知识产权</a></li>
                             </ul>
                         </li>
@@ -205,7 +205,18 @@
 
 
                 <p class="breadcrumb">
-                    <a href="{$Think.config.GOTO}">首页</a> -> 学子风采</p>
+                    <a href="{$Think.config.GOTO}">首页</a> 
+                    <if condition="$result['type'] eq 'student'">
+                        <elseif condition="$result['type'] eq 'subjectTeam'"/>-> 本科教育
+                        <elseif condition="$result['type'] eq 'teachTeam'"/>-> 本科教育
+                        <elseif condition="$result['type'] eq 'shuodaoTeam'"/>-> 硕士教育
+                    </if>
+                    <if condition="$result['type'] eq 'student'">-> 学子风采
+                        <elseif condition="$result['type'] eq 'subjectTeam'"/>-> 学科团队
+                        <elseif condition="$result['type'] eq 'teachTeam'"/>-> 教学团队
+                        <elseif condition="$result['type'] eq 'shuodaoTeam'"/>-> 硕导介绍
+                    </if>
+                </p>
 
             </section>
             <!-- Page Heading -->

@@ -195,7 +195,7 @@
                             <span><i class="icons icon-beaker"></i> 硕士培养</span>
                             <ul>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6">硕士点介绍</a></li>
-                                <li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/subjectTeam/1">硕导介绍</a></li>
+                                <li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/shuodaoTeam/1">硕导介绍</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassages/7">培养计划</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist/sZhaosheng">硕士招生</a></li>
                             </ul>
@@ -215,10 +215,11 @@
                             <ul>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentProject/1">学生项目</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/competition/1">竞赛获奖</a></li>
-                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentThesis/1"">学生论文</a></li>
+                                <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentThesis/1">学生论文</a></li>
                                 <li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/studentProperty/1">知识产权</a></li>
                             </ul>
                         </li>
+                 
 
                         <li>
                             <a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/student/1"><i class="icons icon-group"></i>
@@ -254,12 +255,23 @@
                     <a href="{$Think.config.GOTO}">
                         首页
                     </a>
-                    -> 招生就业 -> 招生介绍
-                    <if condition="$type eq 'research'"> ->科研项目
-                        <elseif condition="$type eq ''"/> -> 招生简章
-                        <elseif condition="$type eq 1"/> -> 招生通知
-                        <elseif condition="$type eq 2"/> -> 招生流程
-                        <elseif condition="$type eq 3"/> -> 招生问答
+                    <if condition="$admissions[0]['second'] eq 'bZhaosheng'"> -> 本科教育
+                        <elseif condition="$admissions[0]['second'] eq 'bJiuye'" /> -> 本科教育
+                        <elseif condition="$admissions[0]['second'] eq 'sZhaosheng'" /> -> 硕士培养
+                    </if>
+                    <if condition="$admissions[0]['second'] eq 'bZhaosheng'"> -> 本科招生
+                        <elseif condition="$admissions[0]['second'] eq 'bJiuye'" /> -> 本科就业
+                        <elseif condition="$admissions[0]['second'] eq 'sZhaosheng'" /> -> 硕士招生
+                    </if>
+                    <if condition="($type eq 'bJianzhang') AND ($second eq 'bZhaosheng')">-> 招生简章
+                        <elseif condition="($type eq 'sJianzhang') AND ($second eq 'sZhaosheng')"/>-> 招生简章
+                        <elseif condition="($type eq 'bJihua') AND ($second eq 'bZhaosheng')"/>-> 招生计划
+                        <elseif condition="($type eq 'sJihua') AND ($second eq 'sZhaosheng')"/>-> 招生计划
+                        <elseif condition="($type eq 'bWenda') AND ($second eq 'bZhaosheng')"/>-> 招生问答
+                        <elseif condition="($type eq 'sWenda') AND ($second eq 'sZhaosheng')"/>-> 招生问答
+                        <elseif condition="($type eq 'bXinxi') AND ($second eq 'bJiuye')"/>-> 就业信息
+                        <elseif condition="($type eq 'bShixi') AND ($second eq 'bJiuye')"/>-> 实习信息
+
                     </if>
         </p>
             </section>
