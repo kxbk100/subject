@@ -25,6 +25,8 @@ class StudentController extends Controller {
 	   	$notice = M('notice');
 		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
 		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
+		
+		$this->assign('type',I('path.2'));
 	    $this->assign('notice',$notice_data);
 	    $this->assign('study',$notice_study);
 	    $this->display(); // 输出模板

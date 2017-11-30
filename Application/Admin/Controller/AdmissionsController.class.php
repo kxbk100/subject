@@ -14,21 +14,10 @@ class AdmissionsController extends Controller {
     public function add(){
         $admissions = M('admissions');
         $result = $admissions->create();
-        $author = I('post.author','','');
-        $result['author'] = $author;
-        $content = I('post.editorValue','','');
-        $type = I('post.type','','');
-
-        $result['content'] = $content;
-        $result['type'] = $type;
+		$result['content'] = I('post.editorValue','','');
+	
         //得到id
-        $id = 0;
-        $con = $admissions->query("select id from admissions");
-        foreach ($con as $arr) {
-            if($arr['id']>$id)
-                $id = $arr['id'];
-        }
-        $id = $id+1;
+		$id = $admissions->max('id')+1;
         $result['id'] = $id;
 
         date_default_timezone_set('PRC');
@@ -80,10 +69,6 @@ class AdmissionsController extends Controller {
         $admissions = M('admissions');
         $result = $admissions->create();
         $content = I('post.editorValue','','');
-        $type = I('post.type','','');
-
-        $result['content'] = $content;
-        $result['type'] = $type;
 
         date_default_timezone_set('PRC');
         $time = date("Y-m-d H:i:s");

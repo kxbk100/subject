@@ -15,6 +15,7 @@ class StudentController extends Controller {
 		学科团队	sujectTeam
 		教学团队	teachTeam
 		学子风采	student
+		硕导介绍	shuodaoTeam
 	*/
 	public function add(){
 		$photo_passages = M('photo_passages');

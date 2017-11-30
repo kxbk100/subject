@@ -335,6 +335,9 @@
                                                 标题
                                             </th>
                                             <th class="text-center">
+                                                二级目录
+                                            </th>
+                                            <th class="text-center">
                                                 类别
                                             </th>
                                             <th class="text-center">
@@ -360,18 +363,18 @@
                                                     {$vo.title}
                                                 </td>
                                                 <td class="text-center">
-                                                    <if condition="$vo.type eq 0">
-                                                        招生简章
-                                                    </if>
-                                                    <if condition="$vo.type eq 1">
-                                                        招生通知
-                                                    </if>
-                                                    <if condition="$vo.type eq 2">
-                                                        招生流程
-                                                    </if>
-                                                    <if condition="$vo.type eq 3">
-                                                        招生问答
-                                                    </if>
+                                                    <if condition="$vo.second eq 'bZhaosheng'">本科招生
+													<elseif condition="$vo.second eq 'bJiuye'" />本科就业
+													<elseif condition="$vo.second eq 'sZhaosheng'" />硕士招生
+													</if>
+                                                </td>
+                                                <td class="text-center">
+                                                    <if condition="($vo.type eq 'bJianzhang') OR ($vo.type eq 'sJianzhang')">招生简章
+													<elseif condition="($vo.type eq 'bJihua') OR ($vo.type eq 'sJihua')" />招生计划
+													<elseif condition="($vo.type eq 'bWenda') OR ($vo.type eq 'sWenda')" />招生问答
+													<elseif condition="$vo.type eq 'bShixi'" />实习信息
+													<elseif condition="$vo.type eq 'bXinxi'" />就业信息
+													</if>
                                                 </td>
                                                 <td class="text-center">
                                                     {$vo.time}

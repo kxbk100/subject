@@ -47,26 +47,22 @@ class PassagesController extends Controller {
 		$this->display();
 	}
 
-	public function showPassagesList(){
-		$passages = M('passages');
-		$notice = M('notice');
-		$admissions = M('admissions');
-		$type = I('get.type','','');
+	// public function showPassagesList(){
+	// 	$second = I('path.2','','');
+	// 	$type = I('path.3','','');
+	// 	$admissions = M('admissions');
 
-		$notice_data = $notice->order('istop desc,time desc')->where("type='0'")->limit(5)->select();
-		$notice_study = $notice->order('istop desc,time desc')->where("type='1'")->limit(5)->select();
-		if($type==''){
-			$admissions_data = $admissions->order('time desc')->limit(6)->select();
-		}else{
-			$admissions_data = $admissions->where("type='{$type}'")->order('time desc')->limit(6)->select();
-		}
-
-		$this->assign('notice',$notice_data);
-		$this->assign('study',$notice_study);
-		$this->assign('admissions',$admissions_data);
-		$this->assign('type',$type);
-		$this->display();
-	}
+	// 	if($type == ""){	
+	// 		$admissions_data = $admissions->where("second='{$second}'")->order('time desc')->limit(6)->select();
+	// 	}else{
+	// 		$admissions_data = $admissions->where("second='{$second}' AND type='{$type}'")->order('time desc')->limit(6)->select();
+	// 	}
+		
+	// 	$this->assign('second',$second);
+	// 	$this->assign('type',$type);
+	// 	$this->assign('admissions',$admissions_data);
+	// 	$this->display();
+	// }
 
 	public function time(){
 		$time = M('time');
@@ -109,7 +105,7 @@ class PassagesController extends Controller {
 		$id = I('path.2','','');
 		$result = $admissions->find($id);
 
-		$max = $admissions->Max('id');
+		$max = $admissions->max('id');
 		$result['pre'] = ($id-1<=0)?$id:$id-1;
 		$result['next'] = ($id+1>$max)?$max:$id+1;
 
@@ -171,150 +167,5 @@ class PassagesController extends Controller {
 		$this->assign('result',$result);
 		$this->display("showPassages");
 	}
-
-	// //科研项目列表
-	// public function showResearchList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='research'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='research'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //学术论文列表
-	// public function showAcademicList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='academic'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='academic'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //专著材料列表
-	// public function showTreatiseList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='treatise'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='treatise'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //知识产权列表
-	// public function showPropertyList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='property'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='property'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //学生项目列表
-	// public function showStudentProjectList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='studentProject'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='studentProject'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //竞赛获奖列表
-	// public function showCompetitionList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='competition'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='competition'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //学生论文列表
-	// public function showStudentThesisList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='studentThesis'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='studentThesis'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
-	// //知识产权列表
-	// public function showStudentPropertyList(){
-	// 	$list_passages = M('list_passages'); // 实例化Data数据对象  date 是你的表名
-	//     $count = $list_passages->where("second='studentProperty'")->count();// 查询满足要求的总记录数 $map表示查询条件
-	//     $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数
-	//     $show = $Page->show();// 分页显示输出
-	//     // 进行分页数据查询
-	//     $list = $list_passages->where("second='studentProperty'")->order('time desc')->page($_GET['p'].',1')->select(); // $Page->firstRow 起始条数 $Page->listRows 获取多少条
-	//     //去除内容的html标记
-	//     for($i=0;$i<count($list);$i++){
-	//     	$list[$i]['content'] = strip_tags($list[$i]['content']);
-	//     }
-
-	//     $this->assign('list',$list);// 赋值数据集
-	//     $this->assign('page',$show);// 赋值分页输出
-	//     $this->display('showList'); // 输出模板
-	// }
-
 
 }
