@@ -30,7 +30,7 @@
 .sidebar-nav ul a {
   padding: 10px 20px;
   color: #0669cf;
-  border-top: 1px solid #fafbfd;
+  border: 1px solid rgba(152, 157, 167, 0.55);
   box-shadow: 0px 1px 0px rgba(133, 148, 158, 0.73) inset;
   text-shadow: 0px 1px 0px 0px 1px 0px #63b2f5;
 }

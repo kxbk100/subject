@@ -185,10 +185,12 @@
                         <elseif condition="$admissions[0]['second'] eq 'bJiuye'" /> -> 本科教育
                         <elseif condition="$admissions[0]['second'] eq 'sZhaosheng'" /> -> 硕士培养
                     </if>
+            <a style="color: #95999e" id="title">
             <if condition="$admissions[0]['second'] eq 'bZhaosheng'"> -> 本科招生
                         <elseif condition="$admissions[0]['second'] eq 'bJiuye'" /> -> 本科就业
                         <elseif condition="$admissions[0]['second'] eq 'sZhaosheng'" /> -> 硕士招生
                     </if>
+            </a>
             <if condition="($type eq 'bJianzhang') AND ($second eq 'bZhaosheng')">-> 招生简章
                         <elseif condition="($type eq 'sJianzhang') AND ($second eq 'sZhaosheng')"/>-> 招生简章
                         <elseif condition="($type eq 'bJihua') AND ($second eq 'bZhaosheng')"/>-> 招生计划
@@ -373,17 +375,22 @@
       <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/script.js"></script>
       <script type="text/javascript" src="{$Think.config.HOMETOOLS}js/metismenu.js"></script>
       <script>
-        if (title == "科研项目") {
-          $('<li class="active"><a class="text-center"><b style="font-size:1.3em;">学术研究</b></a><ul><li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/research/1">科研项目</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/academic/1">学术论文</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/treatise/1">专著教材</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassageList/property/1">知识产权</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassages/3">学术交流</a></li></ul></li>').appendTo($('#menu2'));
+        var title = $('#title').text().trim();
+        if (title == "-> 本科招生" || title == "-> 本科就业") {
+          $('<li class="active"><a class="text-center"><b style="font-size:1.3em;">本科教育</b></a><ul><li><a href="{$Think.config.GOTO}Home/Passages/showPassages/4">专业介绍</a></li><li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/teachTeam/1">教学团队</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassages/5">培养计划</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist/bZhaosheng">本科招生</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist/bJiuye">本科就业</a></li></ul></li>').appendTo($('#menu2'));
           switch (title) {
-            case "科研项目":
-              $('#menu2 ul li:nth-child(1) a').css('background-color', '#63b2f5');
+            case "-> 本科招生":
+              $('#menu2 ul li:nth-child(4) a').css('background-color', '#63b2f5');
               break;
-            case "建设目标":
-              $('#menu2 ul li:nth-child(2) a').css('background-color', '#63b2f5');
+            case "-> 本科就业":
+              $('#menu2 ul li:nth-child(5) a').css('background-color', '#63b2f5');
               break;
           }
         }
+        if (title == "-> 硕士招生") {
+          $('<li class="active"><a class="text-center"><b style="font-size:1.3em;">硕士培养</b></a><ul><li><a href="{$Think.config.GOTO}Home/Passages/showPassages/6">硕士点介绍</a></li><li><a href="{$Think.config.GOTO}Home/Student/showPhotoPassageList/shuodaoTeam/1">硕导介绍</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassages/7">培养计划</a></li><li><a href="{$Think.config.GOTO}Home/Passages/showPassageslist/sZhaosheng">硕士招生</a></li></ul></li>').appendTo($('#menu2'));
+            $('#menu2 ul li:nth-child(4) a').css('background-color', '#63b2f5');
+          }
       </script>
   </body>
 
