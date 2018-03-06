@@ -109,6 +109,8 @@ class PassagesController extends Controller {
 		$result['pre'] = ($id-1<=0)?$id:$id-1;
 		$result['next'] = ($id+1>$max)?$max:$id+1;
 
+		$this->assign('second',$result['second']);
+		$this->assign('type',$result['type']);
 		$this->assign('news',$news_data);
 		$this->assign('notice',$notice_data);
 		$this->assign('study',$notice_study);
