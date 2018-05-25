@@ -338,11 +338,12 @@
                                         <volist name="result[$year]" id="month">
                                             <li>
                                                 <span>
-                                                    {$month.month}月{$month.day}
+                                                    <!-- {$month.month}月{$month.day} -->
                                                 </span>
                                                 <p>
                                                     <span>
-                                                        <a href="{$Think.config.GOTO}Home/Passages/showTime/{$month.id}">{$month.title}</a>
+                                                        <!-- <a href="{$Think.config.GOTO}Home/Passages/showTime/{$month.id}">{$month.title}</a> -->
+                                                        {$month.title}
                                                     </span>
                                                 </p>
                                             </li>

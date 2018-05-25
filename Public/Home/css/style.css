@@ -7993,3 +7993,23 @@ input.numeric-input:focus{
 	}
 
 }
+
+.text_overflow_line {
+  /* width:15em; */
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis; 
+  overflow:hidden;
+}
+
+.text_overflow {
+  /* width:27rem; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text_overflow.l3 {
+  -webkit-line-clamp: 3;
+}

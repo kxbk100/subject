@@ -302,11 +302,14 @@
 
 						<volist name="newss" id="news">
 						<div>
-							<h4 class="post-title">
+							<h4 class="post-title text_overflow_line">
                             <if condition="$news.istop eq 1">[置顶]</if>
-                            <a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}">{$news.title|msubstr=0,18,'utf-8'}</a></h4>
-							<p><a>[{$news.time|msubstr=0,10,'utf-8',false}]</a> {$news.content|msubstr=0,34,'utf-8',true}
-								<!--限定字数--><a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}" class="pull-right">[MORE]</a>
+														<a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}" class="">{$news.title}</a></h4>
+														
+							<p class="text_overflow">
+								<a>[{$news.time|msubstr=0,10,'utf-8',false}]</a>
+								{$news.content}
+								<a href="{$Think.config.GOTO}Home/News/showNews/{$news.id}" class="pull-right">[MORE]</a>
 							</p>
 
 						</div>
@@ -354,7 +357,7 @@
                                                 <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
                                             </h6>
 												<ul class="event-meta">
-													<p>{$vo.content|msubstr=0,80,'utf-8',true}
+													<p class="text_overflow l3">{$vo.content}
 														<!--限定字数-->
 													</p>
 												</ul>
@@ -382,7 +385,7 @@
                                                 <a href="{$Think.config.GOTO}Home/Notice/showNotice/{$vo.id}">{$vo.title}</a>
                                             </h6>
 												<ul class="event-meta">
-													<p>{$vo.content|msubstr=0,80,'utf-8',true}
+													<p class="text_overflow l3">{$vo.content}
 														<!--限定字数-->
 													</p>
 												</ul>
@@ -434,10 +437,10 @@
 											<img src="{$vo.small_path}" alt="">
 										</div>
 
-										<h4 class="post-title"><a
+										<h4 class="post-title text_overflow_line"><a
                                             href="{$Think.config.GOTO}Home/Student/showPhotoPassage/{$vo.id}">{$vo.title}</a>
                                     </h4>
-										<p>{$vo.content|msubstr=0,50,'utf-8',true}
+										<p class="text_overflow">{$vo.content}
 											<!--限定字数-->
 										</p>
 									</div>
